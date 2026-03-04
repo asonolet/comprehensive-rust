@@ -10575,6 +10575,9 @@ msgid ""
 "makes `Box` one of the types that allow the compiler to optimize storage of some "
 "enums (the \"niche optimization\")."
 msgstr ""
+"Bien que les `Box` ressemblent à des `std::unique_ptr` en C++, ils ne peuvent être "
+"vides/nuls. Cela fait de `Box` un des types qui permettent au compilateur d'optimiser "
+"le stockage de certains enums (l'\"optimisation de niche\")."
 
 #: src/smart-pointers/rc.md
 #, fuzzy
@@ -10592,6 +10595,8 @@ msgid ""
 "Each `Rc` points to the same shared data structure, containing strong and weak "
 "pointers and the value:"
 msgstr ""
+"Chaque `Rc` pointe vers la même structure des données partagée, il contient des "
+"pointeurs faibles et forts et la valeur."
 
 #: src/smart-pointers/rc.md
 #, fuzzy
