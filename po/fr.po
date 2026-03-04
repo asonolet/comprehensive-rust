@@ -14,7 +14,7 @@ msgstr ""
 
 #: src/SUMMARY.md src/index.md
 msgid "Welcome to Comprehensive Rust 🦀"
-msgstr "Bienvenue à Comprehensive Rust (le guide complet de Rust) 🦀"
+msgstr "Bienvenue à Comprehensive Rust (le guide complet de programmation en Rust) 🦀"
 
 #: src/SUMMARY.md src/running-the-course.md
 msgid "Running the Course"
@@ -38,11 +38,11 @@ msgstr "Utiliser Cargo"
 
 #: src/SUMMARY.md
 msgid "Rust Ecosystem"
-msgstr "Écosystème de Rust"
+msgstr "L'écosystème de Rust"
 
 #: src/SUMMARY.md
 msgid "Code Samples"
-msgstr "Exemples de code"
+msgstr "Exemples"
 
 #: src/SUMMARY.md
 msgid "Running Cargo Locally"
@@ -65,11 +65,11 @@ msgstr "Hello, World"
 
 #: src/SUMMARY.md src/hello-world.md src/hello-world/what-is-rust.md
 msgid "What is Rust?"
-msgstr "Qu'est-ce que Rust ?"
+msgstr "Qu'est-ce que le Rust ?"
 
 #: src/SUMMARY.md src/hello-world.md src/hello-world/benefits.md
 msgid "Benefits of Rust"
-msgstr "Avantages de Rust"
+msgstr "Avantages du Rust"
 
 #: src/SUMMARY.md src/hello-world.md src/hello-world/playground.md
 msgid "Playground"
@@ -115,12 +115,12 @@ msgstr "Solution"
 #: src/SUMMARY.md src/running-the-course/course-structure.md src/welcome-day-1.md
 #: src/control-flow-basics.md
 msgid "Control Flow Basics"
-msgstr "Flux de contrôle"
+msgstr "Fondamentaux des structures du contrôle"
 
 #: src/SUMMARY.md src/control-flow-basics.md
 #: src/control-flow-basics/blocks-and-scopes.md
 msgid "Blocks and Scopes"
-msgstr "Blocs et Portées"
+msgstr "Blocs et Scopes"
 
 #: src/SUMMARY.md
 msgid "`if` Expressions"
@@ -128,7 +128,7 @@ msgstr "expressions \"if\""
 
 #: src/SUMMARY.md src/control-flow-basics/match.md
 msgid "`match` Expressions"
-msgstr "expressions \"correspondantes\""
+msgstr "expressions \"match\""
 
 #: src/SUMMARY.md src/control-flow-basics.md src/control-flow-basics/loops.md
 msgid "Loops"
@@ -160,7 +160,7 @@ msgstr "Macros"
 
 #: src/SUMMARY.md src/control-flow-basics.md src/control-flow-basics/exercise.md
 msgid "Exercise: Collatz Sequence"
-msgstr "Exercice : Séquence de Collatz"
+msgstr "Exercice : Suite de Collatz"
 
 #: src/SUMMARY.md
 msgid "Day 1: Afternoon"
@@ -185,11 +185,11 @@ msgstr "Itération sur Array"
 
 #: src/SUMMARY.md src/tuples-and-arrays.md src/tuples-and-arrays/destructuring.md
 msgid "Patterns and Destructuring"
-msgstr "Déstructuration des énumérations"
+msgstr "Destructuration des énumérations"
 
 #: src/SUMMARY.md src/tuples-and-arrays.md src/tuples-and-arrays/exercise.md
 msgid "Exercise: Nested Arrays"
-msgstr "Exercice : Tableaux"
+msgstr "Exercice : Tableaux imbriqués"
 
 #: src/SUMMARY.md src/running-the-course/course-structure.md
 #: src/welcome-day-1-afternoon.md src/references.md
@@ -206,7 +206,7 @@ msgstr "Références exclusives"
 
 #: src/SUMMARY.md src/references.md src/references/slices.md
 msgid "Slices"
-msgstr "Tranches"
+msgstr "Slices"
 
 #: src/SUMMARY.md src/references.md src/references/strings.md
 msgid "Strings"
@@ -236,7 +236,7 @@ msgstr "Structures tuple"
 #: src/SUMMARY.md src/user-defined-types.md src/user-defined-types/enums.md
 #: src/pattern-matching/destructuring-enums.md
 msgid "Enums"
-msgstr "Énumérations"
+msgstr "`enums`"
 
 #: src/SUMMARY.md src/user-defined-types.md src/user-defined-types/aliases.md
 msgid "Type Aliases"
@@ -252,7 +252,7 @@ msgstr "`static`"
 
 #: src/SUMMARY.md src/user-defined-types.md src/user-defined-types/exercise.md
 msgid "Exercise: Elevator Events"
-msgstr "Exercice : Évènements d'asensceur"
+msgstr "Exercice : Évènements d'un asensceur"
 
 #: src/SUMMARY.md
 msgid "Day 2: Morning"
@@ -273,15 +273,15 @@ msgstr "Valeurs correspondantes"
 
 #: src/SUMMARY.md src/pattern-matching.md
 msgid "Destructuring Structs"
-msgstr "Déstructuration des structs"
+msgstr "Destructuration des structs"
 
 #: src/SUMMARY.md src/pattern-matching.md
 msgid "Destructuring Enums"
-msgstr "Déstructuration des énumérations"
+msgstr "Destructuration des énumérations"
 
 #: src/SUMMARY.md src/pattern-matching.md src/pattern-matching/let-control-flow.md
 msgid "Let Control Flow"
-msgstr "Expressions `let`"
+msgstr "Structure de contrôle `let`"
 
 #: src/SUMMARY.md src/pattern-matching/let-control-flow/if-let.md
 msgid "`if let` Expressions"
@@ -297,7 +297,7 @@ msgstr "Expressions `while let`"
 
 #: src/SUMMARY.md src/pattern-matching.md src/pattern-matching/exercise.md
 msgid "Exercise: Expression Evaluation"
-msgstr "Exercice : Évaluation d'expression"
+msgstr "Exercice : Évaluation d'une expression"
 
 #: src/SUMMARY.md src/running-the-course/course-structure.md src/welcome-day-2.md
 #: src/methods-and-traits.md
@@ -372,11 +372,11 @@ msgstr "Jour 2 : Après-midi"
 #: src/SUMMARY.md src/running-the-course/course-structure.md
 #: src/welcome-day-2-afternoon.md src/closures.md
 msgid "Closures"
-msgstr "Fermetures"
+msgstr "Closures"
 
 #: src/SUMMARY.md src/closures.md src/closures/syntax.md
 msgid "Closure Syntax"
-msgstr "Syntaxe de Fermetures"
+msgstr "Syntaxe de Closure"
 
 #: src/SUMMARY.md src/closures.md src/closures/capturing.md
 msgid "Capturing"
@@ -384,7 +384,7 @@ msgstr "Capture"
 
 #: src/SUMMARY.md src/closures.md
 msgid "Closure Traits"
-msgstr "Traits de Fermeture"
+msgstr "Traits de Closure"
 
 #: src/SUMMARY.md src/closures.md src/closures/exercise.md
 msgid "Exercise: Log Filter"
@@ -426,7 +426,7 @@ msgstr "`HashMap`"
 
 #: src/SUMMARY.md src/std-types.md src/std-types/exercise.md
 msgid "Exercise: Counter"
-msgstr "Exercice : Conteur"
+msgstr "Exercice : Compteur"
 
 #: src/SUMMARY.md src/running-the-course/course-structure.md
 #: src/welcome-day-2-afternoon.md src/std-traits.md
@@ -448,7 +448,7 @@ msgstr "`From` et `Into`"
 
 #: src/SUMMARY.md src/std-traits.md src/std-traits/casting.md
 msgid "Casting"
-msgstr "Casting"
+msgstr "Caster"
 
 #: src/SUMMARY.md src/std-traits/read-and-write.md
 msgid "`Read` and `Write`"
@@ -481,11 +481,11 @@ msgstr "Approches de la gestion mémoire"
 
 #: src/SUMMARY.md src/memory-management.md src/memory-management/ownership.md
 msgid "Ownership"
-msgstr "Possession"
+msgstr "Ownership"
 
 #: src/SUMMARY.md src/memory-management.md src/memory-management/move.md
 msgid "Move Semantics"
-msgstr "Sémantique de déplacement"
+msgstr "Sémantique `Move`"
 
 #: src/SUMMARY.md
 msgid "`Clone`"
@@ -493,7 +493,7 @@ msgstr "`Clone`"
 
 #: src/SUMMARY.md src/memory-management.md src/memory-management/copy-types.md
 msgid "Copy Types"
-msgstr "Types copiables"
+msgstr "Types Copy"
 
 #: src/SUMMARY.md
 msgid "`Drop`"
@@ -631,7 +631,7 @@ msgstr "`IntoIterator`"
 
 #: src/SUMMARY.md src/iterators.md src/iterators/exercise.md
 msgid "Exercise: Iterator Method Chaining"
-msgstr "Exercice : Enchaînement d'adaptateurs d'itérateurs"
+msgstr "Exercice : Chaînage de méthodes sur les itérateurs"
 
 #: src/SUMMARY.md src/running-the-course/course-structure.md src/welcome-day-4.md
 #: src/modules.md src/modules/modules.md
@@ -760,7 +760,7 @@ msgstr "Traits non sécurisés"
 
 #: src/SUMMARY.md src/unsafe-rust.md
 msgid "Exercise: FFI Wrapper"
-msgstr "Exercice : Enveloppe FFI sécurisée"
+msgstr "Exercice :nveloppe Encapsulation FFI sécurisée"
 
 #: src/SUMMARY.md
 msgid "Android"
@@ -928,15 +928,15 @@ msgstr "Types supplémentaires"
 
 #: src/SUMMARY.md
 msgid "Building for Android: Genrules"
-msgstr "Développement pour Android : Genrules"
+msgstr "Développement Android : Genrules"
 
 #: src/SUMMARY.md
 msgid "Building for Android: C++"
-msgstr "Développement pour Android : C++"
+msgstr "Développement Android : C++"
 
 #: src/SUMMARY.md
 msgid "Building for Android: Rust"
-msgstr "Développement pour Android : Rust"
+msgstr "Développement Android : Rust"
 
 #: src/SUMMARY.md
 msgid "With Java"
@@ -960,7 +960,7 @@ msgstr "Rust non sécurisé (_unsafe_)"
 
 #: src/SUMMARY.md src/chromium/build-rules/depending.md
 msgid "Depending on Rust Code from Chromium C++"
-msgstr "Dépendre de code Rust depuis Chromium C++"
+msgstr "Dépendre d'un code en Rust depuis Chromium C++"
 
 #: src/SUMMARY.md src/chromium/build-rules/vscode.md
 msgid "Visual Studio Code"
@@ -1001,7 +1001,7 @@ msgstr "Gestion des erreurs CXX"
 
 #: src/SUMMARY.md
 msgid "Error Handling: QR Example"
-msgstr "Gestion des erreurs : QR"
+msgstr "Gestion d'erreur : QR"
 
 #: src/SUMMARY.md
 msgid "Error Handling: PNG Example"
@@ -1259,7 +1259,7 @@ msgstr "Threads"
 
 #: src/SUMMARY.md src/concurrency/threads.md src/concurrency/threads/scoped.md
 msgid "Scoped Threads"
-msgstr "Threads délimités"
+msgstr "Threads scopés"
 
 #: src/SUMMARY.md src/running-the-course/course-structure.md
 #: src/concurrency/welcome.md src/concurrency/channels.md
@@ -1368,7 +1368,7 @@ msgstr "Tâches"
 #: src/SUMMARY.md src/running-the-course/course-structure.md
 #: src/concurrency/welcome-async.md src/concurrency/async-control-flow.md
 msgid "Channels and Control Flow"
-msgstr "Flux de contrôle"
+msgstr "Canaux et Flux de contrôle"
 
 #: src/SUMMARY.md src/concurrency/async-control-flow.md
 #: src/concurrency/async-control-flow/channels.md
@@ -1802,56 +1802,56 @@ msgstr "Traits dérivés"
 #: src/SUMMARY.md
 #, fuzzy
 msgid "Default Implementations"
-msgstr "Mise en œuvre"
+msgstr "Implémentation par défaut"
 
 #: src/SUMMARY.md
 #, fuzzy
 msgid "Blanket Implementations"
-msgstr "Mise en œuvre"
+msgstr "Implémentations génériques"
 
 #: src/SUMMARY.md
 msgid "Conditional Methods"
-msgstr ""
+msgstr "Méthodes conditionnelles"
 
 #: src/SUMMARY.md src/idiomatic/polymorphism/refresher/orphan-rule.md
 msgid "Orphan Rule"
-msgstr ""
+msgstr "Règle orpheline"
 
 #: src/SUMMARY.md
 msgid "Statically Sized and Dynamically Sized types"
-msgstr ""
+msgstr "Types de taille fixe et Types de taille variable"
 
 #: src/SUMMARY.md src/idiomatic/polymorphism/refresher/monomorphization.md
 msgid "Monomorphization and Binary Size"
-msgstr ""
+msgstr "Monomorphisme et taille du binaire"
 
 #: src/SUMMARY.md
 msgid "From OOP to Rust"
-msgstr ""
+msgstr "De la POO à Rust"
 
 #: src/SUMMARY.md
 msgid "Inheritance"
-msgstr ""
+msgstr "Héritage"
 
 #: src/SUMMARY.md src/idiomatic/polymorphism/from-oop-to-rust/why-no-inheritance.md
 msgid "Why no Inheritance in Rust?"
-msgstr ""
+msgstr "Pourquoi n'y a-t-il pas d'héritage en Rust ?"
 
 #: src/SUMMARY.md src/idiomatic/polymorphism/from-oop-to-rust/switch-perspective.md
 msgid "Inheritance from Rust's Perspective"
-msgstr ""
+msgstr "L'héritage du point de vue de Rust"
 
 #: src/SUMMARY.md
 msgid "\"Inheritance\" in Rust and Supertraits"
-msgstr ""
+msgstr "L'\"héritage\" en Rust et les Supertraits"
 
 #: src/SUMMARY.md src/idiomatic/polymorphism/from-oop-to-rust/composition.md
 msgid "Composition over Inheritance"
-msgstr ""
+msgstr "Composition plutôt qu'héritage"
 
 #: src/SUMMARY.md
 msgid "Trait Objects and Dynamic Dispatch"
-msgstr ""
+msgstr "Objets trait et dispatch dynamique"
 
 #: src/SUMMARY.md
 #, fuzzy
@@ -1876,17 +1876,17 @@ msgstr ""
 #: src/SUMMARY.md
 #, fuzzy
 msgid "The `Any` Trait"
-msgstr "Le trait `Lâcher`"
+msgstr "Le trait `Any`"
 
 #: src/SUMMARY.md
 #: src/idiomatic/polymorphism/from-oop-to-rust/dynamic-dispatch/pitfalls.md
 msgid "Pitfall: Reaching too quickly for `dyn Trait`"
-msgstr ""
+msgstr "Erreur commune : recourir trop vite au `dyn Trait`"
 
 #: src/SUMMARY.md
 #, fuzzy
 msgid "Sealed Traits"
-msgstr "Implémentation de traits non sécurisés"
+msgstr "Traits scellés"
 
 #: src/SUMMARY.md src/idiomatic/polymorphism/from-oop-to-rust/sealing-with-enums.md
 #, fuzzy
@@ -1896,282 +1896,282 @@ msgstr "Appeler C avec Bindgen"
 #: src/SUMMARY.md
 #: src/idiomatic/polymorphism/from-oop-to-rust/sticking-with-traits.md
 msgid "Traits for Polymorphism users can extend"
-msgstr ""
+msgstr "Traits pour le Polymorphisme que les utilisateurs peuvent étendre"
 
 #: src/SUMMARY.md src/idiomatic/polymorphism/from-oop-to-rust/problem-solving.md
 msgid "Problem solving: Break Down the Problem"
-msgstr ""
+msgstr "Résolution de problème : décomposer le problème"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/introduction.md
 #, fuzzy
 msgid "Introduction"
-msgstr "Solutions"
+msgstr "Introduction"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/introduction.md
 #: src/unsafe-deep-dive/introduction/definition.md
 #, fuzzy
 msgid "Defining Unsafe Rust"
-msgstr "Rust non sécurisé (_unsafe_)"
+msgstr "Rust non sûr (_unsafe_)"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/introduction.md
 msgid "Purpose of the unsafe keyword"
-msgstr ""
+msgstr "Raison d'être du mot-clé `unsafe`"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/introduction.md
 msgid "Two roles of the unsafe keyword"
-msgstr ""
+msgstr "Les deux rôles du mot clé `unsafe`"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/introduction.md
 #, fuzzy
 msgid "Warm Up Examples"
-msgstr "Exemples"
+msgstr "Exemples déchauffement"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/introduction/warm-up/unsafe-block.md
 msgid "Using an unsafe block"
-msgstr ""
+msgstr "Utiliser un bloc non sûr"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/introduction/warm-up/unsafe-fn.md
 #, fuzzy
 msgid "Defining an unsafe function"
-msgstr "Ecrire des fonctions non sécurisées"
+msgstr "Définir une fonction non sûr"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/introduction/warm-up/unsafe-impl.md
 #, fuzzy
 msgid "Implementing an unsafe trait"
-msgstr "Implémentation de traits non sécurisés"
+msgstr "Implémentation d'un trait non sûr"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/introduction/warm-up/unsafe-trait.md
 #, fuzzy
 msgid "Defining an unsafe trait"
-msgstr "Implémentation de traits non sécurisés"
+msgstr "Définir des traits non sûr"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/introduction.md
 msgid "Characteristics of Unsafe Rust"
-msgstr ""
+msgstr "Caractéristiques de Rust non sûr"
 
 #: src/SUMMARY.md
 msgid "Dangerous"
-msgstr ""
+msgstr "Dangereux"
 
 #: src/SUMMARY.md
 msgid "Sometimes necessary"
-msgstr ""
+msgstr "Parfois nécessaire"
 
 #: src/SUMMARY.md
 msgid "Sometimes useful"
-msgstr ""
+msgstr "Parfois utile"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/introduction.md
 msgid "Responsibility shift"
-msgstr ""
+msgstr "Transfert de responsabilité"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/introduction.md
 msgid "Stronger development workflow required"
-msgstr ""
+msgstr "Un workflow de développement plus solide"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/introduction.md
 msgid "Example: may_overflow"
-msgstr ""
+msgstr "Exemple : may_overflow"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/safety-preconditions.md
 msgid "Safety Preconditions"
-msgstr ""
+msgstr "Préconditions de sûreté"
 
 #: src/SUMMARY.md
 msgid "Common Preconditions"
-msgstr ""
+msgstr "Préconditions courantes"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/safety-preconditions/getter.md
 #, fuzzy
 msgid "Getter example"
-msgstr "Exécutez l'exemple avec :"
+msgstr "Exemple de Getter"
 
 #: src/SUMMARY.md
 #: src/unsafe-deep-dive/safety-preconditions/semantic-preconditions.md
 msgid "Semantic preconditions"
-msgstr ""
+msgstr "Précondition sémantiques"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/safety-preconditions/u8-to-bool.md
 msgid "Example: u8 to bool"
-msgstr ""
+msgstr "Exemple : de `u8` à `bool`"
 
 #: src/SUMMARY.md
 msgid "Determining preconditions"
-msgstr ""
+msgstr "Déterminer des préconditions"
 
 #: src/SUMMARY.md
 #, fuzzy
 msgid "Example: references"
-msgstr "Références invalides"
+msgstr "Exemple : Références"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/safety-preconditions/defining.md
 msgid "Defining your own preconditions"
-msgstr ""
+msgstr "Définir vos propres préconditions"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/safety-preconditions/ascii.md
 msgid "Example: ASCII Type"
-msgstr ""
+msgstr "Exemple : Type ASCII"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/rules-of-the-game.md
 #, fuzzy
 msgid "Rules of the game"
-msgstr "Exécutez l'exemple avec :"
+msgstr "Règles du jeu"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/rules-of-the-game/rust-is-sound.md
 #, fuzzy
 msgid "Rust is sound"
-msgstr "Rust pour Android"
+msgstr "Rust est valide"
 
 #: src/SUMMARY.md
 msgid "Copying memory"
-msgstr ""
+msgstr "Copier de la mémoire"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/introduction/responsibility-shift.md
 #: src/unsafe-deep-dive/rules-of-the-game/copying-memory/safe.md
 #, fuzzy
 msgid "Safe Rust"
-msgstr "Rust non sécurisé (_unsafe_)"
+msgstr "Rust sûr (_unsafe_)"
 
 #: src/SUMMARY.md
 #: src/unsafe-deep-dive/rules-of-the-game/copying-memory/encapsulated-unsafe.md
 #, fuzzy
 msgid "Encapsulated Unsafe Rust"
-msgstr "Rust non sécurisé (_unsafe_)"
+msgstr "Rust non sûr encapsulé (_unsafe_)"
 
 #: src/SUMMARY.md
 #: src/unsafe-deep-dive/rules-of-the-game/copying-memory/exposed-unsafe.md
 #, fuzzy
 msgid "Exposed Unsafe Rust"
-msgstr "Rust non sécurisé (_unsafe_)"
+msgstr "Rust non sûr exposé (_unsafe_)"
 
 #: src/SUMMARY.md
 #: src/unsafe-deep-dive/rules-of-the-game/copying-memory/documented-safety-preconditions.md
 msgid "Documented safety preconditions"
-msgstr ""
+msgstr "Conditions de sûreté documentées"
 
 #: src/SUMMARY.md
 #: src/unsafe-deep-dive/rules-of-the-game/copying-memory/crying-wolf.md
 msgid "Crying Wolf"
-msgstr ""
+msgstr "Crier au loup"
 
 #: src/SUMMARY.md
 msgid "3 shapes of sound Rust"
-msgstr ""
+msgstr "3 formes de Rust valide "
 
 #: src/SUMMARY.md src/unsafe-deep-dive/rules-of-the-game/soundness-proof.md
 msgid "Soundness Proof"
-msgstr ""
+msgstr "Preuve de validité"
 
 #: src/SUMMARY.md
 #: src/unsafe-deep-dive/rules-of-the-game/soundness-proof/soundness.md
 msgid "Soundness"
-msgstr ""
+msgstr "Validité"
 
 #: src/SUMMARY.md
 msgid "Corollary"
-msgstr ""
+msgstr "Corollaire"
 
 #: src/SUMMARY.md
 #: src/unsafe-deep-dive/rules-of-the-game/soundness-proof/unsoundness.md
 #, fuzzy
 msgid "Unsoundness"
-msgstr "Canaux illimités"
+msgstr "Ce qui est invalide"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/memory-lifecycle.md
 msgid "Memory Lifecycle"
-msgstr ""
+msgstr "Cycle de vie de la mémoire"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/safety-preconditions/common-preconditions.md
 #: src/unsafe-deep-dive/initialization.md
 #, fuzzy
 msgid "Initialization"
-msgstr "Installation"
+msgstr "Initialisation"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/initialization/maybeuninit.md
 msgid "MaybeUninit<T>"
-msgstr ""
+msgstr "MaybeUninit<T>"
 
 #: src/SUMMARY.md
 msgid "Arrays of uninit"
-msgstr ""
+msgstr "Tableaux non initialisés"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/initialization/maybeuninit/zeroed-method.md
 msgid "MaybeUninit::zeroed()"
-msgstr ""
+msgstr "MaybeUninit::zeroed()"
 
 #: src/SUMMARY.md
 msgid "ptr::write vs assignment"
-msgstr ""
+msgstr "ptr::write vs assignation"
 
 #: src/SUMMARY.md
 msgid "How to initialize memory"
-msgstr ""
+msgstr "Comment initialiser la mémoire"
 
 #: src/SUMMARY.md
 msgid "Partial initialization"
-msgstr ""
+msgstr "Initialisation partielle"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/pinning.md
 msgid "Pinning"
-msgstr ""
+msgstr "Pinning"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/pinning.md
 #: src/unsafe-deep-dive/pinning/what-pinning-is.md
 #: src/unsafe-deep-dive/pinning/self-referential-buffer.md
 msgid "What pinning is"
-msgstr ""
+msgstr "Ce qu'est le pinning"
 
 #: src/SUMMARY.md
 msgid "What a move is"
-msgstr ""
+msgstr "Ce qu'est un move"
 
 #: src/SUMMARY.md
 msgid "Definition of Pin<Ptr>"
-msgstr ""
+msgstr "Définition de Pin<Ptr>"
 
 #: src/SUMMARY.md
 msgid "Why it's difficult"
-msgstr ""
+msgstr "Pourquoi c'est difficile ?"
 
 #: src/SUMMARY.md
 msgid "`Unpin` trait"
-msgstr ""
+msgstr "trait `Unpin`"
 
 #: src/SUMMARY.md
 msgid "`PhantomPinned`"
-msgstr ""
+msgstr "`PhantomPinned`"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/pinning.md
 #: src/unsafe-deep-dive/pinning/self-referential-buffer.md
 msgid "Self-Referential Buffer Example"
-msgstr ""
+msgstr "Exemple de Buffer auto-référencé"
 
 #: src/SUMMARY.md
 #, fuzzy
 msgid "C++ implementation"
-msgstr "Mise en œuvre des services"
+msgstr "Implémentation C++"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/pinning/self-referential-buffer/rust.md
 msgid "Modeled in Rust"
-msgstr ""
+msgstr "Modélisé en Rust"
 
 #: src/SUMMARY.md
 #: src/unsafe-deep-dive/pinning/self-referential-buffer/rust-raw-pointers.md
 msgid "With a raw pointer"
-msgstr ""
+msgstr "Avec un pointeur nu"
 
 #: src/SUMMARY.md
 msgid "With an integer offset"
-msgstr ""
+msgstr "Avec un décalage entier"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/pinning/self-referential-buffer/rust-pin.md
 msgid "With `Pin<Ptr>`"
-msgstr ""
+msgstr "With `Pin<Ptr>`"
 
 #: src/SUMMARY.md
 #, fuzzy
 msgid "`Pin<Ptr>` and `Drop`"
-msgstr "`Lire` et `Ecrire`"
+msgstr"`Pin<Ptr>` and `Drop`"
 
 #: src/SUMMARY.md
 #, fuzzy
@@ -2180,65 +2180,65 @@ msgstr "Exemple"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/ffi.md
 msgid "FFI"
-msgstr ""
+msgstr "FFI"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/ffi/language-interop.md
 msgid "Language Interop"
-msgstr ""
+msgstr "Interopérabilité entre langages"
 
 #: src/SUMMARY.md
 #, fuzzy
 msgid "Strategies"
-msgstr "caisses HAL"
+msgstr "Stratégies"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/ffi/type-safety.md
 msgid "Consideration: Type Safety"
-msgstr ""
+msgstr "Sûreté de Type"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/ffi/language-differences.md
 #, fuzzy
 msgid "Language differences"
-msgstr "Références"
+msgstr "Différence de langage"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/ffi/language-differences/representations.md
 #, fuzzy
 msgid "Different representations"
-msgstr "expressions `si nous allons`"
+msgstr "Différence de représentation"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/ffi/language-differences/semantics.md
 #, fuzzy
 msgid "Different semantics"
-msgstr "Sémantique de déplacement"
+msgstr "Différence de sémantique"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/ffi/language-differences/rust-and-c.md
 msgid "Rust ↔ C"
-msgstr ""
+msgstr "Rust ↔ C++"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/ffi/language-differences/cpp-and-c.md
 msgid "C++ ↔ C"
-msgstr ""
+msgstr "Rust ↔ C++"
 
 #: src/SUMMARY.md src/unsafe-deep-dive/ffi/language-differences/rust-and-cpp.md
 msgid "Rust ↔ C++"
-msgstr ""
+msgstr "Rust ↔ C++"
 
 #: src/SUMMARY.md
 msgid "`abs(3)`"
-msgstr ""
+msgstr "`abs(3)`"
 
 #: src/SUMMARY.md
 msgid "`rand(3)`"
-msgstr ""
+msgstr "`rand(3)`"
 
 #: src/SUMMARY.md
 #, fuzzy
 msgid "Exercise:C library"
-msgstr "Enveloppe FFI sécurisée"
+msgstr "Exercice : bibliothèque C"
 
 #: src/SUMMARY.md
 #, fuzzy
 msgid "Exercise: C++ library"
-msgstr "Bibliothèque"
+msgstr "Exercice : Bibliothèque C++"
 
 #: src/SUMMARY.md
 msgid "Final Words"
@@ -2251,7 +2251,7 @@ msgstr "Merci!"
 #. Please keep { #glossary } untranslated.
 #: src/SUMMARY.md src/glossary.md
 msgid "Glossary"
-msgstr ""
+msgstr "Glossaire"
 
 #: src/SUMMARY.md
 msgid "Other Resources"
@@ -2392,14 +2392,14 @@ msgstr ""
 
 #: src/index.md
 msgid "Non-Goals"
-msgstr "Non-objectifs"
+msgstr "Ce que ce cours n'est pas"
 
 #: src/index.md
 msgid ""
 "Rust is a large language and we won't be able to cover all of it in a few days. "
 "Some non-goals of this course are:"
 msgstr ""
-"Rust est un vaste langage et nous ne pourrons pas tout couvrir en quelques jours. "
+"Rust est un langage vaste et nous ne pourrons pas tout couvrir en quelques jours. "
 "Certains non-objectifs de ce cours sont :"
 
 #: src/index.md
@@ -2427,7 +2427,7 @@ msgid ""
 msgstr ""
 "Le cours suppose que vous savez déjà programmer. Rust est un langage statiquement "
 "typé et nous ferons parfois des comparaisons avec C et C++ pour mieux expliquer "
-"ou contraster l'approche de Rust."
+"ou différencier l'approche de Rust."
 
 #: src/index.md
 msgid ""
@@ -2498,11 +2498,10 @@ msgid ""
 "helpful to have a gap in the course since it helps them process all the "
 "information we give them."
 msgstr ""
-"Décidez des dates de la classe en avance. Étant donné que le cours dure quatre "
-"jours complets, nous vous recommandons de programmer les jours de classe sur un "
-"intervalle de deux semaines. Les participants aux classes précédentes ont en "
-"effet indiqué qu'il est utile d'espacer les jours de classe afin de mieux "
-"absorber le contenu."
+"Planifiez ce cours en avance. Étant donné qu'il dure quatre jours complets, nous "
+"vous recommandons de programmer les jours de classe sur un intervalle de deux "
+"semaines. Les participants aux classes précédentes ont en effet indiqué qu'il est "
+"utile d'espacer les jours de classe afin de mieux absorber le contenu."
 
 #: src/running-the-course.md
 msgid ""
@@ -10176,7 +10175,7 @@ msgid ""
 "implementing the `Clone` trait."
 msgstr ""
 "Le clonage est une opération plus générale et permet également un comportement "
-"personnalisé en implémentant le trait \"Cloner\"."
+"personnalisé en implémentant le trait \"Clone\"."
 
 #: src/memory-management/copy-types.md
 #, fuzzy
@@ -10218,6 +10217,10 @@ msgid ""
 "copy of a shared reference, creating a copy of a mutable reference would violate "
 "Rust's borrowing rules."
 msgstr ""
+"Les références partagées implémentent Copy`/`Clone`, les références mutables non. "
+"En effet, Rust exige que les références mutables soient exclusives. Il est donc "
+"valide de faire une copie d'une référence partagée, mais créer une copie d'une "
+"référence mutable violerait les règles de borrowing de Rust."
 
 #: src/memory-management/drop.md
 #, fuzzy
@@ -10236,7 +10239,7 @@ msgstr ""
 
 #: src/memory-management/drop.md
 msgid "\"Dropping {}\""
-msgstr ""
+msgstr "\"Dropping {}\""
 
 #: src/memory-management/drop.md src/concurrency/sync-exercises/link-checker.md
 #: src/concurrency/sync-exercises/solutions.md
@@ -10269,22 +10272,26 @@ msgstr ""
 
 #: src/memory-management/drop.md
 msgid "Note that `std::mem::drop` is not the same as `std::ops::Drop::drop`."
-msgstr ""
+msgstr "Notez que `std::mem::drop` n'est pas la même chose que "
+"`std::ops::Drop::drop`."
 
 #: src/memory-management/drop.md
 msgid "Values are automatically dropped when they go out of scope."
-msgstr ""
+msgstr "Les valeurs sont automatiquement libérées quand elles sortent de la portée."
 
 #: src/memory-management/drop.md
 msgid ""
 "When a value is dropped, if it implements `std::ops::Drop` then its `Drop::drop` "
 "implementation will be called."
 msgstr ""
+"Lorsqu'une valeur est libérée, si elle implémente `std::ops::Drop son implémentation "
+"de `Drop::drop` sera appelée."
 
 #: src/memory-management/drop.md
 msgid ""
 "All its fields will then be dropped too, whether or not it implements `Drop`."
 msgstr ""
+"Tous ses champs seront alors libérés aussi, qu'ils implémentent ou non `Drop`."
 
 #: src/memory-management/drop.md
 msgid ""
@@ -10293,12 +10300,18 @@ msgid ""
 "dropped. This makes it a convenient way to explicitly drop values earlier than "
 "they would otherwise go out of scope."
 msgstr ""
+"`std::mem::drop` est juste une fonction vide qui accepte n'importe quelle valeur. "
+"Ce que cela signifie : elle prend l'ownership de la valeur, donc à la fin de sa portée "
+"elle est libérée. C'est une manière pratique de libérer explicitement des valeurs "
+"avant qu'elles ne sortent de la portée."
 
 #: src/memory-management/drop.md
 msgid ""
 "This is useful for objects that do some work on `drop`: releasing locks, closing "
 "files, etc."
 msgstr ""
+"Ceci est utile pour les objets qui doivent effectuer une action lors du `drop` : "
+"libérer des verrous, fermer des fichiers, etc. "
 
 #: src/memory-management/drop.md
 #, fuzzy
@@ -10452,8 +10465,8 @@ msgid ""
 "Recursive data types or data types with dynamic sizes cannot be stored inline "
 "without a pointer indirection. `Box` accomplishes that indirection:"
 msgstr ""
-"Les types de données récursifs ou les types de données avec des tailles "
-"dynamiques doivent utiliser une `Box` :"
+"Les types de données récursifs ou de taille dynamique ne peuvent pas être "
+"stockés en ligne sans indirection par un pointeur. `Box` fournit cette indirection :"
 
 #: src/smart-pointers/box.md
 msgid "/// A non-empty list: first element and the rest of the list.\n"
@@ -10509,7 +10522,7 @@ msgid ""
 "have a type whose size can't be known at compile time, but the Rust compiler "
 "wants to know an exact size."
 msgstr ""
-"avoir un type dont la taille ne peut pas être connue au moment de la compilation, "
+"avez un type dont la taille ne peut pas être connue au moment de la compilation, "
 "mais le compilateur Rust veut connaître une taille exacte."
 
 #: src/smart-pointers/box.md
