@@ -10596,7 +10596,7 @@ msgid ""
 "pointers and the value:"
 msgstr ""
 "Chaque `Rc` pointe vers la même structure des données partagée, il contient des "
-"pointeurs faibles et forts et la valeur."
+"compteurs de référence faibles et forts ainsi que la valeur."
 
 #: src/smart-pointers/rc.md
 #, fuzzy
@@ -10614,7 +10614,8 @@ msgid ""
 "std/rc/struct.Weak.html) pointer to create cycles that will get dropped."
 msgstr ""
 "Vous pouvez _rétrograder_ un pointeur partagé en un pointeur [`Weak`](https://doc."
-"rust-lang.org/std/rc/struct.Weak.html) pour créer des cycles qui va tomber."
+"rust-lang.org/std/rc/struct.Weak.html) pour créer des cycles qui pourront être "
+"libérés."
 
 #: src/smart-pointers/rc.md
 #, fuzzy
@@ -10628,7 +10629,7 @@ msgstr ""
 #: src/smart-pointers/rc.md
 #, fuzzy
 msgid "`Rc` in Rust is like `std::shared_ptr` in C++."
-msgstr "Comme `std::shared_ptr` de C++."
+msgstr "`Rc` en Rust est comme `std::shared_ptr` de C++."
 
 #: src/smart-pointers/rc.md
 #, fuzzy
@@ -10638,7 +10639,7 @@ msgid ""
 "looking for performance issues in code."
 msgstr ""
 "`clone` est bon marché : il crée un pointeur vers la même allocation et augmente "
-"le nombre de références. Ne crée pas de clone profond et peut généralement être "
+"le nombre de références. Il ne crée pas de clone profond et peut généralement être "
 "ignoré lors de la recherche de problèmes de performances dans le code."
 
 #: src/smart-pointers/rc.md
@@ -10661,9 +10662,9 @@ msgid ""
 "`Rc::downgrade` gives you a _weakly reference-counted_ object to create cycles "
 "that will be dropped properly (likely in combination with `RefCell`)."
 msgstr ""
-"Vous pouvez `downgrader()` un `Rc` en un objet _faiblement compté en référence_ "
-"pour créer des cycles qui seront supprimés correctement (probablement en "
-"combinaison avec `RefCell`)."
+"`Rc::downgrade` vous donne un objet à comptage de références faible pour "
+"créer des cycles qui seront correctement libérés (probablement en combinaison "
+"avec `RefCell`)."
 
 #: src/smart-pointers/trait-objects.md
 msgid ""
@@ -10671,6 +10672,9 @@ msgid ""
 "However, we can also use trait objects with smart pointers like `Box` to create "
 "an owned trait object: `Box<dyn Pet>`."
 msgstr ""
+"Nous avons vu précédemment comment les objets traits peuvent être utilisés avec "
+"des références, ex. `&dyn Pet`. Cependant, nous pouvons aussi les utiliser avec des "
+"pointeurs intelligents comme `Box` pour créer un objet trait possédé : `Box<dyn Pet>`."
 
 #: src/smart-pointers/trait-objects.md
 #, fuzzy
@@ -10742,18 +10746,23 @@ msgid ""
 "Types that implement a given trait may be of different sizes. This makes it "
 "impossible to have things like `Vec<dyn Pet>` in the example above."
 msgstr ""
+"Les types qui implémentent un trait donné peuvent être de taille différente. "
+"Cela rend impossible des choses comme Vec<dyn Pet>` dans l'exemple ci-dessus."
 
 #: src/smart-pointers/trait-objects.md
 msgid ""
 "`dyn Pet` is a way to tell the compiler about a dynamically sized type that "
 "implements `Pet`."
-msgstr ""
+msgstr "`dyn Pet` est une manière d'indiquer au compilateur un type de taille "
+"dynamique qui implémente `Pet`."
 
 #: src/smart-pointers/trait-objects.md
 msgid ""
 "In the example, `pets` is allocated on the stack and the vector data is on the "
 "heap. The two vector elements are _fat pointers_:"
 msgstr ""
+"Dans l'exemple, `pets` est alloué sur la pile et les données du vecteur sont sur "
+"le tas. Les deux éléments du pointeur sont des _pointeurs larges_ :"
 
 #: src/smart-pointers/trait-objects.md
 msgid ""
@@ -10762,6 +10771,10 @@ msgid ""
 "org/wiki/Virtual_method_table) (vtable) for the `Pet` implementation of that "
 "particular object."
 msgstr ""
+"Un pointeur large est un pointeur de double taille. Il a deux composants : un "
+"pointeur vers l'objet lui-même et un pointeur vers la [table de méthodes virtuelles]
+(https://en.wikipedia.org/wiki/Virtual_method_table) (vtable) de l'implémentation de "
+"`Pet` pour cet objet particulier."
 
 #: src/smart-pointers/trait-objects.md
 msgid ""
