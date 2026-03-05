@@ -10781,10 +10781,12 @@ msgid ""
 "The data for the `Dog` named Fido is the `name` and `age` fields. The `Cat` has a "
 "`lives` field."
 msgstr ""
+"Les données pour le `Dog` nommé Fido sont dans les champs `name` et `age`. Le `Cat` "
+"le champ `lives`."
 
 #: src/smart-pointers/trait-objects.md
 msgid "Compare these outputs in the above example:"
-msgstr ""
+msgstr "Comparez ces deux résultats dans l'exemple ci-dessus :"
 
 #: src/smart-pointers/trait-objects.md
 msgid "\"{} {}\""
@@ -10814,18 +10816,24 @@ msgid ""
 "nodes in N's right subtree will contain larger values. A given value should only "
 "be stored in the tree once, i.e. no duplicate nodes."
 msgstr ""
+"Un arbre binaire est une structure de données en arbre dans laquelle chaque noeud "
+"a 2 enfants (gauche et droit). Nous allons créer un arbre où chaque noeud stocke "
+"une valeur. Pour un noeud N, tous les nœuds du sous-arbre gauche de N contiennent "
+"des valeurs inférieures et tous les nœuds du sous-arbre droit contiennent des "
+"valeurs supérieures. Une valeur donnée ne devrait être stockée qu'une fois, c.a.d "
+"qu'il ne doit pas y avoir de noeuds dupliqués."
 
 #: src/smart-pointers/exercise.md
 msgid "Implement the following types, so that the given tests pass."
-msgstr ""
+msgstr "Implémentez les types suivants afin que les tests suivants réussissent."
 
 #: src/smart-pointers/exercise.md src/smart-pointers/solution.md
 msgid "/// A node in the binary tree.\n"
-msgstr ""
+msgstr "/// Un noeud dans l'arbre binaire.\n"
 
 #: src/smart-pointers/exercise.md src/smart-pointers/solution.md
 msgid "/// A possibly-empty subtree.\n"
-msgstr ""
+msgstr "/// Un sous arbre potentiellement vide.\n"
 
 #: src/smart-pointers/exercise.md src/smart-pointers/solution.md
 msgid ""
@@ -10833,26 +10841,33 @@ msgid ""
 "///\n"
 "/// If the same value is added multiple times, it is only stored once.\n"
 msgstr ""
+"/// Un conteneur stockant un ensemble de valeurs utilisant un arbre binaire\n"
+"///\n"
+"/// Si la même ivaleur est ajoutée plusieurs fois, elle est stockée une seule fois.\n"
 
 #: src/smart-pointers/exercise.md
 msgid ""
 "// Implement `new` for `Node`.\n"
 "// Implement `new`, `insert`, `len`, and `has` for `Subtree`.\n"
 msgstr ""
+"// Implémentez `new` pour `Node`.\n"
+"// Implémentez `new`, `insert`, `len`, et `has` pour `Subtree`.\n"
 
 #: src/smart-pointers/exercise.md src/smart-pointers/solution.md
 msgid "// not a unique item\n"
-msgstr ""
+msgstr "// pas un item unique\n"
 
 #: src/welcome-day-3-afternoon.md
 msgid ""
 "Including 10 minute breaks, this session should take about 2 hours and 30 "
 "minutes. It contains:"
 msgstr ""
+"Cette session devrait prendre environ 2 heures et 30 minutes incluant des pauses "
+"de 10 minutes. Elle contient :"
 
 #: src/borrowing.md src/unsafe-rust.md
 msgid "This segment should take about 1 hour and 15 minutes. It contains:"
-msgstr ""
+msgstr "Ce morceau devrait prendre environ 1 heure et 15 minutes. Elle contient :"
 
 #: src/borrowing/shared.md
 #, fuzzy
@@ -10860,8 +10875,8 @@ msgid ""
 "As we saw before, instead of transferring ownership when calling a function, you "
 "can let a function _borrow_ the value:"
 msgstr ""
-"Au lieu de transférer la propriété lors de l'appel d'une fonction, vous pouvez "
-"laisser une la fonction _emprunte_ la valeur :"
+"Comme nous l'avons déjà vu, au lieu de transférer la propriété lors de l'appel d'une "
+"fonction, vous pouvez laisser une la fonction _emprunter_ la valeur :"
 
 #: src/borrowing/shared.md
 #, fuzzy
@@ -10878,11 +10893,14 @@ msgid ""
 "This slide is a review of the material on references from day 1, expanding "
 "slightly to include function arguments and return values."
 msgstr ""
+"Ce slide est une révision du contenu sur les références du jour 1. Il étend "
+"légèrement la notion pour inclure les arguments des fonctions et les valeurs "
+"de retour."
 
 #: src/borrowing/shared.md
 #, fuzzy
 msgid "Notes on stack returns and inlining:"
-msgstr "Remarques sur les retours de pile :"
+msgstr "Remarques sur les retours sur la pile et l'inlining :"
 
 #: src/borrowing/shared.md
 msgid ""
