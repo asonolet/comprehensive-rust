@@ -10913,12 +10913,22 @@ msgid ""
 "optimization level, the addresses should change, while they stay the same when "
 "changing to the \"RELEASE\" setting:"
 msgstr ""
+"Démontrez que retourner depuis `add` n'est pas coûteux parce que le compileur "
+"peut éliminer l'opération de copie en inlinant l'appel à `add` dans `main`. "
+"Le code ci-dessus pour afficher les adresses de la pile et exécutez-le sur "
+"[Playground](https://play.rust-lang.org/?"
+"version=stable&mode=release&edition=2024&gist=0cb13be1c05d7e3446686ad9947c4671) "
+"ou examinez l'assembleur dans [Godbolt](https://rust.godbolt.org/). Au niveau "
+"d'optimisation \"DEBUG\" les adresses doivent changer alors qu'elles restent
+"les mêmes en passant le paramètre \"RELEASE\" :"
 
 #: src/borrowing/shared.md
 msgid ""
 "The Rust compiler can do automatic inlining, that can be disabled on a function "
 "level with `#[inline(never)]`."
 msgstr ""
+"Le compilateur Rust peut réaliser un inlining automatique qui peut-être "
+"désactivé au niveau d'une fonction avec `#[inline(never)]`."
 
 #: src/borrowing/shared.md
 msgid ""
@@ -10927,6 +10937,10 @@ msgid ""
 "the value depends on the ABI, e.g. on amd64 the two i32 that is making up the "
 "point will be returned in 2 registers (eax and edx)."
 msgstr ""
+"Une fois désactivé, l'adresse imprimée changera à tous les niveaux d'optimisation "
+"En examinant Godbolt ou Playground; on peut voir que dans ce cas, le retour de "
+"la valeur dépend de l'ABI, i.e sur amd64 les deux i32 qui composent le point "
+"seront retournées dans deux registres (eax et edx)."
 
 #: src/borrowing/borrowck.md
 #, fuzzy
@@ -10934,24 +10948,27 @@ msgid ""
 "Rust's _borrow checker_ puts constraints on the ways you can borrow values. We've "
 "already seen that a reference cannot _outlive_ the value it borrows:"
 msgstr ""
-"Rust impose des contraintes sur la manière dont vous pouvez emprunter des "
-"valeurs :"
+"Le _borrow checker_ de Rust impose des contraintes sur la manière dont vous pouvez "
+"emprunter des valeurs. Nous avons déjà vu qu'une référence ne peut pas vivre "
+"_outlive_ (survivre à) la valeur qu'elle emprunte : "
 
 #: src/borrowing/borrowck.md
 msgid ""
 "There's also a second main rule that the borrow checker enforces: The _aliasing_ "
 "rule. For a given value, at any time:"
 msgstr ""
+"Il existe également une deuxième règle principale que le borrow checker applique :"
+"la règle d'_aliasing_. Pour une valeur donnée à tout moment :"
 
 #: src/borrowing/borrowck.md
 #, fuzzy
 msgid "You can have one or more shared references to the value, _or_"
-msgstr "Vous pouvez avoir une ou plusieurs valeurs `&T` à tout moment, _ou_"
+msgstr "Vous pouvez avoir une ou plusieurs références partagées, _or_"
 
 #: src/borrowing/borrowck.md
 #, fuzzy
 msgid "You can have exactly one exclusive reference to the value."
-msgstr "Vous pouvez avoir exactement une valeur `&mut T`."
+msgstr "Vous pouvez avoir une et une seule référence à la valeur."
 
 #: src/borrowing/borrowck.md
 msgid ""
@@ -10959,6 +10976,10 @@ msgid ""
 "references. We review it here to show students that the borrow checking is "
 "following a few different rules to validate borrowing."
 msgstr ""
+"La règle d'_outlive_ a été démontrée précédemment quand nous "
+"avons abordé les références pour la première fois. Nous la revoyons ici pour
+montrer aux apprenants que le _borrow checker_ suit plusieurs règles distinctes "
+"pour valider le borrowing. "
 
 #: src/borrowing/borrowck.md
 #, fuzzy
@@ -10975,6 +10996,10 @@ msgid ""
 "point. It does not matter where the reference is dereferenced. Try commenting out "
 "`*c = 20` and show that the compiler error still occurs even if we never use `c`."
 msgstr ""
+"Notez que la règle est que les références en conflit ne doivent pas exister au même "
+"endroit. Quel que soit l'endroit où la référence est déréférencée. Essayez de "
+"décommenter `*c = 20` et montrez que l'erreur du compilateur se produit même si nous "
+n'avons jamais utilisé  `c`."
 
 #: src/borrowing/borrowck.md
 msgid ""
@@ -10983,6 +11008,10 @@ msgid ""
 "produces a similar error. This is because direct mutation of a value effectively "
 "creates a temporary mutable reference."
 msgstr ""
+"Notez que la référence intermédiaire à `c` n'est pas là nécessairement pour déclencher "
+"un conflit de _borrowing_. Remplacez `c` par une mutation directe de `a` et démontrez "
+"que cela déclenche une erreur similaire. Cela a lieu parce qu'une mutation directe "
+"d'une valeur crée effectivement une référence temporarie mutable."
 
 #: src/borrowing/borrowck.md
 #, fuzzy
@@ -10990,8 +11019,8 @@ msgid ""
 "Move the `dbg!` statement for `b` before the scope that introduces `c` to make "
 "the code compile."
 msgstr ""
-"Déplacez l'instruction `println!` pour `b` avant la portée qui introduit `c` pour "
-"que le code soit compilé."
+"Déplacez l'instruction `dbg!` pour `b` avant la portée qui introduit `c` pour "
+"que le code compile."
 
 #: src/borrowing/borrowck.md
 #, fuzzy
@@ -11000,9 +11029,9 @@ msgid ""
 "new mutable borrow of `a` through `c`. This is a feature of the borrow checker "
 "called \"non-lexical lifetimes\"."
 msgstr ""
-"Après ce changement, le compilateur se rend compte que 'b' n'est utilisé qu'avant "
+"Après ce changement, le compilateur se rend compte que 'b' n'est jamais utilisé avant "
 "le nouvel emprunt mutable de 'a' à 'c'. Il s'agit d'une fonctionnalité du "
-"vérificateur d'emprunt appelée \"durées de vie non lexicales\"."
+"_borrow checker_ appelée \"non-lexical lifetimes\"."
 
 #: src/borrowing/borrowck.md
 msgid ""
@@ -11013,6 +11042,12 @@ msgid ""
 "version=stable&mode=debug&edition=2024&gist=8f5896878611566845fe3b0f4dc5af68) "
 "demonstrates that behavior."
 msgstr ""
+"Techniquement, plusieurs références mutables à une donnée peut exister au même "
+"moment via un _re-borrowing_. C'est ce qui vous permet de passer une référence "
+"mutable à une fonction sans invalider la référence originelle. [Cet exemple "
+"playground] (https://play.rust-lang.org/?"
+"version=stable&mode=debug&edition=2024&gist=8f5896878611566845fe3b0f4dc5af68) "
+"démontre ce comportement."
 
 #: src/borrowing/borrowck.md
 msgid ""
@@ -11020,6 +11055,9 @@ msgid ""
 "occur in multi-threaded code, since only one thread can have mutable access to a "
 "piece of data at a time."
 msgstr ""
+"Rust utilise la contrainte de la référence unique pour s'assurer qu'il n'y aura "
+"pas de data race dans un code multi-threaded, puisque l'accès mutable à une donnée "
+"se fait un thread à la fois."
 
 #: src/borrowing/borrowck.md
 msgid ""
@@ -11027,6 +11065,9 @@ msgid ""
 "shared reference can be safely cached in a register for the lifetime of that "
 "reference."
 msgstr ""
+"Rust utilise cette contrainte également pour optimiser le code. Par exemple, une "
+"valeur sous une référence partagée peut être _cachée_ de manière sécure pour toute "
+"la durée de vie de cette référence."
 
 #: src/borrowing/borrowck.md
 msgid ""
@@ -11037,6 +11078,12 @@ msgid ""
 "version=stable&mode=debug&edition=2024&gist=f293a31f2d4d0d31770486247c2e8437) for "
 "an example of this."
 msgstr ""
+"Les champs d'une structure peuvent être empruntés indépendamment les uns des "
+"autres, mais appeler une méthode sur une structure empruntera la structure entière, "
+"invalidant potentiellement les références aux champs individuels. Voir "
+"[cet extrait Playground](https://play.rust-lang.org/?"
+"version=stable&mode=debug&edition=2024&gist=f293a31f2d4d0d31770486247c2e8437) "
+"pour un exemple."
 
 #: src/borrowing/examples.md
 msgid ""
@@ -11044,10 +11091,14 @@ msgid ""
 "consider the case of modifying a collection while there are references to its "
 "elements:"
 msgstr ""
+"Comme exemple concret de la façon dont ces règles d'emprunt empêchent les "
+"erreurs mémoire, considérons le cas de la modification d'une collection alors "
+"qu'il existe des références vers ses éléments :"
 
 #: src/borrowing/examples.md
 msgid "Similarly, consider the case of iterator invalidation:"
 msgstr ""
+"De même, considérons le cas de l'invalidation d'un itérateur :"
 
 #: src/borrowing/examples.md
 msgid ""
@@ -11055,6 +11106,9 @@ msgid ""
 "can potentially invalidate existing references to the collection's elements if "
 "the collection has to reallocate."
 msgstr ""
+"Dans ces deux cas, modifier la collection en y ajoutant de nouveaux éléments peut "
+"potentiellement invalider les références existantes vers les éléments de la "
+"collection si celle-ci doit se réallouer."
 
 #: src/borrowing/interior-mutability.md
 msgid ""
@@ -11062,6 +11116,10 @@ msgid ""
 "reference. For example, a shared data structure might have an internal cache, and "
 "wish to update that cache from read-only methods."
 msgstr ""
+"Dans certaines situations, il est nécessaire de modifier des données derrière une "
+"référence partagée (en lecture seule). Par exemple, une structure de données "
+"partagée peut avoir un cache interne et souhaiter mettre à jour ce cache depuis "
+"des méthodes en lecture seule."
 
 #: src/borrowing/interior-mutability.md
 msgid ""
@@ -11069,6 +11127,10 @@ msgid ""
 "shared reference. The standard library provides several ways to do this, all "
 "while still ensuring safety, typically by performing a runtime check."
 msgstr ""
+"Le pattern de la « mutabilité intérieure » permet un accès exclusif (mutable) "
+"derrière une référence partagée. La bibliothèque standard fournit plusieurs "
+"façons de procéder, tout en garantissant la sécurité, généralement en "
+"effectuant une vérification à l'exécution."
 
 #: src/borrowing/interior-mutability.md
 msgid ""
@@ -11076,6 +11138,10 @@ msgid ""
 "modify data behind a shared reference. There are a variety of ways to ensure that "
 "safety, and the next sub-slides present a few of them."
 msgstr ""
+"Ce qu'il faut retenir de cette diapositive est que Rust fournit des moyens "
+"_sûrs_ de modifier des données derrière une référence partagée. Il existe "
+"diverses façons de garantir cette sécurité, et les sous-diapositives suivantes "
+"en présentent quelques-unes."
 
 #: src/borrowing/interior-mutability/cell.md
 msgid ""
@@ -11083,11 +11149,16 @@ msgid ""
 "reference to the `Cell`. However, it does not allow any references to the inner "
 "value. Since there are no references, borrowing rules cannot be broken."
 msgstr ""
+"`Cell` encapsule une valeur et permet de la lire ou de la modifier en utilisant "
+"uniquement une référence partagée vers le `Cell`. Cependant, il ne permet aucune "
+"référence vers la valeur intérieure. Puisqu'il n'y a pas de références, les "
+"règles d'emprunt ne peuvent pas être violées."
 
 #: src/borrowing/interior-mutability/cell.md
 #: src/borrowing/interior-mutability/refcell.md
 msgid "// Note that `cell` is NOT declared as mutable.\n"
 msgstr ""
+"// Notez que `cell` nest pas déclaré comme mutable. \n"
 
 #: src/borrowing/interior-mutability/cell.md
 msgid ""
@@ -11095,6 +11166,9 @@ msgid ""
 "`&self`. This needs no runtime check, but requires moving values, which can have "
 "its own cost."
 msgstr ""
+"`Cell` est un moyen simple de garantir la sécurité : il possède une méthode `set` "
+"qui prend `&self`. Cela ne nécessite aucune vérification à l'exécution, mais "
+"requiert de déplacer les valeurs, ce qui peut avoir son propre coût."
 
 #: src/borrowing/interior-mutability/refcell.md
 msgid ""
@@ -11102,18 +11176,27 @@ msgid ""
 "types `Ref` and `RefMut` that emulate `&T`/`&mut T` without actually being Rust "
 "references."
 msgstr ""
+"`RefCell` permet d'accéder à une valeur encapsulée et de la modifier en "
+"fournissant les types alternatifs `Ref` et `RefMut` qui émulent `&T`/`&mut T` "
+"sans être de véritables références Rust."
 
 #: src/borrowing/interior-mutability/refcell.md
 msgid ""
 "These types perform dynamic checks using a counter in the `RefCell` to prevent "
 "existence of a `RefMut` alongside another `Ref`/`RefMut`."
 msgstr ""
+"Ces types effectuent des vérifications dynamiques à l'aide d'un compteur dans le "
+"`RefCell` pour empêcher l'existence d'un `RefMut` en même temps qu'un autre "
+"`Ref`/`RefMut`."
 
 #: src/borrowing/interior-mutability/refcell.md
 msgid ""
 "By implementing `Deref` (and `DerefMut` for `RefMut`), these types allow calling "
 "methods on the inner value without allowing references to escape."
 msgstr ""
+"En implémentant `Deref` (et `DerefMut` pour `RefMut`), ces types permettent "
+"d'appeler des méthodes sur la valeur intérieure sans permettre aux références "
+"d'en échapper."
 
 #: src/borrowing/interior-mutability/refcell.md
 msgid ""
@@ -11121,10 +11204,13 @@ msgid ""
 "        // let other = cell.borrow();\n"
 "        // println!(\"{}\", other);\n"
 msgstr ""
+"// Ceci déclenche une erreur à l'exécution.\n"
+"        // let other = cell.borrow();\n"
+"        // println!(\"{}\", other);\n"
 
 #: src/borrowing/interior-mutability/refcell.md
 msgid "\"{cell:?}\""
-msgstr ""
+msgstr "\"{cell:?}\""
 
 #: src/borrowing/interior-mutability/refcell.md
 msgid ""
@@ -11132,6 +11218,10 @@ msgid ""
 "references or a single exclusive reference) with a runtime check. In this case, "
 "all borrows are very short and never overlap, so the checks always succeed."
 msgstr ""
+"`RefCell` applique les règles d'emprunt habituelles de Rust (soit plusieurs "
+"références partagées, soit une seule référence exclusive) avec une vérification "
+"à l'exécution. Dans ce cas, tous les emprunts sont très courts et ne se "
+"chevauchent jamais, donc les vérifications réussissent toujours."
 
 #: src/borrowing/interior-mutability/refcell.md
 msgid ""
@@ -11139,6 +11229,9 @@ msgid ""
 "`borrow_mut` before we print the cell. Trying to print a borrowed `RefCell` just "
 "shows the message `\"{borrowed}\"`."
 msgstr ""
+"Le bloc supplémentaire dans l'exemple sert à terminer l'emprunt créé par l'appel "
+"à `borrow_mut` avant d'afficher le cell. Tenter d'afficher un `RefCell` emprunté "
+"affiche simplement le message `\"{borrowed}\"`."
 
 #: src/borrowing/interior-mutability/refcell.md
 msgid ""
@@ -11146,30 +11239,42 @@ msgid ""
 "use. Making these useful requires some more knowledge than students have at this "
 "time."
 msgstr ""
+"Il existe également `OnceCell` et `OnceLock`, qui permettent l'initialisation "
+"lors de la première utilisation. Les utiliser de manière pertinente requiert "
+"davantage de connaissances que les apprenants n'en ont à ce stade."
 
 #: src/borrowing/exercise.md
 msgid ""
 "In this exercise, you will manage a wizard's inventory using what you have "
 "learned about borrowing and ownership."
 msgstr ""
+"Dans cet exercice vous allez gérer l'inventaire d'un sorcier en utilisant ce que "
+"vous avez appris sur le _borrowing_ et l'_ownership_."
 
 #: src/borrowing/exercise.md
 msgid ""
 "The wizard has a collection of spells. You need to implement functions to add "
 "spells to the inventory and to cast spells from them."
 msgstr ""
+"Le sorcier a une collection de sorts. Vous devez implémenter les fonctions pour "
+"ajouter des sorts à l'inventaire et lancer des sorts à partir d'eux."
 
 #: src/borrowing/exercise.md
 msgid ""
 "Spells have a limited number of uses. When a spell has no uses left, it must be "
 "removed from the wizard's inventory."
 msgstr ""
+"Les sorts ont un nombre limité d'usage. Quand un sort ne peut plus être utilisé, il "
+"doit être enlevé de l'inventaire du sorcier."
 
 #: src/borrowing/exercise.md
 msgid ""
 "// TODO: Implement `add_spell` to take ownership of a spell and add it to\n"
 "    // the wizard's inventory.\n"
 msgstr ""
+"// TODO : Implémentez `add_spell` pour prendre possession d'un sort et l'ajouter\n"
+"    // à l'inventaire du sorcier.\n"
+
 
 #: src/borrowing/exercise.md
 msgid ""
@@ -11180,26 +11285,32 @@ msgid ""
 "    // If the wizard doesn't have enough mana, the spell should fail.\n"
 "    // If the spell has no uses left, it is removed from the inventory.\n"
 msgstr ""
+"// TODO : Implémentez `cast_spell` pour emprunter un sort de l'inventaire et\n"
+"    // le lancer. Le mana du sorcier doit diminuer du coût du sort et le\n"
+"    // nombre d'utilisations du sort doit diminuer de 1.\n"
+"    //\n"
+"    // Si le sorcier n'a pas assez de mana, le sort doit échouer.\n"
+"    // Si le sort n'a plus d'utilisations, il est retiré de l'inventaire.\n"
 
 #: src/borrowing/exercise.md src/borrowing/solution.md
 msgid "\"Fireball\""
-msgstr ""
+msgstr "\"Fireball\""
 
 #: src/borrowing/exercise.md src/borrowing/solution.md
 msgid "\"Ice Blast\""
-msgstr ""
+msgstr "\"Ice Blast\""
 
 #: src/borrowing/exercise.md src/borrowing/solution.md
 msgid "// Casts successfully\n"
-msgstr ""
+msgstr "// Casts successfully\n"
 
 #: src/borrowing/exercise.md src/borrowing/solution.md
 msgid "// Casts successfully, then removed\n"
-msgstr ""
+msgstr "// Casts successfully, then removed\n"
 
 #: src/borrowing/exercise.md src/borrowing/solution.md
 msgid "// Fails (not found)\n"
-msgstr ""
+msgstr "// Fails (not found)\n"
 
 #: src/borrowing/exercise.md
 msgid ""
@@ -11207,32 +11318,38 @@ msgid ""
 "borrowing, specifically the rule that you cannot mutate a collection while "
 "holding a reference to one of its elements."
 msgstr ""
+"Le but de cet exercice est de pratiquer les concepts fondamentaux de l'"
+"_ownership_ et du _borrowing_, specifiquement la règle selon laquelle on ne "
+"peut muter une collection pendant qu'elle contient une référence à un de ses "
+"éléments."
 
 #: src/borrowing/exercise.md
 msgid ""
 "`add_spell` should take ownership of a `Spell` and move it into the `Wizard`'s "
 "inventory."
 msgstr ""
+"`add_spell` doit prendre l'_ownership_ d'un `Spell` et le déplacer dans "
+"l'inventaire du `Wizard`."
 
 #: src/borrowing/exercise.md
 msgid "`cast_spell` is the core of the exercise. It needs to:"
-msgstr ""
+msgstr "`cast_spell` est le coeur de l'exercice. Elle doit :"
 
 #: src/borrowing/exercise.md
 msgid "Find the spell (by index or by reference)."
-msgstr ""
+msgstr "Trouver le sort (par index ou par référence)."
 
 #: src/borrowing/exercise.md
 msgid "Check mana and decrement it."
-msgstr ""
+msgstr "Vérifier le mana et le décrémenter."
 
 #: src/borrowing/exercise.md
 msgid "Decrement the spell's `uses`."
-msgstr ""
+msgstr "Décrémenter le sort `uses`."
 
 #: src/borrowing/exercise.md
 msgid "Remove the spell if `uses == 0`."
-msgstr ""
+msgstr "Supprimer le sort si `uses == 0`."
 
 #: src/borrowing/exercise.md
 msgid ""
@@ -11243,31 +11360,38 @@ msgid ""
 "satisfy the borrow checker (e.g., by using indices or by ensuring the borrow ends "
 "before the mutation)."
 msgstr ""
+"**Conflit du _borrow checker_ :** Si les apprenants tentent de conserver une "
+"référence vers le sort (par ex. `let spell = &mut self.spells[i]`) puis d'appeler "
+"`self.spells.remove(i)` alors que cette référence est encore « vivante » dans la "
+"même portée, le _borrow checker_ se plaindra. C'est une excellente occasion de "
+"montrer comment structurer le code pour satisfaire le _borrow checker_ (par ex. "
+"en utilisant des indices ou en s'assurant que l'emprunt se termine avant la "
+"mutation)."
 
 #: src/borrowing/solution.md
 msgid "Solution: Wizard's Inventory"
-msgstr ""
+msgstr "Solution : l'inventaire du Sorcier"
 
 #: src/borrowing/solution.md
 msgid "\"Spell {} not found!\""
-msgstr ""
+msgstr "\"Spell {} not found!\""
 
 #: src/borrowing/solution.md
 msgid "\"Casting {}! Mana left: {}. Uses left: {}\""
-msgstr ""
+msgstr "\"Casting {}! Mana left: {}. Uses left: {}\""
 
 #: src/borrowing/solution.md
 msgid "\"Not enough mana to cast {}!\""
-msgstr ""
+msgstr "\"Not enough mana to cast {}!\""
 
 #: src/lifetimes.md
 msgid "This segment should take about 1 hour and 5 minutes. It contains:"
-msgstr ""
+msgstr "Cette séquence devrait prendre environ 1 heure et 5 minutes. Elle contient :"
 
 #: src/lifetimes/simple-borrows.md
 #, fuzzy
 msgid "Borrowing with Functions"
-msgstr "Ecrire des fonctions non sécurisées"
+msgstr "_Borrowing_ avec des fonctions"
 
 #: src/lifetimes/simple-borrows.md
 msgid ""
@@ -11275,15 +11399,18 @@ msgid ""
 "into and out of functions. In the simplest case borrows last for the duration of "
 "the function call:"
 msgstr ""
+"Dans le cadre de la vérification d'emprunt, le compilateur doit raisonner sur la "
+"façon dont les emprunts entrent et sortent des fonctions. Dans le cas le plus "
+"simple, les emprutns durent le tempsde l'appel de la fonction :"
 
 #: src/lifetimes/simple-borrows.md
 #, fuzzy
 msgid "// Borrow `val` for the function call.\n"
-msgstr "Heap : Stockage de valeurs en dehors des appels de fonction."
+msgstr "// Emprunter `val` pour l'appel de fonction.\n"
 
 #: src/lifetimes/simple-borrows.md
 msgid "// Borrow has ended and we're free to mutate.\n"
-msgstr ""
+msgstr "// L'emprunt est terminé et nous pouvons muter si nous voulons.\n"
 
 #: src/lifetimes/simple-borrows.md
 msgid ""
@@ -11291,22 +11418,29 @@ msgid ""
 "ability to mutate `val`, but once the function call returns the borrow has ended "
 "and we're free to mutate again."
 msgstr ""
+"Dans cet exemple, nous empruntons `val` pour l'appel à `borrows`. Cela limiterait "
+"notre capacité à muter `val`, mais une fois que l'appel de fonction retourne, "
+"l'emprunt est terminé et nous sommes libres de muter à nouveau."
 
 #: src/lifetimes/returning-borrows.md
 msgid ""
 "But we can also have our function return a reference! This means that a borrow "
 "flows back out of a function:"
 msgstr ""
+"Mais notre fonction peut aussi retourner une référence ! Cela signifie qu'un "
+"_borrow_ ressort d'une fonction."
 
 #: src/lifetimes/returning-borrows.md
 msgid "// x = 5; // 🛠️❌ `x` is still borrowed!\n"
-msgstr ""
+msgstr "// x = 5; // 🛠️❌ `x` est toujours emprunté !\n"
 
 #: src/lifetimes/returning-borrows.md
 msgid ""
 "Rust functions can return references, meaning that a borrow can flow back out of "
 "a function."
 msgstr ""
+"Les fonctions Rust peuvent retourner des références, cela veut dire qu'un _borrow_ "
+"peut ressortir d'une fonction."
 
 #: src/lifetimes/returning-borrows.md
 msgid ""
@@ -11314,28 +11448,38 @@ msgid ""
 "derived from one of its arguments. This means that the return value of the "
 "function will extend the borrow for one or more argument borrows."
 msgstr ""
+"Si une fonction retourne une référence (ou un autre type d'emprunt), elle a "
+"probablement été dérivée de l'un de ses arguments. Cela signifie que la valeur "
+"de retour de la fonction étendra l'emprunt pour un ou plusieurs emprunts "
+"d'arguments."
 
 #: src/lifetimes/returning-borrows.md
 msgid ""
 "This case is still fairly simple, in that only one borrow is passed into the "
 "function, so the returned borrow has to be the same one."
 msgstr ""
+"Ce cas est relativement simple, dans la mesure où un seul _borrow_ est passé "
+"dans la fonction, ainsi l'emprunt retourné sera le même."
 
 #: src/lifetimes/multiple-borrows.md
 msgid ""
 "But what about when there are multiple borrows passed into a function and one "
 "being returned?"
 msgstr ""
+"Mais qu'en est-il lorsqu'il y a des emprunts multiples passés à une fonction et "
+"un seul est retourné ?"
 
 #: src/lifetimes/multiple-borrows.md
 msgid "\"Return either `a` or `b`\""
-msgstr ""
+msgstr "\"Retourne soit `a` ou `b`\""
 
 #: src/lifetimes/multiple-borrows.md
 msgid ""
 "// Which one is still borrowed?\n"
 "    // Should either mutation be allowed?\n"
 msgstr ""
+"// Lequel est toujours emprunté ?\n"
+"    // Les deux mutations sont-elles permises ?\n"
 
 #: src/lifetimes/multiple-borrows.md
 msgid ""
@@ -11343,6 +11487,10 @@ msgid ""
 "Before we get it to compile, use this opportunity to have students to think about "
 "which of our argument borrows should be extended by the return value."
 msgstr ""
+"Ce code ne compile pas pour l'instant car il manque des annotations de durée de "
+"vie. Avant de le faire compiler, profitez de cette occasion pour amener les "
+"apprenants à réfléchir à lequel de nos emprunts d'arguments devrait être étendu "
+"par la valeur de retour."
 
 #: src/lifetimes/multiple-borrows.md
 msgid ""
@@ -11351,6 +11499,10 @@ msgid ""
 "one should be extended? Do we need to see the body of `multiple` to figure this "
 "out?"
 msgstr ""
+"Nous passons deux emprunts dans `multiple` et l'un va en ressortir, ce qui "
+"signifie que nous devrons étendre l'emprunt de l'une des durées de vie des "
+"arguments. Lequel doit être étendu ? Avons-nous besoin de voir le corps de "
+"`multiple` pour le déterminer ?"
 
 #: src/lifetimes/multiple-borrows.md
 msgid ""
@@ -11358,6 +11510,9 @@ msgid ""
 "reason about the borrows flowing out, instead it looks only at the signature of "
 "the function for borrow analysis."
 msgstr ""
+"Lors de la vérification des emprunts, le compilateur ne regarde pas le corps de "
+"`multiple` pour raisonner sur les emprunts qui en sortent ; il ne regarde que la "
+"signature de la fonction pour l'analyse des emprunts."
 
 #: src/lifetimes/multiple-borrows.md
 msgid ""
@@ -11365,6 +11520,9 @@ msgid ""
 "borrowed by the returned reference. Show students the compiler errors and "
 "introduce the lifetime syntax:"
 msgstr ""
+"Dans ce cas, il n'y a pas suffisamment d'informations pour déterminer si `a` ou "
+"`b` sera emprunté par la référence retournée. Montrez aux apprenants les erreurs "
+"du compilateur et introduisez la syntaxe des durées de vie :"
 
 #: src/lifetimes/borrow-both.md
 msgid ""
@@ -11372,6 +11530,9 @@ msgid ""
 "case we use the lifetime annotations to tell the compiler that both borrows may "
 "flow into the return value."
 msgstr ""
+"Dans ce cas, nous avons une fonction où `a` ou `b` peut être retourné. Dans ce "
+"cas, nous utilisons les annotations de durée de vie pour indiquer au compilateur "
+"que les deux emprunts peuvent se propager dans la valeur de retour."
 
 #: src/lifetimes/borrow-both.md
 msgid ""
@@ -11380,12 +11541,18 @@ msgid ""
 "    // a += 7;\n"
 "    // b += 7;\n"
 msgstr ""
+"// Lequel est encore emprunté ?\n"
+"    // L'une ou l'autre des mutations devrait-elle être autorisée ?\n"
+"    // a += 7;\n"
+"    // b += 7;\n"
 
 #: src/lifetimes/borrow-both.md
 msgid ""
 "The `pick` function will return either `a` or `b` depending on the value of `c`, "
 "which means we can't know at compile time which one will be returned."
 msgstr ""
+"La fonction `pick` retournera soit `a` soit `b` selon la valeur de `c`, ce qui "
+"signifie que nous ne pouvons pas savoir à la compilation lequel sera retourné."
 
 #: src/lifetimes/borrow-both.md
 msgid ""
@@ -11393,18 +11560,25 @@ msgid ""
 "along with the return type. This means that the returned reference will borrow "
 "BOTH `a` and `b`!"
 msgstr ""
+"Pour l'exprimer au compilateur, nous utilisons la même durée de vie pour `a` et "
+"`b`, ainsi que pour le type de retour. Cela signifie que la référence retournée "
+"empruntera `a` ET `b` !"
 
 #: src/lifetimes/borrow-both.md
 msgid ""
 "Uncomment both of the commented lines and show that `r` is borrowing both `a` and "
 "`b`, even though at runtime it will only point to one of them."
 msgstr ""
+"Décommentez les deux lignes commentées et montrez que `r` emprunte à la fois `a` "
+"et `b`, même si à l'exécution il ne pointera que vers l'un d'eux."
 
 #: src/lifetimes/borrow-both.md
 msgid ""
 "Change the first argument to `pick` to show that the result is the same "
 "regardless of if `a` or `b` is returned."
 msgstr ""
+"Modifiez le premier argument de `pick` pour montrer que le résultat est le même "
+"que `a` ou `b` soit retourné."
 
 #: src/lifetimes/borrow-one.md
 msgid ""
@@ -11412,20 +11586,25 @@ msgid ""
 "them. The lifetime annotations explicitly tie the returned borrow to the "
 "corresponding argument borrow."
 msgstr ""
+"Dans cet exemple, `find_nearest` prend plusieurs emprunts mais n'en retourne "
+"qu'un seul. Les annotations de durée de vie lient explicitement l'emprunt "
+"retourné à l'emprunt d'argument correspondant."
 
 #: src/lifetimes/borrow-one.md
 msgid ""
 "/// Searches `points` for the point closest to `query`.\n"
 "/// Assumes there's at least one point in `points`.\n"
 msgstr ""
+"/// Recherche dans `points` le point le plus proche de `query`.\n"
+"/// Suppose qu'il y a au moins un point dans `points`.\n"
 
 #: src/lifetimes/borrow-one.md
 msgid "// query // What happens if we do this instead?\n"
-msgstr ""
+msgstr "// query // Que se passe-t-il si nous faisons cela à la place ?\n"
 
 #: src/lifetimes/borrow-one.md
 msgid "// `query` isn't borrowed at this point.\n"
-msgstr ""
+msgstr "// `query` n'est pas emprunté à ce stade.\n"
 
 #: src/lifetimes/borrow-one.md
 msgid ""
@@ -11433,24 +11612,36 @@ msgid ""
 "on the signature of the function. The actual logic in the function is somewhat "
 "complex and isn't important for the purpose of borrow analysis."
 msgstr ""
+"Il peut être utile de masquer la définition de `find_nearest` pour se concentrer "
+"davantage sur la signature de la fonction. La logique réelle de la fonction est "
+"quelque peu complexe et n'est pas importante pour l'analyse des emprunts."
 
 #: src/lifetimes/borrow-one.md
 msgid ""
 "When we call `find_nearest` the returned reference doesn't borrow `query`, and so "
 "we are free to drop it while `nearest` is still active."
 msgstr ""
+"Lorsque nous appelons `find_nearest`, la référence retournée n'emprunte pas "
+"`query`, nous sommes donc libres de le libérer tandis que `nearest` est encore "
+"actif."
 
 #: src/lifetimes/borrow-one.md
 msgid ""
 "But what happens if we return the wrong borrow? Change the last line of "
 "`find_nearest` to return `query` instead. Show the compiler error to the students."
 msgstr ""
+"Mais que se passe-t-il si nous retournons le mauvais emprunt ? Modifiez la "
+"dernière ligne de `find_nearest` pour retourner `query` à la place. Montrez "
+"l'erreur du compilateur aux apprenants."
 
 #: src/lifetimes/borrow-one.md
 msgid ""
 "The first thing we have to do is add a lifetime annotation to `query`. Show "
 "students that we can add a second lifetime `'b` to `find_nearest`."
 msgstr ""
+"La première chose que nous devons faire est d'ajouter une annotation de durée de "
+"vie à `query`. Montrez aux apprenants que nous pouvons ajouter une seconde durée "
+"de vie `'b` à `find_nearest`."
 
 #: src/lifetimes/borrow-one.md
 msgid ""
@@ -11459,6 +11650,10 @@ msgid ""
 "enforcing that the function adheres to the contract set by the function's "
 "signature."
 msgstr ""
+"Montrez la nouvelle erreur aux apprenants. Le _borrow checker_ vérifie que la "
+"logique dans le corps de la fonction retourne bien une référence avec la durée de "
+"vie correcte, garantissant que la fonction respecte le contrat défini par sa "
+"signature."
 
 #: src/lifetimes/borrow-one.md
 msgid ""
@@ -11467,6 +11662,11 @@ msgid ""
 "return `query`. This is an example of lifetime subtyping, which allows us to "
 "return a longer lifetime where a shorter one is expected."
 msgstr ""
+"Le message « help » dans l'erreur indique que nous pouvons ajouter une contrainte "
+"de durée de vie `'b: 'a` pour indiquer que `'b` vivra au moins aussi longtemps "
+"que `'a`, ce qui nous permettrait alors de retourner `query`. C'est un exemple de "
+"sous-typage de durées de vie, qui permet de retourner une durée de vie plus longue "
+"là où une plus courte est attendue."
 
 #: src/lifetimes/borrow-one.md
 msgid ""
@@ -11474,6 +11674,10 @@ msgid ""
 "to a `static` variable. The `'static` lifetime is guaranteed to be longer than "
 "any other lifetime, so it's always safe to return in place of a shorter lifetime."
 msgstr ""
+"Nous pouvons faire quelque chose de similaire en retournant une durée de vie "
+"`'static`, par ex. une référence vers une variable `static`. La durée de vie "
+"`'static` est garantie d'être plus longue que toute autre durée de vie, il est "
+"donc toujours sûr de la retourner à la place d'une durée de vie plus courte."
 
 #: src/lifetimes/lifetime-elision.md
 msgid ""
@@ -11482,22 +11686,33 @@ msgid ""
 "(https://doc.rust-lang.org/nomicon/lifetime-elision.html). This is not inference "
 "-- it is just a syntactic shorthand."
 msgstr ""
+"Les durées de vie des arguments de fonction et des valeurs de retour doivent être "
+"entièrement spécifiées, mais Rust permet d'élider les durées de vie dans la "
+"plupart des cas grâce à [quelques règles simples]"
+"(https://doc.rust-lang.org/nomicon/lifetime-elision.html). Ce n'est pas de "
+"l'inférence — c'est simplement un raccourci syntaxique."
 
 #: src/lifetimes/lifetime-elision.md
 msgid "Each argument which does not have a lifetime annotation is given one."
-msgstr ""
+msgstr "Chaque argument qui n'a pas d'annotation de durée de vie se voit en attribuer "
+"une."
 
 #: src/lifetimes/lifetime-elision.md
 msgid ""
 "If there is only one argument lifetime, it is given to all un-annotated return "
 "values."
 msgstr ""
+"S'il n'y a qu'une seule durée de vie d'argument, elle est attribuée à toutes les "
+"valeurs de retour non annotées."
 
 #: src/lifetimes/lifetime-elision.md
 msgid ""
 "If there are multiple argument lifetimes, but the first one is for `self`, that "
 "lifetime is given to all un-annotated return values."
 msgstr ""
+"S'il y a plusieurs durées de vie d'arguments, mais que la première est pour "
+"`self`, cette durée de vie est attribuée à toutes les valeurs de retour non "
+"annotées."
 
 #: src/lifetimes/lifetime-elision.md
 msgid ""
@@ -11505,12 +11720,18 @@ msgid ""
 "functions. `only_args` is completed by the first rule, `identity` is completed by "
 "the second, and `Foo::get` is completed by the third."
 msgstr ""
+"Passez en revue l'application des règles d'élision de durée de vie pour chacune "
+"des fonctions exemples. `only_args` est complétée par la première règle, "
+"`identity` par la deuxième, et `Foo::get` par la troisième."
 
 #: src/lifetimes/lifetime-elision.md
 msgid ""
 "If all lifetimes have not been filled in by applying the three elision rules then "
 "you will get a compiler error telling you to add annotations manually."
 msgstr ""
+"Si toutes les durées de vie n'ont pas été renseignées en appliquant les trois "
+"règles d'élision, vous obtiendrez une erreur du compilateur vous demandant "
+"d'ajouter des annotations manuellement."
 
 #: src/lifetimes/struct-lifetimes.md
 #, fuzzy
@@ -11521,11 +11742,11 @@ msgstr ""
 
 #: src/lifetimes/struct-lifetimes.md
 msgid "\"The quick brown fox jumps over the lazy dog.\""
-msgstr ""
+msgstr "\"Le renard marron rapide saute au-dessus du chient paresseux.\""
 
 #: src/lifetimes/struct-lifetimes.md
 msgid "// drop(doc);\n"
-msgstr ""
+msgstr "// drop(doc);\n"
 
 #: src/lifetimes/struct-lifetimes.md
 #, fuzzy
@@ -11587,6 +11808,11 @@ msgid ""
 "than it seems! This illustrates a common parsing pattern, passing slices of data. "
 "The underlying data itself is never copied."
 msgstr ""
+"Dans cet exercice, vous allez construire un analyseur pour l'[encodage binaire "
+"protobuf](https://protobuf.dev/programming-guides/encoding/). Ne vous inquiétez "
+"pas, c'est plus simple qu'il n'y paraît ! Cela illustre un pattern d'analyse "
+"courant : passer des tranches de données. Les données sous-jacentes elles-mêmes "
+"ne sont jamais copiées."
 
 #: src/lifetimes/exercise.md
 msgid ""
@@ -11595,15 +11821,19 @@ msgid ""
 "this exercise, we'll encode that information into `match` statements in functions "
 "that get called for each field."
 msgstr ""
+"Analyser complètement un message protobuf nécessite de connaître les types des "
+"champs, indexés par leurs numéros de champ. Cela est généralement fourni dans un "
+"fichier `proto`. Dans cet exercice, nous encoderons ces informations dans des "
+"instructions `match` dans des fonctions appelées pour chaque champ."
 
 #: src/lifetimes/exercise.md
 #, fuzzy
 msgid "We'll use the following proto:"
-msgstr "Vous pouvez utiliser le fichier `Cargo.toml` suivant :"
+msgstr "Nous utiliserons le proto suivant :"
 
 #: src/lifetimes/exercise.md
 msgid "Messages"
-msgstr ""
+msgstr "Messages"
 
 #: src/lifetimes/exercise.md
 msgid ""
@@ -11613,6 +11843,12 @@ msgid ""
 "the payload should be determined from the byte stream. These are combined into a "
 "single integer, as decoded in `unpack_tag` below."
 msgstr ""
+"Un message proto est encodé comme une série de champs, l'un après l'autre. "
+"Chacun est implémenté comme une « étiquette » (tag) suivie de la valeur. "
+"L'étiquette contient un numéro de champ (par ex. `2` pour le champ `id` d'un "
+"message `Person`) et un type de fil (wire type) définissant comment la charge "
+"utile doit être déterminée à partir du flux d'octets. Ces éléments sont combinés "
+"en un seul entier, tel que décodé dans `unpack_tag` ci-dessous."
 
 #: src/lifetimes/exercise.md
 msgid "Varint"
@@ -11623,22 +11859,29 @@ msgid ""
 "Integers, including the tag, are represented with a variable-length encoding "
 "called VARINT. Luckily, `parse_varint` is defined for you below."
 msgstr ""
+"Les entiers, y compris l'étiquette (tag), sont représentés avec un encodage à "
+longueur variable appelé VARINT. Heureusement, `parse_varint` est défini pour "
+"vous ci-dessous."
 
 #: src/lifetimes/exercise.md
 #, fuzzy
 msgid "Wire Types"
-msgstr "Types scalaires"
+msgstr "Types de fil (Wire Types)"
 
 #: src/lifetimes/exercise.md
 msgid ""
 "Proto defines several wire types, only two of which are used in this exercise."
 msgstr ""
+"Proto définit plusieurs types de fil (Wire type0, dont seulement deux sont "
+"utilisés dans cet exercice."
 
 #: src/lifetimes/exercise.md
 msgid ""
 "The `Varint` wire type contains a single varint, and is used to encode proto "
 "values of type `int32` such as `Person.id`."
 msgstr ""
+"Le type de fil `Varint` contient un seul varint et est utilisé pour encoder des "
+"valeurs proto de type `int32` telles que `Person.id`."
 
 #: src/lifetimes/exercise.md
 msgid ""
@@ -11648,26 +11891,35 @@ msgid ""
 "sub-messages such as `Person.phones`, where the payload contains an encoding of "
 "the sub-message."
 msgstr ""
+"Le type de fil `Len` contient une longueur exprimée en varint, suivie d'une "
+"charge utile de ce nombre d'octets. Cela est utilisé pour encoder des valeurs "
+"proto de type `string` telles que `Person.name`. Il est également utilisé pour "
+"encoder des valeurs proto contenant des sous-messages tels que `Person.phones`, "
+"où la charge utile contient un encodage du sous-message."
 
 #: src/lifetimes/exercise.md
 msgid ""
 "The given code also defines callbacks to handle `Person` and `PhoneNumber` "
 "fields, and to parse a message into a series of calls to those callbacks."
 msgstr ""
+"Le code fourni définit également des callbacks pour gérer les champs `Person` et "
+"`PhoneNumber`, et pour analyser un message en une série d'appels à ces rappels."
 
 #: src/lifetimes/exercise.md
 msgid ""
 "What remains for you is to implement the `parse_field` function and the "
 "`ProtoMessage` trait for `Person` and `PhoneNumber`."
 msgstr ""
+"Ce qu'il vous reste à faire est d'implémenter la fonction `parse_field` et "
+"le trait `ProtoMessage` pour `Person` et `PhoneNumber`."
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "/// A wire type as seen on the wire.\n"
-msgstr ""
+msgstr "/// Un type de fil comme observé sur le fil.\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "/// The Varint WireType indicates the value is a single VARINT.\n"
-msgstr ""
+msgstr "/// Le WireType Varint indique que la valeur est un seul VARINT.\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid ""
@@ -11677,6 +11929,11 @@ msgid ""
 "    /// The Len WireType indicates that the value is a length represented as a\n"
 "    /// VARINT followed by exactly that number of bytes.\n"
 msgstr ""
+"// Le WireType I64 indique que la valeur est précisément 8 octets en\n"
+"    // ordre little-endian contenant un entier signé 64 bits ou un type double.\n"
+"    //I64,  -- pas nécessaire pour cet exercice\n"
+"    /// Le WireType Len indique que la valeur est une longueur représentée comme\n"
+"    /// un VARINT suivi exactement de ce nombre d'octets.\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid ""
@@ -11684,90 +11941,96 @@ msgid ""
 "    // little-endian order containing a 32-bit signed integer or float type.\n"
 "    //I32,  -- not needed for this exercise\n"
 msgstr ""
+"// Le WireType I32 indique que la valeur est précisément 4 octets en\n"
+"    // ordre little-endian contenant un entier signé 32 bits ou un type float.\n"
+"    //I32,  -- pas nécessaire pour cet exercice\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "/// A field's value, typed based on the wire type.\n"
-msgstr ""
+msgstr "/// La valeur d'un champ, typée selon le type de fil.\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "//I64(i64),  -- not needed for this exercise\n"
-msgstr ""
+msgstr "//I64(i64),  -- pas nécessaire pour cet exercice\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "//I32(i32),  -- not needed for this exercise\n"
-msgstr ""
+msgstr "//I32(i32),  -- pas nécessaire pour cet exercice\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "/// A field, containing the field number and its value.\n"
-msgstr ""
+msgstr "/// Un champ contenant le numéro de champ et sa valeur.\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "//1 => WireType::I64,  -- not needed for this exercise\n"
-msgstr ""
+msgstr "//1 => WireType::I64,  -- pas nécessaire pour cet exercice\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "//5 => WireType::I32,  -- not needed for this exercise\n"
-msgstr ""
+msgstr "//5 => WireType::I32,  -- pas nécessaire pour cet exercice\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "\"Invalid wire type: {value}\""
-msgstr ""
+msgstr "\"Type de fil invalide: {value}\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "\"Expected string to be a `Len` field\""
-msgstr ""
+msgstr "\"Le champ string devrait être de type `Len`\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 #, fuzzy
 msgid "\"Invalid string\""
-msgstr "String"
+msgstr "\"Chaîne invalide\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "\"Expected bytes to be a `Len` field\""
-msgstr ""
+msgstr "\"Les octets devraient être de type `Len`\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "\"Expected `u64` to be a `Varint` field\""
-msgstr ""
+msgstr "\"Le champ `u64` devrait être de type `Varint`\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "/// Parse a VARINT, returning the parsed value and the remaining bytes.\n"
-msgstr ""
+msgstr"/// Parse un VARINT, retourne la valeur parsée et les octets restants.\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "\"Not enough bytes for varint\""
-msgstr ""
+msgstr "\"Pas assez d'octets pour le varint\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid ""
 "// This is the last byte of the VARINT, so convert it to\n"
 "            // a u64 and return it.\n"
 msgstr ""
+"// C'est le dernier octet du VARINT, donc convertissez-le en\n"
+"            // u64 et retournez-le.\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "// More than 7 bytes is invalid.\n"
-msgstr ""
+msgstr "// Plus que 7 octets est invalide.\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "\"Too many bytes for varint\""
-msgstr ""
+msgstr "\"Trop d'octets pour le varint\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "/// Convert a tag into a field number and a WireType.\n"
-msgstr ""
+msgstr "/// Convertissez une étiquette en un numéro de champ et un WireType.\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "/// Parse a field, returning the remaining bytes\n"
-msgstr ""
+msgstr "/// Parsez un champ, retournez les octets restants.\n"
 
 #: src/lifetimes/exercise.md
 msgid ""
 "\"Based on the wire type, build a Field, consuming as many bytes as necessary.\""
-msgstr ""
+msgstr "\"Selon le type de fil, construisez un Field qui consomme le nombre "
+"nécessaire d'octets.\""
 
 #: src/lifetimes/exercise.md
 msgid "\"Return the field, and any un-consumed bytes.\""
-msgstr ""
+msgstr"\"Retournez le champ et les octets non consommés.\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid ""
@@ -11776,51 +12039,55 @@ msgid ""
 "///\n"
 "/// The entire input is consumed.\n"
 msgstr ""
+"/// Parse un message dans les données fournies, appelant `T::add_field` pour\n"
+"/// chaque champ du message.\n"
+"///\n"
+"/// L'intégralité de l'entrée est consommée.\n"
 
 #: src/lifetimes/exercise.md
 msgid "// TODO: Implement ProtoMessage for Person and PhoneNumber.\n"
-msgstr ""
+msgstr"// TODO: Implémentez ProtoMessage pour Person et PhoneNumber.\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md src/modules/exercise.md
 #: src/modules/solution.md src/testing/unit-tests.md src/testing/solution.md
 msgid "\"\""
-msgstr ""
+msgstr "\"\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "\"beautiful name\""
-msgstr ""
+msgstr "\"magnifique nom\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "\"Evan\""
-msgstr ""
+msgstr "\"Evan\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "\"+1234-777-9090\""
-msgstr ""
+msgstr "\"+1234-777-9090\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "\"home\""
-msgstr ""
+msgstr "\"domicile\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "// Put that all together into a single parse.\n"
-msgstr ""
+msgstr "// Rassemblez tout cela dans un seul parse.\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "\"maxwell\""
-msgstr ""
+msgstr "\"maxwell\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "\"+1202-555-1212\""
-msgstr ""
+msgstr "\"+1202-555-1212\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "\"+1800-867-5308\""
-msgstr ""
+msgstr"\"+1800-867-5308\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "\"mobile\""
-msgstr ""
+msgstr "\"mobile\""
 
 #: src/lifetimes/exercise.md
 msgid ""
@@ -11830,60 +12097,71 @@ msgid ""
 "simplicity in this exercise we panic if any errors are encountered. On day 4 "
 "we'll cover error handling in Rust in more detail."
 msgstr ""
+"Dans cet exercice, il existe divers cas où l'analyse protobuf peut échouer, par "
+"ex. si vous essayez d'analyser un `i32` alors qu'il reste moins de 4 octets dans "
+"le tampon de données. Dans du code Rust normal, nous gérerions cela avec l'enum "
+"`Result`, mais par souci de simplicité dans cet exercice, nous paniquons si des "
+"erreurs sont rencontrées. Au jour 4, nous aborderons la gestion des erreurs en "
+"Rust plus en détail."
 
 #: src/lifetimes/solution.md
 msgid "// cast for simplicity\n"
-msgstr ""
+msgstr "// castez pour plus de simplicité\n"
 
 #: src/lifetimes/solution.md
 msgid "// skip everything else\n"
-msgstr ""
+msgstr "// ignorez tout le reste\n"
 
 #: src/welcome-day-4.md
 #, fuzzy
 msgid "Welcome to Day 4"
-msgstr "Bienvenue au jour 1"
+msgstr "Bienvenue au jour 4"
 
 #: src/welcome-day-4.md
 msgid "We have mastered the core language and its unique safety model:"
-msgstr ""
+msgstr "Nous avons maîtrisé le langage et son modèle de sécurité unique :"
 
 #: src/welcome-day-4.md
 msgid "**Foundations & Abstraction:** Traits, generics, and the standard library."
-msgstr ""
+msgstr "**Fondations et abstraction :** Traits, génériques et la bibliothèque standard."
 
 #: src/welcome-day-4.md
 msgid "**Ownership:** Move semantics and the `Drop` trait."
-msgstr ""
+msgstr "**Ownership** la sémantique des traits `Move` et `Drop`"
 
 #: src/welcome-day-4.md
 msgid "**Memory Management:** Borrowing rules (`&` vs `&mut`) and lifetimes."
-msgstr ""
+msgstr "**Management de la mémoire :** Règles de borrowing (`&` vs `&mut`) et les "
+durées de vie."
 
 #: src/welcome-day-4.md
 msgid "**Smart Pointers:** `Box`, `Rc`, and `RefCell` for complex data structures."
-msgstr ""
+msgstr "**Les pointeurs intelligents** `Box`, `Rc` et `RefCell` pour les structures "
+"de données complexes."
 
 #: src/welcome-day-4.md
 msgid ""
 "You now understand how Rust guarantees memory safety at compile time! Today we "
 "focus on applying this knowledge to build robust, large-scale applications."
 msgstr ""
+"Vous comprenez maintenant comment Rust garantit la sûreté de la mémoire à la "
+"compilation ! Aujourd'hui nous allons nous concentrer sur l'application de cette "
+"connaissance pour construire des application robustes et à grande échelle."
 
 #: src/iterators.md
 #, fuzzy
 msgid "Iterator Trait"
-msgstr "Itérateurs"
+msgstr "Le trait Iterator"
 
 #: src/iterators.md
 #, fuzzy
 msgid "Iterator Helper Methods"
-msgstr "`Itérateur`"
+msgstr "Méthodes utilitaires d'Iterator"
 
 #: src/iterators.md
 #, fuzzy
 msgid "collect"
-msgstr "Select"
+msgstr "collect"
 
 #: src/iterators.md
 #, fuzzy
@@ -11893,38 +12171,40 @@ msgstr "`IntoIterator`"
 #: src/iterators/motivation.md
 #, fuzzy
 msgid "Motivating Iterators"
-msgstr "Itérateurs"
+msgstr "Motivation pour les itérateurs"
 
 #: src/iterators/motivation.md
 msgid "If you want to iterate over the contents of an array, you'll need to define:"
-msgstr ""
+msgstr "Si vous voulez itérer sur le contenu d'un tableau, vous devrez définir :"
 
 #: src/iterators/motivation.md
 msgid ""
 "Some state to keep track of where you are in the iteration process, e.g. an index."
-msgstr ""
+msgstr "Un état pour suivre où vous en être dans le processus d'itération, i.e un index."
 
 #: src/iterators/motivation.md
 msgid "A condition to determine when iteration is done."
-msgstr ""
+msgstr "Une condition pour déterminer quand l'itération est terminée."
 
 #: src/iterators/motivation.md
 msgid "Logic for updating the state of iteration each loop."
-msgstr ""
+msgstr "Une logique pour mettre à jour l'état d'itération à chaque tour de boucle."
 
 #: src/iterators/motivation.md
 msgid "Logic for fetching each element using that iteration state."
-msgstr ""
+msgstr "Une logique pour récupérer chaque élément en utilisant cet état d'itération."
 
 #: src/iterators/motivation.md
 msgid "In a C-style for loop you declare these things directly:"
-msgstr ""
+msgstr "Dans une boucle `for` comme en C, vous déclarez ces éléments directement :"
 
 #: src/iterators/motivation.md
 msgid ""
 "In Rust we bundle this state and logic together into an object known as an "
 "\"iterator\"."
 msgstr ""
+"En Rust, nous regroupons cet état et cette logique dans un objet appelé "
+"\"itérateur\"."
 
 #: src/iterators/motivation.md
 msgid ""
@@ -11933,12 +12213,19 @@ msgid ""
 "requires some state and some logic, that way on the next slide we can show how an "
 "iterator bundles these together."
 msgstr ""
+"Cette diapositive donne le contexte de ce que font les itérateurs Rust sous le "
+"capot. Nous utilisons la construction (espérons-le) familière d'une boucle `for` "
+"comme en C pour montrer comment l'itération nécessite un état et une logique ; "
+"ainsi, dans la diapositive suivante, nous pouvons montrer comment un itérateur les "
+"regroupe."
 
 #: src/iterators/motivation.md
 msgid ""
 "Rust doesn't have a C-style `for` loop, but we can express the same thing with "
 "`while`:"
 msgstr ""
+"Rust n'a pas une boucle `for` comme en C, mais nous pouvons exprimer la même "
+"chose avec `while` :"
 
 #: src/iterators/motivation.md
 msgid ""
@@ -11946,12 +12233,18 @@ msgid ""
 "use a pointer to the front and a pointer to the end of the array and then compare "
 "those pointers to determine when the loop should end."
 msgstr ""
+"Il existe une autre façon d'exprimer l'itération sur un tableau en utilisant "
+"`for` en C et C++ : vous pouvez utiliser un pointeur vers le début et un pointeur "
+"vers la fin du tableau, puis comparer ces pointeurs pour déterminer quand la "
+"boucle doit se terminer."
 
 #: src/iterators/motivation.md
 msgid ""
 "If students ask, you can point out that this is how Rust's slice and array "
 "iterators work under the hood (though implemented as a Rust iterator)."
 msgstr ""
+"Si les apprenants le demandent, vous pouvez faire remarquer que c'est comme ça que "
+"Rust fonctionne sous le capot (bien qu'implémentés comme un itérateur Rust)."
 
 #: src/iterators/iterator.md
 msgid ""
@@ -11960,12 +12253,18 @@ msgid ""
 "if we wanted to create an iterator that can produce the elements of a slice it "
 "might look something like this:"
 msgstr ""
+"Le trait [`Iterator`](https://doc.rust-lang.org/std/iter/trait.Iterator.html) "
+"définit comment un objet peut être utilisé pour produire une séquence de valeurs. "
+"Par exemple, si nous voulions créer un itérateur capable de produire les éléments "
+"d'une tranche, cela pourrait ressembler à ceci :"
 
 #: src/iterators/iterator.md
 msgid ""
 "The `SliceIter` example implements the same logic as the C-style `for` loop "
 "demonstrated on the last slide."
 msgstr ""
+"L'exemple `SliceIter` implémente la même logique que la boucle `for` à la C "
+"démontrée dans la diapositive précédente."
 
 #: src/iterators/iterator.md
 msgid ""
@@ -11973,6 +12272,9 @@ msgid ""
 "initializes the struct but does not otherwise do any work. No work happens until "
 "the `next` method is called."
 msgstr ""
+"Signalez aux apprenants que les itérateurs sont paresseux : créer l'itérateur "
+"initialise simplement la structure mais n'effectue aucun travail. Aucun travail "
+"n'est effectué tant que la méthode `next` n'est pas appelée."
 
 #: src/iterators/iterator.md
 msgid ""
@@ -11980,6 +12282,10 @@ msgid ""
 "will produce values forever. For example, a half open range like `0..` will keep "
 "going until integer overflow occurs."
 msgstr ""
+"Les itérateurs n'ont pas besoin d'être finis ! Il est tout à fait valide d'avoir "
+"un itérateur qui produira des valeurs indéfiniment. Par exemple, un intervalle "
+"semi-ouvert comme `0..` continuera jusqu'à ce qu'un dépassement d'entier se "
+"produise."
 
 #: src/iterators/iterator.md
 msgid ""
@@ -11988,18 +12294,27 @@ msgid ""
 "real version uses pointers under the hood instead of an index in order to "
 "eliminate bounds checks."
 msgstr ""
+"La « vraie » version de `SliceIter` est le type [`slice::Iter`](https://doc.rust-"
+"lang.org/stable/std/slice/struct.Iter.html) dans la bibliothèque standard, "
+"cependant la vraie version utilise des pointeurs sous le capot plutôt qu'un index "
+"afin d'éliminer les vérifications de bornes."
 
 #: src/iterators/iterator.md
 msgid ""
 "The `SliceIter` example is a good example of a struct that contains a reference "
 "and therefore uses lifetime annotations."
 msgstr ""
+"`SliceIter` est un bon exemple d'une structure qui contient une référence et "
+"utilise pour cela des annotations de durée de vie."
 
 #: src/iterators/iterator.md
 msgid ""
 "You can also demonstrate adding a generic parameter to `SliceIter` to allow it to "
 "work with any kind of slice (not just `&[i32]`)."
 msgstr ""
+"Vous pouvez également démontrer l'ajout d'un paramètre générique à `SliceIter` "
+"pour lui permettre de fonctionner avec n'importe quel type de tranche (pas "
+"seulement `&[i32]`)."
 
 #: src/iterators/helpers.md
 msgid ""
@@ -12007,26 +12322,29 @@ msgid ""
 "`Iterator` trait provides 70+ helper methods that can be used to build customized "
 "iterators."
 msgstr ""
+"En plus de la méthode `next` qui définit le comportement d'un itérateur, le trait "
+"`Iterator` fournit plus de 70 méthodes utilitaires qui peuvent être utilisées pour "
+"construire des itérateurs personnalisés."
 
 #: src/iterators/helpers.md
 msgid "// Create a range from 1 to 10\n"
-msgstr ""
+msgstr "// Créez un intervalle de 1 à 10\n"
 
 #: src/iterators/helpers.md
 msgid "// Keep only even numbers\n"
-msgstr ""
+msgstr "// Ne gardez que les nombres pairs\n"
 
 #: src/iterators/helpers.md
 msgid "// Square each number\n"
-msgstr ""
+msgstr "// Elevez chaque nombre au carré\n"
 
 #: src/iterators/helpers.md
 msgid "// Sum up all the squared numbers\n"
-msgstr ""
+msgstr "// Faites la somme de tous les nombres au carré\n"
 
 #: src/iterators/helpers.md
 msgid "\"The sum of squares of even numbers from 1 to 10 is: {}\""
-msgstr ""
+msgstr "\"La somme des carrés des nombres pairs de 1 à 10 est : {}\""
 
 #: src/iterators/helpers.md
 #, fuzzy
@@ -12038,26 +12356,32 @@ msgstr ""
 "Le trait `Iterator` implémente de nombreuses opérations de programmation "
 "fonctionnelles courantes sur les collections (par exemple, `map`, `filter`, "
 "`reduce`, etc.). C'est le trait où vous pouvez trouver toute la documentation à "
-"propos d'eux. Dans Rust, ces fonctions devraient produire le code aussi efficace "
-"que l'impératif équivalent implémentations."
+"propos d'eux."
 
 #: src/iterators/helpers.md
 msgid ""
 "Many of these helper methods take the original iterator and produce a new "
 "iterator with different behavior. These are know as \"iterator adapter methods\"."
 msgstr ""
+"Nombre de ces méthodes utilitaires prennent l'itérateur originel et en produisent "
+"un nouveau ayant un comportement différent. Elles sont connues sous l'appellation de "
+"\"méthodes adaptatrices d'itérateur\"."
 
 #: src/iterators/helpers.md
 msgid ""
 "Some methods, like `sum` and `count`, consume the iterator and pull all of the "
 "elements out of it."
 msgstr ""
+"Certaines méthodes, comme `sum` et `count` consomment l'itérateur et en extraient "
+"tous les éléments."
 
 #: src/iterators/helpers.md
 msgid ""
 "These methods are designed to be chained together so that it's easy to build a "
 "custom iterator that does exactly what you need."
 msgstr ""
+"Ces méthodes sont conçues pour être chaînées afin de faciliter la construction "
+"d'un itérateur qui fait ce dont vous avez besoin."
 
 #: src/iterators/helpers.md
 msgid ""
@@ -12065,6 +12389,10 @@ msgid ""
 "iterators made by combining many adapter methods will still result in code as "
 "efficient as equivalent imperative implementations."
 msgstr ""
+"Les itérateurs Rust sont très efficients et hautement optimisables. Même les "
+"itérateurs complexes produits par la combinaison de plusieurs méthodes adaptatrices "
+"vont donner un code aussi efficient qu'un équivalent qu'une implémentation "
+"impérative."
 
 #: src/iterators/collect.md
 #, fuzzy
@@ -12079,7 +12407,7 @@ msgstr ""
 
 #: src/iterators/collect.md
 msgid "\"prime_squares: {prime_squares:?}\""
-msgstr ""
+msgstr "\"prime_squares: {prime_squares:?}\""
 
 #: src/iterators/collect.md
 msgid ""
@@ -12087,24 +12415,36 @@ msgid ""
 "that produce key-value pairs (i.e. a two-element tuple) can also be collected "
 "into `HashMap` and `BTreeMap`."
 msgstr ""
+"N'importe quel itérateur peut être collecté dans un `Vec`, `VecDeque` ou "
+"`HashSet`. Les itérateurs qui produisent des paires clé-valeur (c'est-à-dire un "
+"tuple à deux éléments) peuvent également être collectés dans `HashMap` et "
+"`BTreeMap`."
 
 #: src/iterators/collect.md
 msgid ""
 "Show the students the definition for `collect` in the standard library docs. "
 "There are two ways to specify the generic type `B` for this method:"
 msgstr ""
+"Montrez aux apprenants la définition de `collect` dans la documentation de la "
+"bibliothèque standard. Il y a deux façons de spécifier le type générique `B` pour "
+"cette méthode :"
 
 #: src/iterators/collect.md
 msgid ""
 "With the \"turbofish\": `some_iterator.collect::<COLLECTION_TYPE>()`, as shown. "
 "The `_` shorthand used here lets Rust infer the type of the `Vec` elements."
 msgstr ""
+"Avec le « turbofish » : `some_iterator.collect::<COLLECTION_TYPE>()`, comme "
+"montré. Le raccourci `_` utilisé ici permet à Rust d'inférer le type des éléments "
+"du `Vec`."
 
 #: src/iterators/collect.md
 msgid ""
 "With type inference: `let prime_squares: Vec<_> = some_iterator.collect()`. "
 "Rewrite the example to use this form."
 msgstr ""
+"Avec l'inférence de type : `let prime_squares: Vec<_> = some_iterator.collect()`. "
+"Réécrivez l'exemple pour utiliser cette forme."
 
 #: src/iterators/collect.md
 #, fuzzy
@@ -12113,8 +12453,10 @@ msgid ""
 "[`FromIterator`](https://doc.rust-lang.org/std/iter/trait.FromIterator.html) "
 "trait, which defines how each type of collection gets built from an iterator."
 msgstr ""
-"Vous pouvez implémenter le trait [`Iterator`](https://doc.rust-lang.org/std/iter/"
-"trait.Iterator.html) sur vos propres types :"
+"Si les apprenants sont curieux de savoir comment ça fonctionne, vous pouvez aborder "
+"le trait [`FromIterator`](https://doc.rust-lang.org/std/iter/trait.FromIterator."
+"html), qui définit comment chaque type de collection est construit à partir "
+"d'un itérateur."
 
 #: src/iterators/collect.md
 #, fuzzy
@@ -12123,9 +12465,10 @@ msgid ""
 "etc., there are also more specialized implementations which let you do cool "
 "things like convert an `Iterator<Item = Result<V, E>>` into a `Result<Vec<V>, E>`."
 msgstr ""
-"Il existe également des implémentations qui vous permettent de faire des choses "
-"sympas comme convertir un `Iterator<Item = Result<V, E>>` en un `Result<Vec<V>, "
-"E>`."
+"En plus des implémentations de base de `FromIterator` pour `Vec`, `HashMap`, "
+"etc., il existe également des implémentations plus spécialisées qui permettent "
+"de faire des choses intéressantes comme convertir un "
+"`Iterator<Item = Result<V, E>>` en `Result<Vec<V>, E>`."
 
 #: src/iterators/collect.md
 msgid ""
@@ -12133,6 +12476,9 @@ msgid ""
 "generic over its return type. This makes it harder for the compiler to infer the "
 "correct type in many cases."
 msgstr ""
+"La raison pour laquelle des annotations de type sont souvent nécessaires avec "
+"`collect` est qu'il est générique sur son type de retour. Cela rend plus difficile "
+"pour le compilateur d'inférer le type correct dans de nombreux cas."
 
 #: src/iterators/intoiterator.md
 #, fuzzy
@@ -12143,12 +12489,13 @@ msgid ""
 "automatically by the `for` loop."
 msgstr ""
 "Le trait `Iterator` vous indique comment _itérer_ une fois que vous avez créé un "
-"itérateur. Le trait connexe \"IntoIterator\" vous indique comment créer "
-"l'itérateur :"
+"itérateur. Le trait associé [`IntoIterator`](https://doc.rust-lang.org/std/iter/"
+"trait.IntoIterator.html) définit comment créer un itérateur pour un type. Il est "
+"utilisé automatiquement par la boucle `for`."
 
 #: src/iterators/intoiterator.md
 msgid "\"point = {x}, {y}\""
-msgstr ""
+msgstr "\"point = {x}, {y}\""
 
 #: src/iterators/intoiterator.md
 #, fuzzy
@@ -12160,9 +12507,9 @@ msgid ""
 msgstr ""
 "`IntoIterator` est le trait qui fait fonctionner les boucles. Il est implémenté "
 "par des types de collection tels que `Vec<T>` et leurs références telles que "
-"`&Vec<T>` et `&[T]`. Les gammes l'implémentent également. C'est pourquoi vous "
-"pouvez itérer sur un vecteur avec `for i in some_vec { .. }` mais `some_vec."
-"next()` n'existe pas."
+"`&Vec<T>` et `&[T]`. Les intervalles l'implémentent également. C'est pourquoi "
+"vous pouvez itérer sur un vecteur avec `for i in some_vec { .. }` mais "
+"`some_vec.next()` n'existe pas."
 
 #: src/iterators/intoiterator.md
 #, fuzzy
@@ -12170,8 +12517,8 @@ msgid ""
 "Click through to the docs for `IntoIterator`. Every implementation of "
 "`IntoIterator` must declare two types:"
 msgstr ""
-"La syntaxe ici signifie que chaque implémentation de `IntoIterator` doit déclarer "
-"deux types :"
+"Consultez la documentation de `IntoIterator`. Chaque implémentation de "
+"`IntoIterator` doit déclarer deux types :"
 
 #: src/iterators/intoiterator.md
 #, fuzzy
@@ -12194,13 +12541,15 @@ msgstr ""
 
 #: src/iterators/intoiterator.md
 msgid "The example iterates over all combinations of x and y coordinates."
-msgstr ""
+msgstr "L'exemple itère sur toutes les combinaisons des coordonnées x et y."
 
 #: src/iterators/intoiterator.md
 msgid ""
 "Try iterating over the grid twice in `main`. Why does this fail? Note that "
 "`IntoIterator::into_iter` takes ownership of `self`."
 msgstr ""
+"Essayez d'itérer sur la grille deux fois dans `main`. Pourquoi cela échoue-t-il ? "
+"Notez que `IntoIterator::into_iter` prend possession de `self`."
 
 #: src/iterators/intoiterator.md
 msgid ""
@@ -12209,6 +12558,10 @@ msgid ""
 "`GridRefIter` is available [in this playground](https://play.rust-lang.org/?"
 "version=stable&mode=debug&edition=2024&gist=947e371c7295af758504f01f149023a1)."
 msgstr ""
+"Résolvez ce problème en implémentant `IntoIterator` pour `&Grid` et en créant un "
+"`GridRefIter` qui itère par référence. Une version avec `GridIter` et "
+"`GridRefIter` est disponible [dans ce playground](https://play.rust-lang.org/?"
+"version=stable&mode=debug&edition=2024&gist=947e371c7295af758504f01f149023a1)."
 
 #: src/iterators/intoiterator.md
 msgid ""
@@ -12217,6 +12570,10 @@ msgid ""
 "vector. Use `for e in &some_vector` instead, to iterate over references to "
 "elements of `some_vector`."
 msgstr ""
+"Le même problème peut survenir pour les types de la bibliothèque standard : "
+"`for e in some_vector` prendra possession de `some_vector` et itérera sur les "
+"éléments possédés de ce vecteur. Utilisez `for e in &some_vector` à la place, "
+"pour itérer sur des références vers les éléments de `some_vector`."
 
 #: src/iterators/exercise.md
 #, fuzzy
@@ -12225,8 +12582,9 @@ msgid ""
 "the [`Iterator`](https://doc.rust-lang.org/std/iter/trait.Iterator.html) trait to "
 "implement a complex calculation."
 msgstr ""
-"Vous pouvez implémenter le trait [`Iterator`](https://doc.rust-lang.org/std/iter/"
-"trait.Iterator.html) sur vos propres types :"
+"Dans cet exercice, vous devrez trouver et utiliser certaines des méthodes "
+"fournies dans le trait [`Iterator`](https://doc.rust-lang.org/std/iter/trait."
+"Iterator.html) pour implémenter un calcul complexe."
 
 #: src/iterators/exercise.md
 #, fuzzy
@@ -12235,7 +12593,8 @@ msgid ""
 "Use an iterator expression and `collect` the result to construct the return value."
 msgstr ""
 "Copiez le code suivant sur <https://play.rust-lang.org/> et faites les tests "
-"passer. Essayez d'éviter d'attribuer un \"Vec\" à vos résultats intermédiaires :"
+"passer. Utilisez une expression d'itérateur et `collect` le résultat pour "
+"construire la valeur de retour."
 
 #: src/iterators/exercise.md src/iterators/solution.md
 msgid ""
@@ -12244,32 +12603,36 @@ msgid ""
 "///\n"
 "/// Element `n` of the result is `values[(n+offset)%len] - values[n]`.\n"
 msgstr ""
+"/// Calcule les différences entre les éléments de `values` décalés de `offset`,\n"
+"/// en bouclant de la fin de `values` au début.\n"
+"///\n"
+"/// L'élément `n` du résultat est `values[(n+offset)%len] - values[n]`.\n"
 
 #: src/modules.md src/modules/paths.md
 msgid "use, super, self"
-msgstr ""
+msgstr "use, super, self"
 
 #: src/modules/modules.md
 #, fuzzy
 msgid "We have seen how `impl` blocks let us namespace functions to a type."
 msgstr ""
-"Nous avons vu comment les blocs `impl` nous permettent de faire fonctionner "
-"l'espace de noms sur un type."
+"Nous avons vu comment les blocs `impl` nous permettent de rattacher des fonctions "
+"à un type."
 
 #: src/modules/modules.md
 #, fuzzy
 msgid "Similarly, `mod` lets us namespace types and functions:"
 msgstr ""
-"De même, `mod` nous permet d'utiliser des types et des fonctions d'espace de "
-"noms :"
+"De même, `mod` nous permet d'organiser les types et les fonctions dans des espaces "
+"de noms :"
 
 #: src/modules/modules.md
 msgid "\"In the foo module\""
-msgstr ""
+msgstr "\"Dans le module foo\""
 
 #: src/modules/modules.md
 msgid "\"In the bar module\""
-msgstr ""
+msgstr "\"Dans le module bar\""
 
 #: src/modules/modules.md
 #, fuzzy
@@ -12277,8 +12640,8 @@ msgid ""
 "Packages provide functionality and include a `Cargo.toml` file that describes how "
 "to build a bundle of 1+ crates."
 msgstr ""
-"Les packages fournissent des fonctionnalités et incluent un fichier `Cargo.toml` "
-"qui décrit comment créer un ensemble de 1+ caisses."
+"Les paquets fournissent des fonctionnalités et incluent un fichier `Cargo.toml` "
+"qui décrit comment construire un ensemble d'un ou plusieurs crates."
 
 #: src/modules/modules.md
 #, fuzzy
@@ -12286,8 +12649,8 @@ msgid ""
 "Crates are a tree of modules, where a binary crate creates an executable and a "
 "library crate compiles to a library."
 msgstr ""
-"Les caisses sont un arbre de modules, où une caisse binaire crée un exécutable et "
-"une caisse de bibliothèque se compile en une bibliothèque."
+"Les crates sur un arvre de modules, où un crate binaire crée un exécutable et "
+"un crate bibliothèque se compile en une bibliothèque."
 
 #: src/modules/modules.md
 #, fuzzy
@@ -12298,7 +12661,8 @@ msgstr ""
 
 #: src/modules/filesystem.md
 msgid "Omitting the module content will tell Rust to look for it in another file:"
-msgstr ""
+msgstr "Omettre le contenu du module indiquera à Rust de le chercher dans un autre "
+"fichier."
 
 #: src/modules/filesystem.md
 msgid ""
@@ -12306,16 +12670,19 @@ msgid ""
 "Similarly, a `garden::vegetables` module can be found at `src/garden/vegetables."
 "rs`."
 msgstr ""
+"Cela indique à Rust que le contenu du module `garden` se trouve dans `src/garden."
+"rs`. De même, un module `garden::vegetables` peut être trouvé dans `src/garden/"
+"vegetables.rs`."
 
 #: src/modules/filesystem.md
 #, fuzzy
 msgid "The `crate` root is in:"
-msgstr "La racine `crate` se trouve dans :"
+msgstr "La racine du `crate` se trouve dans :"
 
 #: src/modules/filesystem.md
 #, fuzzy
 msgid "`src/lib.rs` (for a library crate)"
-msgstr "`src/lib.rs` (pour une caisse de bibliothèque)"
+msgstr "`src/lib.rs` (pour un crate bibliothèque)"
 
 #: src/modules/filesystem.md
 #, fuzzy
@@ -12328,9 +12695,7 @@ msgid ""
 "Modules defined in files can be documented, too, using \"inner doc comments\". "
 "These document the item that contains them -- in this case, a module."
 msgstr ""
-"Les modules définis dans les fichiers peuvent également être documentés à l'aide "
-"de \"commentaires de documentation internes\". Ceux-ci documentent l'élément qui "
-"les contient -- dans ce cas, un module."
+
 
 #: src/modules/filesystem.md
 msgid ""
