@@ -12695,6 +12695,9 @@ msgid ""
 "Modules defined in files can be documented, too, using \"inner doc comments\". "
 "These document the item that contains them -- in this case, a module."
 msgstr ""
+"Les modules définis dans les fichier peuvent aussi être documentés en "
+"utilisant les \"commentaires intra document\". Ils documentent l'item qui "
+"les contient -- dans ce cas, un module."
 
 
 #: src/modules/filesystem.md
@@ -12702,49 +12705,64 @@ msgid ""
 "//! This module implements the garden, including a highly performant germination\n"
 "//! implementation.\n"
 msgstr ""
+"//! Ce module implémente le jardin. Il inclue l'implémentation d'une germination\n"
+"//! ultra performante.\n"
+
 
 #: src/modules/filesystem.md
 msgid "// Re-export types from this module.\n"
-msgstr ""
+msgstr "// Types ré-exportés depuis ce module.\n"
 
 #: src/modules/filesystem.md
 msgid "/// Sow the given seed packets.\n"
-msgstr ""
+msgstr "/// Semez les sachets de graines donnés.\n"
 
 #: src/modules/filesystem.md
 msgid "/// Harvest the produce in the garden that is ready.\n"
-msgstr ""
+msgstr "/// Récoltez les produits du jardin qui sont prêts.\n"
 
 #: src/modules/filesystem.md
 msgid ""
 "Before Rust 2018, modules needed to be located at `module/mod.rs` instead of "
 "`module.rs`, and this is still a working alternative for editions after 2018."
 msgstr ""
+"Avant Rust 2018, les modules devaient être localisés à `module/mod.rs` "
+"au lieu de `module.rs`. Cette alternative est toujours valide pour les éditions "
+"postérieures à 2018."
 
 #: src/modules/filesystem.md
 msgid ""
 "The main reason to introduce `filename.rs` as alternative to `filename/mod.rs` "
 "was because many files named `mod.rs` can be hard to distinguish in IDEs."
 msgstr ""
+"La principale raison d'introduire `filename.rs` comme alternative à "
+"`filename/mod.rs` est que de nombreux fichiers nommés `mod.rs` peuvent être "
+"difficiles à distinguer dans les IDE."
 
 #: src/modules/filesystem.md
 msgid "Deeper nesting can use folders, even if the main module is a file:"
 msgstr ""
+"Un imbrication plus profonde peut utiliser des dossiers, même si le module "
+"principal est un fichier :"
 
 #: src/modules/filesystem.md
 msgid ""
 "The place Rust will look for modules can be changed with a compiler directive:"
 msgstr ""
+"L'emplacement où Rust cherchera les modules peut être modifié avec une "
+"directve de compilateur."
 
 #: src/modules/filesystem.md
 msgid "\"some/path.rs\""
-msgstr ""
+msgstr "\"some/path.rs\""
 
 #: src/modules/filesystem.md
 msgid ""
 "This is useful, for example, if you would like to place tests for a module in a "
 "file named `some_module_test.rs`, similar to the convention in Go."
 msgstr ""
+"Ceci est utile quand, par exemple, vous voulez placer les tests d'un module dans "
+"un fichier nommé `some_module_test.rs`, comme la convention de Go."
 
 #: src/modules/visibility.md
 #, fuzzy
@@ -12761,7 +12779,7 @@ msgstr ""
 #: src/modules/visibility.md
 #, fuzzy
 msgid "Parent and sibling items are always visible."
-msgstr "Les éléments parents et frères sont toujours visibles."
+msgstr "Les éléments parents et adelphes sont toujours visibles."
 
 #: src/modules/visibility.md
 #, fuzzy
@@ -12774,19 +12792,19 @@ msgstr ""
 
 #: src/modules/visibility.md
 msgid "\"outer::private\""
-msgstr ""
+msgstr "\"outer::private\""
 
 #: src/modules/visibility.md
 msgid "\"outer::public\""
-msgstr ""
+msgstr "\"outer::public\""
 
 #: src/modules/visibility.md
 msgid "\"outer::inner::private\""
-msgstr ""
+msgstr "\"outer::inner::private\""
 
 #: src/modules/visibility.md
 msgid "\"outer::inner::public\""
-msgstr ""
+msgstr "\"outer::inner::public\""
 
 #: src/modules/visibility.md
 #, fuzzy
@@ -12832,7 +12850,7 @@ msgstr ""
 
 #: src/modules/encapsulation.md
 msgid "Visibility and Encapsulation"
-msgstr ""
+msgstr "Visibilité et Encapsulation"
 
 #: src/modules/encapsulation.md
 msgid ""
@@ -12841,22 +12859,26 @@ msgid ""
 "modules). This allows us to encapsulate implementation details of struct, "
 "controlling what data and functionality is visible externally."
 msgstr ""
+"Comme les items dans un module, les champs des structures sont également privés par "
+"défaut. Les champs privés sont de même visibles au sein du module (en incluant les "
+"modules enfants). Cela nous permet d'encapsuler les détails d'implémentation d'une "
+"struct, controller quelles données et fonctionalités sont visibles de l'extérieur."
 
 #: src/modules/encapsulation.md
 msgid "\"Is {} big? {}\""
-msgstr ""
+msgstr "\"Is {} big? {}\""
 
 #: src/modules/encapsulation.md
 msgid "\"foo.val = {}\""
-msgstr ""
+msgstr "\"foo.val = {}\""
 
 #: src/modules/encapsulation.md
 msgid "// let foo = Foo { val: 42, is_big: true };\n"
-msgstr ""
+msgstr "// let foo = Foo { val: 42, is_big: true };\n"
 
 #: src/modules/encapsulation.md
 msgid "// println!(\"Is {} big? {}\", foo.val, foo.is_big);\n"
-msgstr ""
+msgstr "// println!(\"Is {} big? {}\", foo.val, foo.is_big);\n"
 
 #: src/modules/encapsulation.md
 msgid ""
@@ -12865,6 +12887,11 @@ msgid ""
 "boundary, so this demonstrates how Rust behaves differently while showing how we "
 "can still achieve encapsulation."
 msgstr ""
+"Cette diapositive démontre que la confidentialité dans les structures est basée "
+"sur les modules. Les apprenants venant de langages orientés objet peuvent être "
+"habitués aux types comme frontière d'encapsulation ; cela démontre donc comment "
+"Rust se comporte différemment tout en montrant comment nous pouvons toujours "
+"atteindre l'encapsulation."
 
 #: src/modules/encapsulation.md
 msgid ""
@@ -12872,12 +12899,18 @@ msgid ""
 "control how it's initialized and enforce any invariants it needs to (e.g. that "
 "`is_big` is only `true` if `val > 100`)."
 msgstr ""
+"Notez comment le champ `is_big` est entièrement contrôlé par `Foo`, permettant "
+"à `Foo` de contrôler son initialisation et d'appliquer les invariants nécessaires "
+"(par ex. que `is_big` n'est `true` que si `val > 100`)."
 
 #: src/modules/encapsulation.md
 msgid ""
 "Point out how helper functions can be defined in the same module (including child "
 "modules) in order to get access to the type's private fields/methods."
 msgstr ""
+"Soulignez comment des fonctions utilitaires peuvent être définies dans le même "
+"module (y compris les modules enfants) afin d'accéder aux champs/méthodes privés "
+"du type."
 
 #: src/modules/encapsulation.md
 msgid ""
@@ -12885,12 +12918,17 @@ msgid ""
 "with private fields. The second one demonstrates that you also can't directly "
 "access private fields."
 msgstr ""
+"La première ligne commentée démontre que vous ne pouvez pas initialiser une "
+"structure avec des champs privés. La seconde démontre que vous ne pouvez pas non "
+"plus accéder directement aux champs privés."
 
 #: src/modules/encapsulation.md
 msgid ""
 "Enums do not support privacy: Variants and data within those variants is always "
 "public."
 msgstr ""
+"Les Enum ne supportent pas la confidentialité : les variantes et les données dans "
+"ces variantes sont toujours publiques."
 
 #: src/modules/encapsulation.md
 msgid ""
@@ -12898,6 +12936,9 @@ msgid ""
 "can bring up `#[doc_hidden]` and `#[non_exhaustive]` and show how they're used to "
 "limit what can be done with an enum."
 msgstr ""
+"Si les apprenants souhaitent plus d'information sur la confidentialité (ou son "
+"absence) dans les enums, vous pouvez aborder `#[doc_hidden]` et `#[non_exhaustive]` "
+"et montrer comment ils sont utilisés pour limiter ce qui peut être fait avec un enum."
 
 #: src/modules/encapsulation.md
 #, fuzzy
@@ -12906,14 +12947,17 @@ msgid ""
 "[(example in the playground)](https://play.rust-lang.org/?"
 "version=stable&mode=debug&edition=2024&gist=3e61f43c88de12bcdf69c1d6df9ab3da)."
 msgstr ""
-"Testez le code ci-dessus sur [Rust Playground](https://play.rust-lang.org/?"
-"version=stable&mode=debug&edition=2021&gist=3ce2ad13ea1302f6572cb15cd96becf0)."
+"La confidentialité des modules s'applique toujours lorsqu'il y a des blocs `impl` "
+"dans d'autres modules [(exemple dans le playground)](https://play.rust-lang.org/?"
+"version=stable&mode=debug&edition=2024&gist=3e61f43c88de12bcdf69c1d6df9ab3da)."
 
 #: src/modules/paths.md
 msgid ""
 "A module can bring symbols from another module into scope with `use`. You will "
 "typically see something like this at the top of each module:"
 msgstr ""
+"Un module peut importer des symboles d'un autre module dans sa portée avec `use`. "
+"Vous verrez généralement quelque chose comme ceci en haut de chaque module :"
 
 #: src/modules/paths.md
 msgid "Paths"
@@ -12959,12 +13003,16 @@ msgid ""
 "It is common to \"re-export\" symbols at a shorter path. For example, the top-"
 "level `lib.rs` in a crate might have"
 msgstr ""
+"Il es commun de \"ré-exporter\" des symboles avec un chemin plus court. Par "
+"exemple, le `lib.rs` de niveau supérieur d'un crate peut contenir"
 
 #: src/modules/paths.md
 msgid ""
 "making `DiskStorage` and `NetworkStorage` available to other crates with a "
 "convenient, short path."
 msgstr ""
+"rendant `DiskStorage` et `NetworkStorage` disponibles pour d'autres crates avec "
+"un chemin court et pratique."
 
 #: src/modules/paths.md
 msgid ""
@@ -12974,6 +13022,11 @@ msgid ""
 "`read_to_string` method on a type implementing the `Read` trait, you need to `use "
 "std::io::Read`."
 msgstr ""
+"En général, seuls les éléments qui apparaissent dans un module ont besoin d'être "
+"importés avec `use`. Cependant, un trait doit être dans la portée pour appeler "
+"ses méthodes, même si un type implémentant ce trait est déjà dans la portée. "
+"Par exemple, pour utiliser la méthode `read_to_string` sur un type implémentant "
+"le trait `Read`, vous devez faire `use std::io::Read`."
 
 #: src/modules/paths.md
 msgid ""
@@ -12981,6 +13034,9 @@ msgid ""
 "because it is not clear which items are imported, and those might change over "
 "time."
 msgstr ""
+"L'instruction `use` peut avoir un joker : `use std::io::*`. Cela est déconseillé "
+"car il n'est pas clair quels éléments sont importés, et ceux-ci pourraient changer "
+"avec le temps."
 
 #: src/modules/exercise.md
 msgid ""
@@ -12988,103 +13044,114 @@ msgid ""
 "library defines a `Widget` trait and a few implementations of that trait, as well "
 "as a `main` function."
 msgstr ""
+"Dans cet exercice, vous allez réorganiser une petite implémentation de "
+"bibliothèque GUI. Cette bibliothèque définit un trait `Widget` et quelques "
+"implémentations de ce trait, ainsi qu'une fonction `main`."
 
 #: src/modules/exercise.md
 msgid ""
 "It is typical to put each type or set of closely-related types into its own "
 "module, so each widget type should get its own module."
 msgstr ""
+"Il est courant de placer chaque type ou ensemble de types étroitement liés dans "
+"son propre module, donc chaque type de widget devrait avoir son propre module."
 
 #: src/modules/exercise.md
 #, fuzzy
 msgid "Cargo Setup"
-msgstr "Installation"
+msgstr "Installation de Cargo"
 
 #: src/modules/exercise.md
 msgid ""
 "The Rust playground only supports one file, so you will need to make a Cargo "
 "project on your local filesystem:"
 msgstr ""
+"Le Playground Rust ne supporte qu'un seul fichier, vous devrez donc créer un "
+"projet Cargo sur votre système de fichiers local :"
 
 #: src/modules/exercise.md
 msgid ""
 "Edit the resulting `src/main.rs` to add `mod` statements, and add additional "
 "files in the `src` directory."
 msgstr ""
+"Editez le `src/main.rs` pour ajouter une déclaration de `mod` et ajoutez d'autres "
+"fichiers dans le dossier `src`."
 
 #: src/modules/exercise.md
 msgid "Source"
-msgstr ""
+msgstr "Source"
 
 #: src/modules/exercise.md
 msgid "Here's the single-module implementation of the GUI library:"
-msgstr ""
+msgstr "Voici une implémentation mono-module de la bibliothèque GUI :"
 
 #: src/modules/exercise.md src/modules/solution.md
 msgid "/// Natural width of `self`.\n"
-msgstr ""
+msgstr "/// Largeur naturelle de `self`.\n"
 
 #: src/modules/exercise.md src/modules/solution.md
 msgid "/// Draw the widget into a buffer.\n"
-msgstr ""
+msgstr "/// Dessinez le widget dans un buffer"
 
 #: src/modules/exercise.md src/modules/solution.md
 msgid "/// Draw the widget on standard output.\n"
-msgstr ""
+msgstr "/// Dessinez le widget dans la sortie standard.\n"
 
 #: src/modules/exercise.md src/modules/solution.md
 msgid "\"{buffer}\""
-msgstr ""
+msgstr "\"{buffer}\""
 
 #: src/modules/exercise.md
 msgid "// Add 4 paddings for borders\n"
-msgstr ""
+msgstr "// Ajoutez 4 espaces pour les bordures\n"
 
 #: src/modules/exercise.md
 msgid ""
 "// TODO: Change draw_into to return Result<(), std::fmt::Error>. Then use the\n"
 "        // ?-operator here instead of .unwrap().\n"
 msgstr ""
+"// TODO: Modifiez draw_into pour retourner Result<(), std::fmt::Error>. Ensuite, \n"
+"       // utiliez l'opérateur ? au lieu d'`unwrap()`\n"
 
 #: src/modules/exercise.md src/modules/solution.md
 msgid "\"+-{:-<inner_width$}-+\""
-msgstr ""
+msgstr "\"+-{:-<inner_width$}-+\""
 
 #: src/modules/exercise.md src/modules/solution.md
 msgid "\"| {:^inner_width$} |\""
-msgstr ""
+msgstr "\"| {:^inner_width$} |\""
 
 #: src/modules/exercise.md src/modules/solution.md
 msgid "\"+={:=<inner_width$}=+\""
-msgstr ""
+msgstr "\"+={:=<inner_width$}=+\""
 
 #: src/modules/exercise.md src/modules/solution.md
 msgid "\"| {:inner_width$} |\""
-msgstr ""
+msgstr "\"| {:inner_width$} |\""
 
 #: src/modules/exercise.md src/modules/solution.md
 msgid "// add a bit of padding\n"
-msgstr ""
+msgstr "// ajoutez un peu d'espace\n"
 
 #: src/modules/exercise.md src/modules/solution.md
 msgid "\"+{:-<width$}+\""
-msgstr ""
+msgstr "\"+{:-<width$}+\""
 
 #: src/modules/exercise.md src/modules/solution.md
 msgid "\"|{:^width$}|\""
-msgstr ""
+msgstr "\"|{:^width$}|\""
 
 #: src/modules/exercise.md src/modules/solution.md
 msgid "\"Rust GUI Demo 1.23\""
-msgstr ""
+msgstr "\"Rust GUI Demo 1.23\""
 
 #: src/modules/exercise.md src/modules/solution.md
 msgid "\"This is a small text GUI demo.\""
-msgstr ""
+msgstr "\"Ceci est un petit texte GUI de démo.\""
 
 #: src/modules/exercise.md src/modules/solution.md
 msgid "\"Click me!\""
-msgstr ""
+msgstr "\"Cliauez ici !\""
 
 #: src/modules/exercise.md
 msgid ""
@@ -13092,60 +13159,65 @@ msgid ""
 "get accustomed to the required `mod`, `use`, and `pub` declarations. Afterward, "
 "discuss what organizations are most idiomatic."
 msgstr ""
+"Encouragez les apprenants à diviser le code d'une manière qui leur semble naturelle "
+"et à s'accoutumer à la déclaration de `mod`, `use`, et `pub`. Puis, discutez les "
+"organisations les plus idiomatiques."
 
 #: src/modules/solution.md
 msgid "// ---- src/widgets.rs ----\n"
-msgstr ""
+msgstr "// ---- src/widgets.rs ----\n"
 
 #: src/modules/solution.md
 msgid "// ---- src/widgets/label.rs ----\n"
-msgstr ""
+msgstr "// ---- src/widgets/label.rs ----\n"
 
 #: src/modules/solution.md
 msgid "// ANCHOR_END: Label-width\n"
-msgstr ""
+msgstr "// ANCHOR_END: Label-width\n"
 
 #: src/modules/solution.md
 msgid "// ANCHOR: Label-draw_into\n"
-msgstr ""
+msgstr "// ANCHOR: Label-draw_into\n"
 
 #: src/modules/solution.md
 msgid "// ANCHOR_END: Label-draw_into\n"
-msgstr ""
+msgstr "// ANCHOR_END: Label-draw_into\n"
 
 #: src/modules/solution.md
 msgid "// ---- src/widgets/button.rs ----\n"
-msgstr ""
+msgstr "// ---- src/widgets/button.rs ----\n"
 
 #: src/modules/solution.md
 msgid "// ANCHOR_END: Button-width\n"
-msgstr ""
+msgstr "// ANCHOR_END: Button-width\n"
 
 #: src/modules/solution.md
 msgid "// ANCHOR: Button-draw_into\n"
-msgstr ""
+msgstr "// ANCHOR: Button-draw_into\n"
 
 #: src/modules/solution.md
 msgid "// ANCHOR_END: Button-draw_into\n"
-msgstr ""
+msgstr "// ANCHOR_END: Button-draw_into\n"
 
 #: src/modules/solution.md
 msgid "// ---- src/widgets/window.rs ----\n"
-msgstr ""
+msgstr "// ---- src/widgets/window.rs ----\n"
 
 #: src/modules/solution.md
 msgid ""
 "// ANCHOR_END: Window-width\n"
 "        // Add 4 paddings for borders\n"
 msgstr ""
+"// ANCHOR_END: Window-width\n"
+"        // Ajoutez 4 espaces pour les bordures\n"
 
 #: src/modules/solution.md
 msgid "// ANCHOR: Window-draw_into\n"
-msgstr ""
+msgstr "// ANCHOR: Window-draw_into\n"
 
 #: src/modules/solution.md
 msgid "// ANCHOR_END: Window-draw_into\n"
-msgstr ""
+msgstr "// ANCHOR_END: Window-draw_into\n"
 
 #: src/modules/solution.md
 msgid ""
@@ -13153,10 +13225,13 @@ msgid ""
 "        // draw_into to return Result<(), std::fmt::Error>. Then use\n"
 "        // the ?-operator here instead of .unwrap().\n"
 msgstr ""
+"// TODO: aprèes avoir entendu parler de gestion d'erreur, vous pouvez\n"
+"        // changer draw_into pour retourner Result<(), std::fmt::Error>.\n"
+"        // Puis, utilisez l'opérateur ? au lieu de .unwrap().\n"
 
 #: src/modules/solution.md
 msgid "// ---- src/main.rs ----\n"
-msgstr ""
+msgstr "// ---- src/main.rs ----\n"
 
 #: src/testing/unit-tests.md
 msgid ""
@@ -13164,6 +13239,10 @@ msgid ""
 "`#[test]`. Unit tests are often put in a nested `tests` module, using "
 "`#[cfg(test)]` to conditionally compile them only when building tests."
 msgstr ""
+"Rust et Cargo sont livrés avec un cadre de test unitaire simple. Les tests sont "
+"marqués avec `#[test]`. Les tests unitaires sont souvent placés dans un module "
+"`tests` imbriqué, en utilisant `#[cfg(test)]` pour les compiler conditionnellement "
+"uniquement lors de la construction des tests."
 
 #: src/testing/unit-tests.md
 #, fuzzy
@@ -13173,7 +13252,7 @@ msgstr "Bonjour le monde!"
 #: src/testing/unit-tests.md
 #, fuzzy
 msgid "This lets you unit test private helpers."
-msgstr "Cela vous permet de tester unitairement les helpers privés."
+msgstr "Cela vous permet de tester unitairement les utilitaires privés."
 
 #: src/testing/unit-tests.md
 #, fuzzy
@@ -13198,7 +13277,7 @@ msgstr "Créez un fichier `.rs` sous `tests/` :"
 
 #: src/testing/other.md
 msgid "// tests/my_library.rs\n"
-msgstr ""
+msgstr "// tests/my_library.rs\n"
 
 #: src/testing/other.md
 #, fuzzy
@@ -13224,6 +13303,8 @@ msgid ""
 "/// assert_eq!(shorten_string(\"Hello World\", 20), \"Hello World\");\n"
 "/// ```\n"
 msgstr ""
+msgid ""
+"/// Raccourcit une liste à une longueur donnée.\n"
 
 #: src/testing/other.md
 #, fuzzy
@@ -13240,6 +13321,8 @@ msgstr "Le code sera compilé et exécuté dans le cadre du `cargo test`."
 #: src/testing/other.md
 msgid ""
 "Adding `#` in the code will hide it from the docs, but will still compile/run it."
+"Ajouter `#` dans le code le masquera dans la documentation, il compilera et "
+sera exécuté tout de même."
 msgstr ""
 
 #: src/testing/other.md
@@ -13257,6 +13340,9 @@ msgid ""
 "lints. [Clippy](https://doc.rust-lang.org/clippy/) provides even more lints, "
 "organized into groups that can be enabled per-project."
 msgstr ""
+"Le compilateur Rust produit de fantastiques messages d'erreur, ainsi que uilt-in "
+"lints. [Clippy](https://doc.rust-lang.org/clippy/) provides even more lints, "
+"organized into groups that can be enabled per-project."
 
 #: src/testing/lints.md
 msgid "\"X probably fits in a u16, right? {}\""
