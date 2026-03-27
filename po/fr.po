@@ -14,7 +14,7 @@ msgstr ""
 
 #: src/SUMMARY.md src/index.md
 msgid "Welcome to Comprehensive Rust 🦀"
-msgstr "Bienvenue à Comprehensive Rust (le guide complet de Rust) 🦀"
+msgstr "Bienvenue à Comprehensive Rust 🦀"
 
 #: src/SUMMARY.md src/running-the-course.md
 msgid "Running the Course"
@@ -2374,7 +2374,7 @@ msgid ""
 "book/) and [Rust by Example](https://doc.rust-lang.org/rust-by-example/macros.html) "
 "instead."
 msgstr ""
-"Apprendre comment développer des macros: pour cela, nous vous invitons à consulter le "
+"Apprendre comment développer des macrosi : pour cela, nous vous invitons à consulter le "
 "[Chapitre 19.5 dans le Rust Book](https://doc.rust-lang.org/book/ch19-06-macros.html) et "
 "[Rust by Example](https://doc.rust-lang.org/rust-by-example/macros.html) (an anglais). "
 "Vous pouvez également consulter [le Chapitre 19.5 dans la traduction non-officielle du "
@@ -2520,7 +2520,7 @@ msgid ""
 "has been for us!"
 msgstr ""
 "C'est tout, bonne chance pour la présentation du cours ! Nous espérons que vous y "
-"prendrez autant de plaisir que nous !"
+"prendrez autant de plaisir que nous_!"
 
 #: src/running-the-course.md
 msgid ""
@@ -2621,7 +2621,7 @@ msgid ""
 "paced and we cover a broad range of topics!"
 msgstr ""
 "Les quatre premiers jours constituent les [Fondamentaux de Rust](../welcome-day-1.md). Le "
-"rythme est soutenu et nous couvrons beaucoup de sujets!"
+"rythme est soutenu et nous couvrons beaucoup de sujets !"
 
 #: src/running-the-course/course-structure.md
 msgid "Course schedule:"
@@ -3325,7 +3325,7 @@ msgstr ""
 #: src/unsafe-rust/unsafe-functions/calling.md src/android/setup.md
 #: src/concurrency/async/async-await.md
 msgid "Key points:"
-msgstr "Points clés:"
+msgstr "Points clés :"
 
 #: src/cargo/rust-ecosystem.md
 msgid ""
@@ -3335,7 +3335,7 @@ msgid ""
 msgstr ""
 "Rust a un calendrier de publication rapide : une nouvelle version est disponible toutes "
 "les six semaines. Les nouvelles versions maintiennent la rétrocompatibilité avec les "
-"anciennes versions --- en plus, elles proposent de nouvelles fonctionnalités."
+"anciennes versions --- elles proposent en plus de nouvelles fonctionnalités."
 
 #: src/cargo/rust-ecosystem.md
 msgid "There are three release channels: \"stable\", \"beta\", and \"nightly\"."
@@ -3403,7 +3403,7 @@ msgid ""
 "tool. It is capable of many advanced features including but not limited to:"
 msgstr ""
 "Il peut être utile de mentionner que Cargo est un outil extrêmement puissant et complet. "
-"Il est capable de nombreuses fonctionnalités avancées, y compris, mais sans s'y limiter :"
+"Il est fort de nombreuses fonctionnalités avancées, y compris, mais sans s'y limiter :"
 
 #: src/cargo/rust-ecosystem.md
 msgid "Project/package structure"
@@ -3451,7 +3451,7 @@ msgid ""
 "experience for everyone."
 msgstr ""
 "Pour cette formation, nous allons surtout explorer le langage Rust à travers des exemples "
-"qui peuvent être exécuté via votre navigateur. Cela rend la configuration beaucoup plus "
+"qui peuvent être exécutés via votre navigateur. Cela rend la configuration beaucoup plus "
 "facile et assure une expérience cohérente pour chacun."
 
 #: src/cargo/code-samples.md
@@ -3462,7 +3462,7 @@ msgid ""
 msgstr ""
 "L'installation de Cargo est tout de même encouragée : elle vous facilitera la tâche pour "
 "les exercices. Le dernier jour, nous ferons un exercice plus conséquent qui vous montrera "
-"comment travailler avec des dépendances et, pour cela, vous avez besoin de Cargo."
+"comment travailler avec des dépendances et pour cela, vous avez besoin de Cargo."
 
 #: src/cargo/code-samples.md
 msgid "The code blocks in this course are fully interactive:"
@@ -3503,7 +3503,7 @@ msgid ""
 "This is the reason that the students should solve the exercises using a local Rust "
 "installation or via the Playground."
 msgstr ""
-"Les environnements d'exécution intégrés sont réinitialisés dès que vous quittez la page! "
+"Les environnements d'exécution intégrés sont réinitialisés dès que vous quittez la page ! "
 "C'est la raison pour laquelle les élèves doivent résoudre les exercices en utilisant une "
 "installation Rust locale ou via l'environnement d'exécution complet."
 
@@ -3605,7 +3605,7 @@ msgstr "Bienvenue au jour 1"
 msgid ""
 "This is the first day of Rust Fundamentals. We will cover a broad range of topics today:"
 msgstr ""
-"C'est le premier jour de Comprehensive Rust(le guide complet de Rust). Nous couvrirons "
+"C'est le premier jour de Comprehensive Rust (le guide complet de Rust). Nous couvrirons "
 "beaucoup de sujets aujourd'hui:"
 
 #: src/welcome-day-1.md
@@ -3676,7 +3676,7 @@ msgid ""
 "This is perfectly okay! Repetition is an important part of learning. Remember that the "
 "slides are just a support and you are free to skip them as you like."
 msgstr ""
-"C'est tout à fait correct! La répétition est une partie importante de l'apprentissage. "
+"C'est tout à fait correct ! La répétition est une partie importante de l'apprentissage. "
 "N'oubliez pas que les diapositives ne sont qu'un support et que vous êtes libre de les "
 "sauter si vous le souhaitez."
 
@@ -3811,7 +3811,7 @@ msgstr "Peut être réduit à des appareils très limités comme les microcontr�
 
 #: src/hello-world/what-is-rust.md
 msgid "Has no runtime or garbage collection."
-msgstr "N'a pas de temps d'exécution ou de récupération d'ordures."
+msgstr "N'a pas de temps d'exécution ou de `garbage collection`."
 
 #: src/hello-world/what-is-rust.md
 msgid "Focuses on reliability and safety without sacrificing performance."
@@ -3819,7 +3819,7 @@ msgstr "Se concentre sur la fiabilité et la sécurité sans sacrifier les perfo
 
 #: src/hello-world/benefits.md
 msgid "Some unique selling points of Rust:"
-msgstr "Quelques arguments de vente uniques à Rust :"
+msgstr "Quelques points forts uniques au Rust :"
 
 #: src/hello-world/benefits.md
 msgid ""
@@ -3850,7 +3850,7 @@ msgstr "Pas de mutex verrouillés oubliés."
 
 #: src/hello-world/benefits.md
 msgid "No data races between threads."
-msgstr "Pas de courses de données entre les threads."
+msgstr "Pas de `data races` entre les threads."
 
 #: src/hello-world/benefits.md
 msgid "No iterator invalidation."
@@ -3865,7 +3865,7 @@ msgstr ""
 
 #: src/hello-world/benefits.md
 msgid "Array access is bounds checked."
-msgstr "L'accès au tableau est vérifié dans les limites."
+msgstr "L'accès à un tableau est vérifié dans les limites de celui-ci."
 
 #: src/hello-world/benefits.md
 msgid "Integer overflow is defined (panic or wrap-around)."
@@ -3891,11 +3891,11 @@ msgstr "Pas de surcoût FFI."
 
 #: src/hello-world/benefits.md
 msgid "Zero-cost abstractions."
-msgstr "Abstractions à coût zéro."
+msgstr "Abstractions sans surcoût."
 
 #: src/hello-world/benefits.md
 msgid "Great compiler errors."
-msgstr "Bonnes erreurs de compilation."
+msgstr "Excellentes erreurs de compilation."
 
 #: src/hello-world/benefits.md
 msgid "Built-in dependency manager."
@@ -3932,8 +3932,8 @@ msgid ""
 "matching and built-in dependency management."
 msgstr ""
 "Expérience avec C ou C++ : Rust élimine toute une classe d'_erreurs d'exécution_ via le "
-"vérificateur d'emprunt. On obtient des performances comme en C et C++, mais sans "
-"problèmes d'insécurité de la mémoire. De plus, Rust est un langage moderne avec des "
+"`borroz checker`. On obtient des performances comme en C et C++, mais sans "
+"problèmes d'insécurité mémoire. De plus, Rust est un langage moderne avec des "
 "constructions telles que le filtrage par motif et la gestion intégrée des dépendances."
 
 #: src/hello-world/benefits.md
@@ -3944,9 +3944,9 @@ msgid ""
 "level hardware (should you need it)."
 msgstr ""
 "Expérience avec Java, Go, Python, JavaScript... : On bénéficie de la même sécurité "
-"mémoire que dans ces langages, plus un sentiment de langage de haut niveau similaire. En "
-"outre on obtient des performances rapides et prévisibles comme C et C++ (pas de ramassage "
-"d'ordures) ainsi que l'accès au matériel de bas niveau (si l'on en a besoin)."
+"mémoire que dans ces langages, plus une prise en main similaire à un langage de haut niveau. "
+"En outre on obtient des performances rapides et prévisibles comme C et C++ (pas de `garbage "
+"collection`) ainsi que l'accès bas niveau au matériel (si l'on en a besoin)."
 
 #: src/hello-world/playground.md
 msgid ""
@@ -4010,7 +4010,7 @@ msgstr "\"Hello 🌍!\""
 
 #: src/types-and-values/hello-world.md
 msgid "What you see:"
-msgstr "Ce que tu vois:"
+msgstr "Ce que vous voyez :"
 
 #: src/types-and-values/hello-world.md
 msgid "Functions are introduced with `fn`."
@@ -4052,9 +4052,9 @@ msgid ""
 "Rust is very much like other languages in the C/C++/Java tradition. It is imperative and "
 "it doesn't try to reinvent things unless absolutely necessary."
 msgstr ""
-"Rust ressemble beaucoup aux autres langages traditionnels C/C++/Java. C'est impératif "
-"(non fonctionnel) et il n'essaie pas de réinventer les choses à moins qu'absolument "
-"nécessaire."
+"Rust ressemble beaucoup aux autres langages traditionnels C/C++/Java. Il est impératif "
+"(non fonctionnel) et il n'essaie pas de réinventer les choses à moins que ce soit "
+"absolument nécessaire."
 
 #: src/types-and-values/hello-world.md
 msgid "Rust is modern with full support for Unicode."
@@ -4075,7 +4075,7 @@ msgid ""
 "treated like a regular function."
 msgstr ""
 "`println!` est une macro car elle doit gérer un nombre quelconque d'arguments en fonction "
-"de la chaîne de format, ce qu'une fonction classique ne peut pas faire. Autrement, elle "
+"de la chaîne formattée, ce qu'une fonction classique ne peut pas faire. Autrement, elle "
 "peut être utilisée comme une fonction classique."
 
 #: src/types-and-values/hello-world.md
@@ -4211,7 +4211,7 @@ msgstr "`true`, `false`"
 
 #: src/types-and-values/values.md
 msgid "The types have widths as follows:"
-msgstr "Les types ont des largeurs comme suit :"
+msgstr "La largeur des types est la suivante :"
 
 #: src/types-and-values/values.md
 msgid "`iN`, `uN`, and `fN` are _N_ bits wide,"
@@ -4312,7 +4312,7 @@ msgid ""
 "for us and helps us write more concise code."
 msgstr ""
 "Il est très important de souligner que les variables déclarées de cette manière ne sont "
-"pas d'une sorte de \"tout type\" dynamique qui peut détenir des données. Le code machine "
+"pas d'une sorte de \"type any\" dynamique qui peut détenir des données. Le code machine "
 "généré par une telle déclaration est identique à la déclaration explicite d'un type. Le "
 "compilateur fait le travail pour nous et nous aide à écrire un code plus concis."
 
@@ -4386,7 +4386,7 @@ msgid ""
 msgstr ""
 "Les étudiants pourraient également proposer une solution itérative, ce qui constitue une "
 "excellente occasion de discuter des compromis entre récursivité et itération (par "
-"exemple, les performances, le débordement de pile pour la récursivité profonde)."
+"exemple, les performances, le débordement de la pile pour la récursivité profonde)."
 
 #: src/types-and-values/solution.md
 msgid ""
@@ -4478,7 +4478,7 @@ msgstr ""
 #: src/idiomatic/leveraging-the-type-system/token-types/branded-02-phantomdata.md
 #: src/idiomatic/leveraging-the-type-system/token-types/branded-04-in-action.md
 msgid "More to Explore"
-msgstr "À explorer davantage"
+msgstr "Pour plus d'exploration"
 
 #: src/types-and-values/solution.md
 msgid ""
@@ -4578,7 +4578,7 @@ msgstr ""
 
 #: src/control-flow-basics/if.md
 msgid "`if` expressions"
-msgstr "expressions `if`"
+msgstr "les expressions `if`"
 
 #: src/control-flow-basics/if.md
 msgid ""
@@ -4666,7 +4666,7 @@ msgstr "Tout comme les expressions `if`, `match` peut également renvoyer une va
 
 #: src/control-flow-basics/match.md
 msgid "\"The value of {flag} is {val}\""
-msgstr "\"The value of {flag} is {val}\""
+msgstr "\"La valeur de {flag} est {val}\""
 
 #: src/control-flow-basics/match.md
 msgid ""
@@ -4689,7 +4689,7 @@ msgid ""
 "same thing, since blocks are also expressions, but students may not fully understand that "
 "symmetry at this point."
 msgstr ""
-"Le corps d'un bras de correspondance peut être une expression unique ou un bloc. "
+"Le corps d'un bras de correspondance (`match`) peut être une expression unique ou un bloc. "
 "Techniquement, c'est la même chose, puisque les blocs sont aussi des expressions, mais "
 "les étudiants ne saisissent peut-être pas encore pleinement cette symétrie."
 
@@ -4702,7 +4702,7 @@ msgid ""
 msgstr ""
 "Les expressions `match` doivent être exhaustives, c'est-à-dire qu'elles doivent couvrir "
 "toutes les valeurs possibles ou comporter un cas par défaut comme `_`. L'exhaustivité est "
-"plus facile à démontrer avec les énumérations, mais celles-ci n'ont pas encore été "
+"plus facile à démontrer avec les énumérations (`enum`), mais celles-ci n'ont pas encore été "
 "introduites. Nous allons donc illustrer la correspondance avec un `bool`, qui est le type "
 "primitif le plus simple."
 
@@ -4745,7 +4745,7 @@ msgstr ""
 
 #: src/control-flow-basics/loops.md
 msgid "There are three looping keywords in Rust: `while`, `loop`, and `for`:"
-msgstr "En Rust, il existe trois mots-clés de boucle : `while`, `loop` et `for`."
+msgstr "En Rust, il existe trois mots-clés pour les boucles : `while`, `loop` et `for`."
 
 #: src/control-flow-basics/loops.md
 msgid "`while`"
@@ -4846,7 +4846,7 @@ msgstr ""
 
 #: src/control-flow-basics/break-continue/labels.md
 msgid "\"This line gets skipped\""
-msgstr "\"This line gets skipped\""
+msgstr "\"Cette ligne est sautée\""
 
 #: src/control-flow-basics/functions.md
 msgid ""
@@ -5056,7 +5056,7 @@ msgstr ""
 
 #: src/control-flow-basics/exercise.md src/control-flow-basics/solution.md
 msgid "/// Determine the length of the collatz sequence beginning at `n`.\n"
-msgstr "/// Determine the length of the collatz sequence beginning at `n`.\n"
+msgstr "/// Déterminez la longueur de la séquence de Collatz commençant a `n`.\n"
 
 #: src/control-flow-basics/exercise.md src/control-flow-basics/solution.md
 #: src/idiomatic/polymorphism/refresher/trait-bounds.md
@@ -5065,7 +5065,7 @@ msgstr "\"Length: {}\""
 
 #: src/control-flow-basics/exercise.md src/control-flow-basics/solution.md
 msgid "// should be 15\n"
-msgstr "// should be 15\n"
+msgstr "// devrait être 15\n"
 
 #: src/control-flow-basics/solution.md
 msgid "This solution demonstrates a few key Rust features:"
@@ -5209,7 +5209,7 @@ msgid ""
 msgstr ""
 "Les tableaux ne sont pas alloués sur le tas. Ce sont des valeurs classiques de taille "
 "fixe, connue à la compilation, et donc stockées sur la pile. Cela peut différer des "
-"attentes des étudiants venant d'un langage avec ramasse-miettes, où les tableaux sont "
+"attentes des étudiants venant d'un langage `garbage collecté`, où les tableaux sont "
 "alloués sur le tas par défaut."
 
 #: src/tuples-and-arrays/arrays.md
@@ -5321,11 +5321,11 @@ msgstr "\"{tuple:?}: {}\""
 
 #: src/tuples-and-arrays/destructuring.md
 msgid "\"ordered\""
-msgstr "\"ordered\""
+msgstr "\"ordonné\""
 
 #: src/tuples-and-arrays/destructuring.md
 msgid "\"unordered\""
-msgstr "\"unordered\""
+msgstr "\"non-ordonné\""
 
 #: src/tuples-and-arrays/destructuring.md
 msgid ""
@@ -5400,7 +5400,7 @@ msgstr "\"{row:?}\""
 
 #: src/tuples-and-arrays/exercise.md src/tuples-and-arrays/solution.md
 msgid "\"\\nTransposed:\""
-msgstr "\"\\nTransposed:\""
+msgstr "\"\\nTransposée:\""
 
 #: src/tuples-and-arrays/solution.md
 msgid ""
@@ -5700,11 +5700,11 @@ msgstr "`&str` est une tranche d'octets encodés en UTF-8, similaire à `&[u8]`.
 
 #: src/references/strings.md
 msgid "`String` is an owned buffer of UTF-8 encoded bytes, similar to `Vec<T>`."
-msgstr "`String` est un tampon possédé d'octets encodés en UTF-8, similaire à `Vec<T>`."
+msgstr "`String` est un tampon `owned` (possédé) d'octets encodés en UTF-8, similaire à `Vec<T>`."
 
 #: src/references/strings.md src/std-traits/read-and-write.md
 msgid "\"World\""
-msgstr "\"World\""
+msgstr "\"Monde\""
 
 #: src/references/strings.md
 msgid "\"s1: {s1}\""
@@ -5728,7 +5728,7 @@ msgid ""
 "data stored in a block of memory. String literals (`\"Hello\"`), are stored in the "
 "program’s binary."
 msgstr ""
-"`&str` introduit une tranche de chaîne, qui est une référence immuable à des données de "
+"`&str` introduit une tranche de chaîne, qui est une référence immutable à des données de "
 "chaîne encodées en UTF-8 et stockées dans un bloc de mémoire. Les littéraux de chaîne "
 "(« Hello ») sont stockés dans le binaire du programme."
 
@@ -5738,7 +5738,7 @@ msgid ""
 "owned."
 msgstr ""
 "Le type `String` de Rust est un wrapper autour d'un vecteur d'octets. Comme pour un "
-"`Vec<T>`, il est possédé."
+"`Vec<T>`, il est `owned` (possédé)."
 
 #: src/references/strings.md
 msgid ""
@@ -5818,8 +5818,8 @@ msgid ""
 "Rust has different rules for references than other languages."
 msgstr ""
 "Cette diapositive amène les étudiants à considérer les références comme ne se limitant "
-"pas à de simples pointeurs, car Rust possède des règles différentes en matière de "
-"références par rapport à d'autres langages."
+"pas à de simples pointeurs, car les règles relatives aux références en Rust diffèrent "
+"d'autres langages."
 
 #: src/references/dangling.md
 msgid ""
@@ -5845,7 +5845,7 @@ msgid ""
 "We will create a few utility functions for 3-dimensional geometry, representing a point "
 "as `[f64;3]`. It is up to you to determine the function signatures."
 msgstr ""
-"Nous allons créer quelques fonctions utilitaires pour la géométrie tridimensionnelle, "
+"Nous allons créer un certain nombre de fonctions utilitaires pour la géométrie tridimensionnelle, "
 "représentant un point par `[f64;3]`. Il vous appartient de déterminer les signatures de "
 "ces fonctions."
 
@@ -5855,41 +5855,41 @@ msgid ""
 "// and taking the square root. Use the `sqrt()` method to calculate the square\n"
 "// root, like `v.sqrt()`.\n"
 msgstr ""
-"// Calculate the magnitude of a vector by summing the squares of its coordinates\n"
-"// and taking the square root. Use the `sqrt()` method to calculate the square\n"
-"// root, like `v.sqrt()`.\n"
+"// Calculez la magnitude d'un vecteur en faisant la somme des carrés de ses\n"
+"// coordonnées et en extrayant la racine carrée de cette somme. Uilisez la\n"
+"// méthode `sqrt()` pour calculer la racine carrée : `v.sqrt()`.\n"
 
 #: src/references/exercise.md
 msgid ""
 "// Normalize a vector by calculating its magnitude and dividing all of its\n"
 "// coordinates by that magnitude.\n"
 msgstr ""
-"// Normalize a vector by calculating its magnitude and dividing all of its\n"
-"// coordinates by that magnitude.\n"
+"// Normalisez un vecteur en calculant sa magnitude et en divisant chacune de\n"
+"// ses coordonnées par cette magnitude.\n"
 
 #: src/references/exercise.md
 msgid "// Use the following `main` to test your work.\n"
-msgstr "// Use the following `main` to test your work.\n"
+msgstr "// Utilisez ce `main` pour tester votre travail.\n"
 
 #: src/references/exercise.md src/references/solution.md
 msgid "\"Magnitude of a unit vector: {}\""
-msgstr "\"Magnitude of a unit vector: {}\""
+msgstr "\"Magnitude d'un vecteur unitaire : {}\""
 
 #: src/references/exercise.md src/references/solution.md
 msgid "\"Magnitude of {v:?}: {}\""
-msgstr "\"Magnitude of {v:?}: {}\""
+msgstr "\"Magnitude de {v:?}: {}\""
 
 #: src/references/exercise.md src/references/solution.md
 msgid "\"Magnitude of {v:?} after normalization: {}\""
-msgstr "\"Magnitude of {v:?} after normalization: {}\""
+msgstr "\"Magnitude de {v:?} après normalisation : {}\""
 
 #: src/references/solution.md
 msgid "/// Calculate the magnitude of the given vector.\n"
-msgstr "/// Calculate the magnitude of the given vector.\n"
+msgstr "/// Calculez la magnitude d'un vecteur donné.\n"
 
 #: src/references/solution.md
 msgid "/// Change the magnitude of the vector to 1.0 without changing its direction.\n"
-msgstr "/// Change the magnitude of the vector to 1.0 without changing its direction.\n"
+msgstr "/// Changez la magnitude du vecteur à 1.0 sans changer sa direction.\n"
 
 #: src/references/solution.md
 msgid ""
@@ -5984,8 +5984,8 @@ msgid ""
 "Struct fields do not support default values. Default values are specified by implementing "
 "the `Default` trait which we will cover later."
 msgstr ""
-"Struct fields do not support default values. Default values are specified by implementing "
-"the `Default` trait which we will cover later."
+"Les champs des `Strcut` ne peuvent pas avoir de valeur par défaut. Les valeurs par défaut "
+"sont spécifiées en implémnetant le trait `Default` que nous aborderons plus tard."
 
 #: src/user-defined-types/named-structs.md
 msgid "You can also demonstrate the struct update syntax here:"
@@ -6030,7 +6030,7 @@ msgstr "Ceci est souvent utilisé pour les wrappers à champ unique (appelés ne
 
 #: src/user-defined-types/tuple-structs.md
 msgid "\"Ask a rocket scientist at NASA\""
-msgstr "\"Ask a rocket scientist at NASA\""
+msgstr "\"Interrogez un chercheur de la NASA\""
 
 #: src/user-defined-types/tuple-structs.md src/android/interoperability/cpp/cpp-bridge.md
 #: src/bare-metal/microcontrollers/type-state.md
@@ -6085,7 +6085,7 @@ msgid ""
 "Rust generally avoids implicit conversions, like automatic unwrapping or using booleans "
 "as integers."
 msgstr ""
-"Rust évite généralement les conversions implicites, comme le déballage automatique ou "
+"Rust évite généralement les conversions implicites, comme l'`unwrapping` automatique ou "
 "l'utilisation de booléens comme des entiers."
 
 #: src/user-defined-types/tuple-structs.md
@@ -6127,19 +6127,19 @@ msgstr "Le mot-clé `enum` permet la création d'un type qui possède plusieurs 
 
 #: src/user-defined-types/enums.md
 msgid "// Simple variant\n"
-msgstr "// Simple variant\n"
+msgstr "// Variant simple\n"
 
 #: src/user-defined-types/enums.md
 msgid "// Tuple variant\n"
-msgstr "// Tuple variant\n"
+msgstr "// Variant Tuple\n"
 
 #: src/user-defined-types/enums.md
 msgid "// Struct variant\n"
-msgstr "// Struct variant\n"
+msgstr "// Variant Struct\n"
 
 #: src/user-defined-types/enums.md
 msgid "\"On this turn: {player_move:?}\""
-msgstr "\"On this turn: {player_move:?}\""
+msgstr "\"Sur ce tour : {player_move:?}\""
 
 #: src/user-defined-types/enums.md
 msgid "Enumerations allow you to collect a set of values under one type."
@@ -6159,7 +6159,7 @@ msgid ""
 "a discriminant so that it knows at runtime which variant is in a `PlayerMove` value."
 msgstr ""
 "`PlayerMove` est un type possédant trois variantes. Outre les données utiles, Rust stocke "
-"un discriminant afin de déterminer, lors de l'exécution, la variante présente dans une "
+"un discriminant afin de déterminer lors de l'exécution, la variante présente dans une "
 "valeur `PlayerMove`."
 
 #: src/user-defined-types/enums.md
@@ -6236,7 +6236,7 @@ msgid ""
 msgstr ""
 "Voici un exemple de code illustrant à quoi peut ressembler la représentation bit à bit en "
 "pratique. Il est important de noter que le compilateur n'offre aucune garantie concernant "
-"cette représentation ; par conséquent, son utilisation est totalement dangereuse."
+"cette représentation ; par conséquent, son utilisation est très dangereuse."
 
 #: src/user-defined-types/aliases.md
 msgid ""
@@ -6247,7 +6247,7 @@ msgstr ""
 
 #: src/user-defined-types/aliases.md
 msgid "// Aliases are more useful with long, complex types:\n"
-msgstr "// Aliases are more useful with long, complex types:\n"
+msgstr "// Les alias sont plus utils pour les types longs et complexes :\n"
 
 #: src/user-defined-types/aliases.md
 msgid ""
@@ -6286,7 +6286,7 @@ msgstr ""
 #: src/user-defined-types/const.md
 msgid "Mention that `const` behaves semantically similar to C++'s `constexpr`"
 msgstr ""
-"Il convient de noter que `const` se comporte de manière sémantiquement similaire à "
+"Il convient de noter que `const` se comporte de manière similaire sémantiquement à "
 "`constexpr` en C++."
 
 #: src/user-defined-types/static.md
@@ -6303,7 +6303,7 @@ msgstr ""
 
 #: src/user-defined-types/static.md
 msgid "\"Welcome to RustOS 3.14\""
-msgstr "\"Welcome to RustOS 3.14\""
+msgstr "\"Bienvenue dans RustOS 3.14\""
 
 #: src/user-defined-types/static.md
 msgid "\"{BANNER}\""
@@ -6383,59 +6383,59 @@ msgstr ""
 
 #: src/user-defined-types/exercise.md src/user-defined-types/solution.md
 msgid "/// An event in the elevator system that the controller must react to.\n"
-msgstr "/// An event in the elevator system that the controller must react to.\n"
+msgstr "/// Un événement dans le système de l'ascenseur auquel le contrôleur doit réagir.\n"
 
 #: src/user-defined-types/exercise.md
 msgid "// TODO: add required variants\n"
-msgstr "// TODO: add required variants\n"
+msgstr "// TODO: ajoutez les variants requis\n"
 
 #: src/user-defined-types/exercise.md src/user-defined-types/solution.md
 msgid "/// A direction of travel.\n"
-msgstr "/// A direction of travel.\n"
+msgstr "/// Une direction de voyage.\n"
 
 #: src/user-defined-types/exercise.md src/user-defined-types/solution.md
 msgid "/// The car has arrived on the given floor.\n"
-msgstr "/// The car has arrived on the given floor.\n"
+msgstr "/// La cabine est arrivée à l'étage donné.\n"
 
 #: src/user-defined-types/exercise.md src/user-defined-types/solution.md
 msgid "/// The car doors have opened.\n"
-msgstr "/// The car doors have opened.\n"
+msgstr "/// Les portes de la cabine se sont ouvertes.\n"
 
 #: src/user-defined-types/exercise.md src/user-defined-types/solution.md
 msgid "/// The car doors have closed.\n"
-msgstr "/// The car doors have closed.\n"
+msgstr "/// Les portes de la cabine se sont fermées.\n"
 
 #: src/user-defined-types/exercise.md src/user-defined-types/solution.md
 msgid "/// A directional button was pressed in an elevator lobby on the given floor.\n"
-msgstr "/// A directional button was pressed in an elevator lobby on the given floor.\n"
+msgstr "/// Un bouton de direction a été pressé dans un hall d'ascenseur à l'étage donné.\n"
 
 #: src/user-defined-types/exercise.md src/user-defined-types/solution.md
 msgid "/// A floor button was pressed in the elevator car.\n"
-msgstr "/// A floor button was pressed in the elevator car.\n"
+msgstr "/// Un bouton d'étage a été pressé dans la cabine d'ascenseur.\n"
 
 #: src/user-defined-types/exercise.md src/user-defined-types/solution.md
 msgid "\"A ground floor passenger has pressed the up button: {:?}\""
-msgstr "\"A ground floor passenger has pressed the up button: {:?}\""
+msgstr "\"Un usager du RDC a pressé le bouton haut : {:?}\""
 
 #: src/user-defined-types/exercise.md src/user-defined-types/solution.md
 msgid "\"The car has arrived on the ground floor: {:?}\""
-msgstr "\"The car has arrived on the ground floor: {:?}\""
+msgstr "\"La cabine est arrivée au rez-de-chaussée : {:?}\""
 
 #: src/user-defined-types/exercise.md src/user-defined-types/solution.md
 msgid "\"The car door opened: {:?}\""
-msgstr "\"The car door opened: {:?}\""
+msgstr "\"Les portes de la cabine se sont ouvertes : {:?}\""
 
 #: src/user-defined-types/exercise.md src/user-defined-types/solution.md
 msgid "\"A passenger has pressed the 3rd floor button: {:?}\""
-msgstr "\"A passenger has pressed the 3rd floor button: {:?}\""
+msgstr "\"Un usager a pressé le bouton du 3ème étage : {:?}\""
 
 #: src/user-defined-types/exercise.md src/user-defined-types/solution.md
 msgid "\"The car door closed: {:?}\""
-msgstr "\"The car door closed: {:?}\""
+msgstr "\"La porte de la cabine est fermée : {:?}\""
 
 #: src/user-defined-types/exercise.md src/user-defined-types/solution.md
 msgid "\"The car has arrived on the 3rd floor: {:?}\""
-msgstr "\"The car has arrived on the 3rd floor: {:?}\""
+msgstr "\"La porte est arrivée au troisième étage : {:?}\""
 
 #: src/user-defined-types/exercise.md
 msgid ""
@@ -6452,11 +6452,11 @@ msgstr ""
 
 #: src/user-defined-types/solution.md
 msgid "/// A button was pressed.\n"
-msgstr "/// A button was pressed.\n"
+msgstr "/// Un bouton a été pressé.\n"
 
 #: src/user-defined-types/solution.md
 msgid "/// The car has arrived at the given floor.\n"
-msgstr "/// The car has arrived at the given floor.\n"
+msgstr "/// La cabine est arrivée à l'étage donné.\n"
 
 #: src/user-defined-types/solution.md
 msgid "/// The car's doors have opened.\n"
@@ -6464,23 +6464,23 @@ msgstr "/// The car's doors have opened.\n"
 
 #: src/user-defined-types/solution.md
 msgid "/// The car's doors have closed.\n"
-msgstr "/// The car's doors have closed.\n"
+msgstr "/// Les portes de la cabine se sont fermées.\n"
 
 #: src/user-defined-types/solution.md
 msgid "/// A floor is represented as an integer.\n"
-msgstr "/// A floor is represented as an integer.\n"
+msgstr "/// Un étage est représenté par un entier.\n"
 
 #: src/user-defined-types/solution.md
 msgid "/// A user-accessible button.\n"
-msgstr "/// A user-accessible button.\n"
+msgstr "/// Un bouton accessible à l'utilisateur.\n"
 
 #: src/user-defined-types/solution.md
 msgid "/// A button in the elevator lobby on the given floor.\n"
-msgstr "/// A button in the elevator lobby on the given floor.\n"
+msgstr "/// Un bouton dans le hall d'ascenseur à l'étage donné.\n"
 
 #: src/user-defined-types/solution.md
 msgid "/// A floor button within the car.\n"
-msgstr "/// A floor button within the car.\n"
+msgstr "/// Un bouton d'étage dans la cabine.\n"
 
 #: src/user-defined-types/solution.md
 msgid ""
@@ -6597,15 +6597,15 @@ msgstr ""
 
 #: src/pattern-matching/infallible.md
 msgid "// This does the same thing as above.\n"
-msgstr "// This does the same thing as above.\n"
+msgstr "// Ce code fait la même chose que ci-dessus.\n"
 
 #: src/pattern-matching/infallible.md
 msgid "// Ignore the first element, only bind the second and third.\n"
-msgstr "// Ignore the first element, only bind the second and third.\n"
+msgstr "// On ignore uniquement le premier élément.\n"
 
 #: src/pattern-matching/infallible.md
 msgid "// Ignore everything but the last element.\n"
-msgstr "// Ignore everything but the last element.\n"
+msgstr "// On ignore tout sauf le dernier élément.\n"
 
 #: src/pattern-matching/infallible.md src/pattern-matching/match.md src/generics/exercise.md
 #: src/generics/solution.md src/std-traits/solution.md
@@ -6679,7 +6679,7 @@ msgstr "'q'"
 
 #: src/pattern-matching/match.md
 msgid "\"Quitting\""
-msgstr "\"Quitting\""
+msgstr "\"Quitter\""
 
 #: src/pattern-matching/match.md
 msgid "'s'"
@@ -6695,7 +6695,7 @@ msgstr "'d'"
 
 #: src/pattern-matching/match.md
 msgid "\"Moving around\""
-msgstr "\"Moving around\""
+msgstr "\"Se déplacer\""
 
 #: src/pattern-matching/match.md
 msgid "'0'"
@@ -6707,15 +6707,15 @@ msgstr "'9'"
 
 #: src/pattern-matching/match.md
 msgid "\"Number input\""
-msgstr "\"Number input\""
+msgstr "\"Entrer un nombre\""
 
 #: src/pattern-matching/match.md
 msgid "\"Lowercase: {key}\""
-msgstr "\"Lowercase: {key}\""
+msgstr "\"petite casse: {key}\""
 
 #: src/pattern-matching/match.md
 msgid "\"Something else\""
-msgstr "\"Something else\""
+msgstr "\"Quelque chose d'autre\""
 
 #: src/pattern-matching/match.md
 msgid ""
@@ -6781,11 +6781,11 @@ msgstr ""
 
 #: src/pattern-matching/match.md
 msgid "\"Uppercase\""
-msgstr "\"Uppercase\""
+msgstr "\"Grande casse\""
 
 #: src/pattern-matching/match.md
 msgid "\"Bug: this is never printed\""
-msgstr "\"Bug: this is never printed\""
+msgstr "\"Bogue : ceci n'est jamais affiché\""
 
 #: src/pattern-matching/match.md
 msgid ""
@@ -6806,11 +6806,11 @@ msgstr ""
 
 #: src/pattern-matching/match.md
 msgid "\"Expected value is 5, actual is {expected}\""
-msgstr "\"Expected value is 5, actual is {expected}\""
+msgstr "\"La valeur attendue est 5, la valeur actuelle est {expected}\""
 
 #: src/pattern-matching/match.md
 msgid "\"Value was something else\""
-msgstr "\"Value was something else\""
+msgstr "\"La valeur était autre chose\""
 
 #: src/pattern-matching/match.md
 msgid ""
@@ -6832,7 +6832,7 @@ msgid ""
 "Another piece of pattern syntax you can show students is the `@` syntax which binds a "
 "part of a pattern to a variable. For example:"
 msgstr ""
-"Un autre élément de syntaxe de motif que vous pouvez montrer aux étudiants est la syntaxe "
+"Un autre élément de syntaxe de motif que vous pouvez montrer aux apprenants est la syntaxe "
 "`@` qui lie une partie d'un motif à une variable. Par exemple :"
 
 #: src/pattern-matching/match.md
@@ -6861,19 +6861,19 @@ msgstr ""
 
 #: src/pattern-matching/destructuring-structs.md
 msgid "\"Standing still\""
-msgstr "\"Standing still\""
+msgstr "\"Rester immobile\""
 
 #: src/pattern-matching/destructuring-structs.md
 msgid "\"{repeat} step x: {x}\""
-msgstr "\"{repeat} step x: {x}\""
+msgstr "\"{repeat} pas x: {x}\""
 
 #: src/pattern-matching/destructuring-structs.md
 msgid "\"Single step y: {y}\""
-msgstr "\"Single step y: {y}\""
+msgstr "\"Single pas y: {y}\""
 
 #: src/pattern-matching/destructuring-structs.md
 msgid "\"Other move\""
-msgstr "\"Other move\""
+msgstr "\"Autre déplacement\""
 
 #: src/pattern-matching/destructuring-structs.md
 msgid "Change the literal values in `m` to match with the other patterns."
@@ -6935,15 +6935,15 @@ msgstr ""
 
 #: src/pattern-matching/destructuring-enums.md
 msgid "\"cannot divide {n} into two equal parts\""
-msgstr "\"cannot divide {n} into two equal parts\""
+msgstr "\"on ne peut pqs diviser {n} en deux parties égales\""
 
 #: src/pattern-matching/destructuring-enums.md
 msgid "\"{n} divided in two is {half}\""
-msgstr "\"{n} divided in two is {half}\""
+msgstr "\"{n} divisé en deux moitiés {half}\""
 
 #: src/pattern-matching/destructuring-enums.md
 msgid "\"sorry, an error happened: {msg}\""
-msgstr "\"sorry, an error happened: {msg}\""
+msgstr "\"désolé, une erreur s'est produite : {msg}\""
 
 #: src/pattern-matching/destructuring-enums.md
 msgid ""
@@ -7069,7 +7069,7 @@ msgstr "Bienvenue à Comprehensive Rust (le guide complet de Rust) 🦀"
 
 #: src/pattern-matching/let-control-flow/while-let.md
 msgid "// (There are more efficient ways to reverse a string!)\n"
-msgstr "// (There are more efficient ways to reverse a string!)\n"
+msgstr "// (Il y a d'autres moyens efficaces de renverser une chaîne !)\n"
 
 #: src/pattern-matching/let-control-flow/while-let.md
 msgid ""
@@ -7123,19 +7123,19 @@ msgstr ""
 
 #: src/pattern-matching/let-control-flow/let-else.md
 msgid "\"got None\""
-msgstr "\"got None\""
+msgstr "\"on a obtenu None\""
 
 #: src/pattern-matching/let-control-flow/let-else.md
 msgid "\"got empty string\""
-msgstr "\"got empty string\""
+msgstr "\"on a obtenu une chaîne vide\""
 
 #: src/pattern-matching/let-control-flow/let-else.md
 msgid "\"not a hex digit\""
-msgstr "\"not a hex digit\""
+msgstr "\"ce n'est pas un nombre hexadécimal\""
 
 #: src/pattern-matching/let-control-flow/let-else.md
 msgid "\"result: {:?}\""
-msgstr "\"result: {:?}\""
+msgstr "\"résultat : {:?}\""
 
 #: src/pattern-matching/let-control-flow/let-else.md src/generics/trait-bounds.md
 #: src/testing/solution.md src/android/testing.md src/android/testing/googletest.md
@@ -7156,7 +7156,7 @@ msgid ""
 "If students ask, you can also demonstrate how real error handling code would be written "
 "with `?`."
 msgstr ""
-"Si les élèves vous le demandent, vous pouvez également leur montrer comment on écrirait "
+"Si les apprenants vous le demandent, vous pouvez également leur montrer comment on écrirait "
 "un véritable code de gestion des erreurs à l'aide de `?`."
 
 #: src/pattern-matching/exercise.md
@@ -7186,22 +7186,22 @@ msgstr "Dans le code, nous représenterons l'arbre à l'aide de deux types :"
 #: src/pattern-matching/exercise.md src/pattern-matching/solution.md
 #: src/error-handling/exercise.md src/error-handling/solution.md
 msgid "/// An operation to perform on two subexpressions.\n"
-msgstr "/// An operation to perform on two subexpressions.\n"
+msgstr "/// Une opération à réaliser sur deux sous-expressions.\n"
 
 #: src/pattern-matching/exercise.md src/pattern-matching/solution.md
 #: src/error-handling/exercise.md src/error-handling/solution.md
 msgid "/// An expression, in tree form.\n"
-msgstr "/// An expression, in tree form.\n"
+msgstr "/// Une expression sous forme d'arbre.\n"
 
 #: src/pattern-matching/exercise.md src/pattern-matching/solution.md
 #: src/error-handling/exercise.md src/error-handling/solution.md
 msgid "/// An operation on two subexpressions.\n"
-msgstr "/// An operation on two subexpressions.\n"
+msgstr "/// Une opération sur deux sous-expressions.\n"
 
 #: src/pattern-matching/exercise.md src/pattern-matching/solution.md
 #: src/error-handling/exercise.md src/error-handling/solution.md
 msgid "/// A literal value\n"
-msgstr "/// A literal value\n"
+msgstr "/// Une valeur littérale\n"
 
 #: src/pattern-matching/exercise.md
 msgid ""
@@ -7231,39 +7231,39 @@ msgid ""
 "block:"
 msgstr ""
 "Rust vous permet d'associer des fonctions à vos nouveaux types. Vous faites cela avec un "
-"Bloc `impl` :"
+"bloc `impl` :"
 
 #: src/methods-and-traits/methods.md
 msgid "// No receiver, a static method\n"
-msgstr "// No receiver, a static method\n"
+msgstr "// Pas de receveur : une méthode statique\n"
 
 #: src/methods-and-traits/methods.md
 msgid "// Exclusive borrowed read-write access to self\n"
-msgstr "// Exclusive borrowed read-write access to self\n"
+msgstr "// Référence exclusive en lecture-écriture vers self\n"
 
 #: src/methods-and-traits/methods.md
 msgid "// Shared and read-only borrowed access to self\n"
-msgstr "// Shared and read-only borrowed access to self\n"
+msgstr "// Référence partagée en lecture seule vers self\n"
 
 #: src/methods-and-traits/methods.md
 msgid "\"Recorded {} laps for {}:\""
-msgstr "\"Recorded {} laps for {}:\""
+msgstr "\"{} tours enregistrés pour {}:\""
 
 #: src/methods-and-traits/methods.md
 msgid "\"Lap {idx}: {lap} sec\""
-msgstr "\"Lap {idx}: {lap} sec\""
+msgstr "\"tour {idx}: {lap} sec\""
 
 #: src/methods-and-traits/methods.md
 msgid "// Exclusive ownership of self (covered later)\n"
-msgstr "// Exclusive ownership of self (covered later)\n"
+msgstr "// Possession exclusive de self (nous en parlerons plus tard)\n"
 
 #: src/methods-and-traits/methods.md
 msgid "\"Race {} is finished, total lap time: {}\""
-msgstr "\"Race {} is finished, total lap time: {}\""
+msgstr "\"La course {} est finie, temps total de tour : {}\""
 
 #: src/methods-and-traits/methods.md
 msgid "\"Monaco Grand Prix\""
-msgstr "\"Monaco Grand Prix\""
+msgstr "\"Grand Prix de Monaco\""
 
 #: src/methods-and-traits/methods.md
 msgid "// race.add_lap(42);\n"
@@ -7301,7 +7301,7 @@ msgid ""
 "automatically mean mutability."
 msgstr ""
 "`self` : prend possession de l’objet et le retire de la méthode appelante. La méthode "
-"devient propriétaire de l’objet. L’objet sera libéré (désalé) lorsque la méthode se "
+"devient propriétaire de l’objet. L’objet sera libéré (désalloué) lorsque la méthode se "
 "termine, sauf si sa propriété est explicitement transmise. La propriété complète "
 "n’implique pas automatiquement la mutabilité."
 
@@ -7401,11 +7401,11 @@ msgstr ""
 
 #: src/methods-and-traits/traits.md
 msgid "/// Return a sentence from this pet.\n"
-msgstr "/// Return a sentence from this pet.\n"
+msgstr "/// Retourne une phrase de cet animal.\n"
 
 #: src/methods-and-traits/traits.md
 msgid "/// Print a string to the terminal greeting this pet.\n"
-msgstr "/// Print a string to the terminal greeting this pet.\n"
+msgstr "/// Affiche une chaîne sur le terminal saluant cet animal.\n"
 
 #: src/methods-and-traits/traits.md
 msgid ""
@@ -7424,12 +7424,12 @@ msgstr ""
 
 #: src/methods-and-traits/traits/implementing.md
 msgid "\"Oh you're a cutie! What's your name? {}\""
-msgstr "\"Oh you're a cutie! What's your name? {}\""
+msgstr "\"Oh tu es mignon ! Quel est ton nom ? {}\""
 
 #: src/methods-and-traits/traits/implementing.md src/generics/dyn-trait.md
 #: src/smart-pointers/trait-objects.md
 msgid "\"Woof, my name is {}!\""
-msgstr "\"Woof, my name is {}!\""
+msgstr "\"Woof, je m'appelle {}!\""
 
 #: src/methods-and-traits/traits/implementing.md src/generics/dyn-trait.md
 #: src/smart-pointers/trait-objects.md
@@ -7487,7 +7487,7 @@ msgstr "\"Rex\""
 
 #: src/methods-and-traits/traits/supertraits.md
 msgid "\"{} has {} legs\""
-msgstr "\"{} has {} legs\""
+msgstr "\"{} a {} pattes\""
 
 #: src/methods-and-traits/traits/supertraits.md
 msgid ""
@@ -7497,7 +7497,7 @@ msgid ""
 msgstr ""
 "Un trait peut exiger que les types qui l'implémentent implémentent également d'autres "
 "traits, appelés « supertraits ». Ce mécanisme est parfois appelé « héritage de traits », "
-"mais les étudiants ne doivent pas s'attendre à ce qu'il fonctionne comme l'héritage "
+"mais les apprenants ne doivent pas s'attendre à ce qu'il fonctionne comme l'héritage "
 "orienté objet. Il spécifie simplement une exigence supplémentaire pour les "
 "implémentations d'un trait. Par exemple, tout type implémentant `Pet` doit implémenter "
 "`Animal`."
@@ -7540,11 +7540,11 @@ msgstr ""
 
 #: src/methods-and-traits/deriving.md
 msgid "// Default trait adds `default` constructor.\n"
-msgstr "// Default trait adds `default` constructor.\n"
+msgstr "// Le trait `Default` ajoute le constructeur `default`.\n"
 
 #: src/methods-and-traits/deriving.md
 msgid "// Clone trait adds `clone` method.\n"
-msgstr "// Clone trait adds `clone` method.\n"
+msgstr "// Le trait `Clone`ajoute la méthode `clone`.\n"
 
 #: src/methods-and-traits/deriving.md
 msgid "\"EldurScrollz\""
@@ -7552,7 +7552,7 @@ msgstr "\"EldurScrollz\""
 
 #: src/methods-and-traits/deriving.md
 msgid "// Debug trait adds support for printing with `{:?}`.\n"
-msgstr "// Debug trait adds support for printing with `{:?}`.\n"
+msgstr "// Le trait `Debug` ajoute la faculté d'imprimer avec `{:?}`.\n"
 
 #: src/methods-and-traits/deriving.md
 msgid "\"{p1:?} vs. {p2:?}\""
@@ -7593,7 +7593,7 @@ msgstr ""
 
 #: src/methods-and-traits/exercise.md
 msgid "Exercise: Logger Trait"
-msgstr "Exercise: Logger Trait"
+msgstr "Exercice : Trait Logger"
 
 #: src/methods-and-traits/exercise.md
 msgid ""
@@ -7631,26 +7631,26 @@ msgstr ""
 #: src/methods-and-traits/exercise.md src/methods-and-traits/solution.md
 #: src/generics/generic-data.md src/closures/exercise.md src/closures/solution.md
 msgid "/// Log a message at the given verbosity level.\n"
-msgstr "/// Log a message at the given verbosity level.\n"
+msgstr "/// Logue un message à un niveau de verbosité donné.\n"
 
 #: src/methods-and-traits/exercise.md src/methods-and-traits/solution.md
 #: src/generics/generic-data.md src/closures/exercise.md src/closures/solution.md
 msgid "\"verbosity={verbosity}: {message}\""
-msgstr "\"verbosity={verbosity}: {message}\""
+msgstr "\"verbosité={verbosity}: {message}\""
 
 #: src/methods-and-traits/exercise.md src/methods-and-traits/solution.md
 #: src/generics/generic-data.md
 msgid "/// Only log messages up to the given verbosity level.\n"
-msgstr "/// Only log messages up to the given verbosity level.\n"
+msgstr "/// Ne logue que les messages jusqu'à un niveau de verbosité donné.\n"
 
 #: src/methods-and-traits/exercise.md
 msgid "// TODO: Implement the `Logger` trait for `VerbosityFilter`.\n"
-msgstr "// TODO: Implement the `Logger` trait for `VerbosityFilter`.\n"
+msgstr "// TODO: Implémentez le trait `Logger` pour `VerbosityFilter`.\n"
 
 #: src/methods-and-traits/exercise.md src/methods-and-traits/solution.md
 #: src/generics/generic-data.md src/closures/exercise.md src/closures/solution.md
 msgid "\"FYI\""
-msgstr "\"FYI\""
+msgstr "\"PI\""
 
 #: src/methods-and-traits/exercise.md src/methods-and-traits/solution.md
 #: src/generics/generic-data.md
@@ -7680,11 +7680,11 @@ msgstr ""
 
 #: src/generics/generic-functions.md
 msgid "\"picked a number: {:?}\""
-msgstr "\"picked a number: {:?}\""
+msgstr "\"L'appelant a choisi un nombre : {:?}\""
 
 #: src/generics/generic-functions.md
 msgid "\"picked a string: {:?}\""
-msgstr "\"picked a string: {:?}\""
+msgstr "\"L'appelant a choisi une chaîne : {:?}\""
 
 #: src/generics/generic-functions.md
 msgid "'L'"
@@ -7862,11 +7862,11 @@ msgstr ""
 
 #: src/generics/generic-traits.md
 msgid "\"Converted from integer: {from}\""
-msgstr "\"Converted from integer: {from}\""
+msgstr "\"Converti depuis le type entier : {from}\""
 
 #: src/generics/generic-traits.md
 msgid "\"Converted from bool: {from}\""
-msgstr "\"Converted from bool: {from}\""
+msgstr "\"Converti depuis le type bool : {from}\""
 
 #: src/generics/generic-traits.md
 msgid ""
@@ -7923,7 +7923,7 @@ msgid ""
 "// Syntactic sugar for:\n"
 "//   fn add_42_millions<T: Into<i32>>(x: T) -> i32 {\n"
 msgstr ""
-"// Syntactic sugar for:\n"
+"// Raccourci pour :\n"
 "//   fn add_42_millions<T: Into<i32>>(x: T) -> i32 {\n"
 
 #: src/generics/impl-trait.md
@@ -7984,19 +7984,19 @@ msgstr ""
 
 #: src/generics/dyn-trait.md src/smart-pointers/trait-objects.md
 msgid "\"Miau!\""
-msgstr "\"Miau!\""
+msgstr "\"Miaou !\""
 
 #: src/generics/dyn-trait.md
 msgid "// Uses generics and static dispatch.\n"
-msgstr "// Uses generics and static dispatch.\n"
+msgstr "// On utilise les générique et le dispatch statique.\n"
 
 #: src/generics/dyn-trait.md src/smart-pointers/trait-objects.md
 msgid "\"Hello, who are you? {}\""
-msgstr "\"Hello, who are you? {}\""
+msgstr "\"Bonjour, comment vas-tu ? {}\""
 
 #: src/generics/dyn-trait.md
 msgid "// Uses type-erasure and dynamic dispatch.\n"
-msgstr "// Uses type-erasure and dynamic dispatch.\n"
+msgstr "// Utilise l'effacement de type et la distribution dynamique.\n"
 
 #: src/generics/dyn-trait.md
 msgid ""
@@ -8072,7 +8072,7 @@ msgstr ""
 
 #: src/generics/exercise.md
 msgid "// TODO: implement the `min` function used in the tests.\n"
-msgstr "// TODO: implement the `min` function used in the tests.\n"
+msgstr "// TODO: implémentez la fonction `min` utilisée dans les tests.\n"
 
 #: src/generics/exercise.md src/generics/solution.md
 msgid "'z'"
@@ -8089,26 +8089,26 @@ msgstr "'1'"
 #: src/generics/exercise.md src/generics/solution.md src/std-traits/from-and-into.md
 #: src/idiomatic/leveraging-the-type-system/raii/drop_option.md
 msgid "\"hello\""
-msgstr "\"hello\""
+msgstr "\"bonjour\""
 
 #: src/generics/exercise.md src/generics/solution.md
 msgid "\"goodbye\""
-msgstr "\"goodbye\""
+msgstr "\"au revoir\""
 
 #: src/generics/exercise.md src/generics/solution.md
 msgid "\"bat\""
-msgstr "\"bat\""
+msgstr "\"chauve-souris\""
 
 #: src/generics/exercise.md src/generics/solution.md
 msgid "\"armadillo\""
-msgstr "\"armadillo\""
+msgstr "\"tatou\""
 
 #: src/generics/exercise.md
 msgid ""
 "Show students the [`Ord`](https://doc.rust-lang.org/stable/std/cmp/trait.Ord.html) trait "
 "and [`Ordering`](https://doc.rust-lang.org/stable/std/cmp/enum.Ordering.html) enum."
 msgstr ""
-"Montrez aux étudiants le trait [`Ord`](https://doc.rust-lang.org/stable/std/cmp/trait.Ord."
+"Montrez aux apprenants le trait [`Ord`](https://doc.rust-lang.org/stable/std/cmp/trait.Ord."
 "html) et l'énumération [`Ordering`](https://doc.rust-lang.org/stable/std/cmp/enum."
 "Ordering.html)."
 
@@ -8122,11 +8122,13 @@ msgstr "Les fermetures sont créées avec des barres verticales : `|..| ..`."
 
 #: src/closures/syntax.md
 msgid "// Argument and return type can be inferred for lightweight syntax:\n"
-msgstr "// Argument and return type can be inferred for lightweight syntax:\n"
+msgstr "// L'argument et le type de retour peuvent être inférés pour une syntaxe légère :\n"
 
 #: src/closures/syntax.md
 msgid "// Or we can specify types and bracket the body to be fully explicit:\n"
-msgstr "// Or we can specify types and bracket the body to be fully explicit:\n"
+msgstr ""
+"// Ou l'on peut spécifier les types et mettre le corps de la déclaration entre \n"
+"   // crochets pour être complètement explicites :\n"
 
 #: src/closures/syntax.md
 msgid ""
@@ -8257,7 +8259,7 @@ msgstr ""
 
 #: src/closures/traits.md
 msgid "\"Calling {func_name}({input}): {}\""
-msgstr "\"Calling {func_name}({input}): {}\""
+msgstr "\"On appelle {func_name}({input}): {}\""
 
 #: src/closures/traits.md
 msgid "\"-itis\""
@@ -8389,15 +8391,15 @@ msgstr ""
 
 #: src/closures/exercise.md
 msgid "// TODO: Define and implement `Filter`.\n"
-msgstr "// TODO: Define and implement `Filter`.\n"
+msgstr "// TODO: Définissez et implémentez `Filter`.\n"
 
 #: src/closures/exercise.md src/closures/solution.md
 msgid "\"yikes\""
-msgstr "\"yikes\""
+msgstr "\"oups\""
 
 #: src/closures/exercise.md src/closures/solution.md
 msgid "\"yikes, something went wrong\""
-msgstr "\"yikes, something went wrong\""
+msgstr "\"oups, quelque chose s'est mal passé\""
 
 #: src/closures/exercise.md src/closures/solution.md
 msgid "\"uhoh\""
@@ -8405,7 +8407,7 @@ msgstr "\"uhoh\""
 
 #: src/closures/solution.md
 msgid "/// Only log messages matching a filtering predicate.\n"
-msgstr "/// Only log messages matching a filtering predicate.\n"
+msgstr "/// Ne logguez que les messages correspondant à un prédicat de filtrage.\n"
 
 #: src/closures/solution.md
 msgid ""
@@ -8568,9 +8570,9 @@ msgid ""
 "///\n"
 "/// If the second argument is zero, the result is false.\n"
 msgstr ""
-"/// Determine whether the first argument is divisible by the second argument.\n"
+"/// Déterminez si les premier argument est divisible par le second.\n"
 "///\n"
-"/// If the second argument is zero, the result is false.\n"
+"/// Si le second argument est égal à zéro, le résultat est false.\n"
 
 #: src/std-types/docs.md
 msgid ""
@@ -8595,7 +8597,7 @@ msgstr ""
 
 #: src/std-types/docs.md
 msgid "//! This module contains functionality relating to divisibility of integers.\n"
-msgstr "//! This module contains functionality relating to divisibility of integers.\n"
+msgstr "//! Ce module contient une fonctionalité en relation avec la divisibilité des entiers.\n"
 
 #: src/std-types/docs.md
 msgid "Show students the generated docs for the `rand` crate at <https://docs.rs/rand>."
@@ -8626,7 +8628,7 @@ msgstr "'Z'"
 
 #: src/std-types/option.md
 msgid "\"Character not found\""
-msgstr "\"Character not found\""
+msgstr "\"Caractère non trouvé\""
 
 #: src/std-types/option.md
 msgid "`Option` is widely used, not just in the standard library."
@@ -8683,15 +8685,15 @@ msgstr "\"diary.txt\""
 
 #: src/std-types/result.md src/error-handling/result.md
 msgid "\"Dear diary: {contents} ({bytes} bytes)\""
-msgstr "\"Dear diary: {contents} ({bytes} bytes)\""
+msgstr "\"Cher journal : {contents} ({bytes} octets)\""
 
 #: src/std-types/result.md src/error-handling/result.md
 msgid "\"Could not read file content\""
-msgstr "\"Could not read file content\""
+msgstr "\"Le contenu du fichier n'a pas pu être lu\""
 
 #: src/std-types/result.md src/error-handling/result.md
 msgid "\"The diary could not be opened: {err}\""
-msgstr "\"The diary could not be opened: {err}\""
+msgstr "\"Le journale n'a pas pu être ouvert : {err}\""
 
 #: src/std-types/result.md
 msgid ""
@@ -8737,7 +8739,7 @@ msgstr "\"Hello\""
 
 #: src/std-types/string.md
 msgid "\"s1: len = {}, capacity = {}\""
-msgstr "\"s1: len = {}, capacity = {}\""
+msgstr "\"s1: longueur = {}, capacité = {}\""
 
 #: src/std-types/string.md
 msgid "'!'"
@@ -8745,7 +8747,7 @@ msgstr "'!'"
 
 #: src/std-types/string.md
 msgid "\"s2: len = {}, capacity = {}\""
-msgstr "\"s2: len = {}, capacity = {}\""
+msgstr "\"s2: longueur = {}, capacité = {}\""
 
 #: src/std-types/string.md
 msgid "\"🇨🇭\""
@@ -8753,7 +8755,7 @@ msgstr "\"🇨🇭\""
 
 #: src/std-types/string.md
 msgid "\"s3: len = {}, number of chars = {}\""
-msgstr "\"s3: len = {}, number of chars = {}\""
+msgstr "\"s3: longueur = {}, nombre de chars = {}\""
 
 #: src/std-types/string.md
 msgid ""
@@ -8883,11 +8885,11 @@ msgstr "\"v2: len = {}, capacity = {}\""
 
 #: src/std-types/vec.md
 msgid "// Canonical macro to initialize a vector with elements.\n"
-msgstr "// Canonical macro to initialize a vector with elements.\n"
+msgstr "// Macro canonique pour initialiser un vector avec des éléments.\n"
 
 #: src/std-types/vec.md
 msgid "// Retain only the even elements.\n"
-msgstr "// Retain only the even elements.\n"
+msgstr "// Ne retenir que les éléments pairs.\n"
 
 #: src/std-types/vec.md
 msgid "\"{v3:?}\""
@@ -8895,7 +8897,7 @@ msgstr "\"{v3:?}\""
 
 #: src/std-types/vec.md
 msgid "// Remove consecutive duplicates.\n"
-msgstr "// Remove consecutive duplicates.\n"
+msgstr "// Enlever les duplicats consécutifs.\n"
 
 #: src/std-types/vec.md
 msgid ""
@@ -8948,15 +8950,15 @@ msgstr "Table de hachage standard avec protection contre les attaques HashDoS :
 
 #: src/std-types/hashmap.md
 msgid "\"Adventures of Huckleberry Finn\""
-msgstr "\"Adventures of Huckleberry Finn\""
+msgstr "\"Les aventures d'Huckleberry Finn\""
 
 #: src/std-types/hashmap.md
 msgid "\"Grimms' Fairy Tales\""
-msgstr "\"Grimms' Fairy Tales\""
+msgstr "\"Les contes de Grimm\""
 
 #: src/std-types/hashmap.md
 msgid "\"Pride and Prejudice\""
-msgstr "\"Pride and Prejudice\""
+msgstr "\"Orgueil et Préjugés\""
 
 #: src/std-types/hashmap.md
 msgid "\"Les Misérables\""
@@ -8964,11 +8966,11 @@ msgstr "\"Les Misérables\""
 
 #: src/std-types/hashmap.md
 msgid "\"We know about {} books, but not Les Misérables.\""
-msgstr "\"We know about {} books, but not Les Misérables.\""
+msgstr "\"Nous connaissons {} livres mais pas Les Misérables.\""
 
 #: src/std-types/hashmap.md
 msgid "\"Alice's Adventure in Wonderland\""
-msgstr "\"Alice's Adventure in Wonderland\""
+msgstr "\"Alice au pays des Merveilles\""
 
 #: src/std-types/hashmap.md
 msgid "\"{book}: {count} pages\""
@@ -8976,11 +8978,11 @@ msgstr "\"{book}: {count} pages\""
 
 #: src/std-types/hashmap.md
 msgid "\"{book} is unknown.\""
-msgstr "\"{book} is unknown.\""
+msgstr "\"{book} est inconnu.\""
 
 #: src/std-types/hashmap.md
 msgid "// Use the .entry() method to insert a value if nothing is found.\n"
-msgstr "// Use the .entry() method to insert a value if nothing is found.\n"
+msgstr "// Utilisez la méthode .entry() pour insérer une valeur si rien n'est trouvé.\n"
 
 #: src/std-types/hashmap.md
 msgid "`HashMap` is not defined in the prelude and needs to be brought into scope."
@@ -8999,11 +9001,11 @@ msgstr ""
 
 #: src/std-types/hashmap.md
 msgid "\"Harry Potter and the Sorcerer's Stone\""
-msgstr "\"Harry Potter and the Sorcerer's Stone\""
+msgstr "\"Harry Potter et la Pierre Philosophale\""
 
 #: src/std-types/hashmap.md
 msgid "\"The Hunger Games\""
-msgstr "\"The Hunger Games\""
+msgstr "\"Les Hunger Games\""
 
 #: src/std-types/hashmap.md
 msgid "Unlike `vec!`, there is unfortunately no standard `hashmap!` macro."
@@ -9073,27 +9075,27 @@ msgstr ""
 
 #: src/std-types/exercise.md src/std-types/solution.md
 msgid "/// Counter counts the number of times each value of type T has been seen.\n"
-msgstr "/// Counter counts the number of times each value of type T has been seen.\n"
+msgstr "/// Le compteur conte le nombre de fois que chaque valeur de type T a été vue.\n"
 
 #: src/std-types/exercise.md src/std-types/solution.md
 msgid "/// Create a new Counter.\n"
-msgstr "/// Create a new Counter.\n"
+msgstr "/// Créez un nouveau Compteur.\n"
 
 #: src/std-types/exercise.md src/std-types/solution.md
 msgid "/// Count an occurrence of the given value.\n"
-msgstr "/// Count an occurrence of the given value.\n"
+msgstr "/// Comptez l'occurrence d'une valeur donnée.\n"
 
 #: src/std-types/exercise.md src/std-types/solution.md
 msgid "/// Return the number of times the given value has been seen.\n"
-msgstr "/// Return the number of times the given value has been seen.\n"
+msgstr "/// Retournez le nombre de fois qu'une valeur donnée a été vue.\n"
 
 #: src/std-types/exercise.md src/std-types/solution.md
 msgid "\"saw {} values equal to {}\""
-msgstr "\"saw {} values equal to {}\""
+msgstr "\"{} valeur vues, ce qui égale {}\""
 
 #: src/std-types/exercise.md src/std-types/solution.md
 msgid "\"apple\""
-msgstr "\"apple\""
+msgstr "\"pomme\""
 
 #: src/std-types/exercise.md src/std-types/solution.md
 msgid "\"orange\""
@@ -9101,7 +9103,7 @@ msgstr "\"orange\""
 
 #: src/std-types/exercise.md src/std-types/solution.md
 msgid "\"got {} apples\""
-msgstr "\"got {} apples\""
+msgstr "\"a {} pommes\""
 
 #: src/std-traits.md
 msgid "Read and Write"
@@ -9394,11 +9396,11 @@ msgstr "b\"foo\\nbar\\nbaz\\n\""
 
 #: src/std-traits/read-and-write.md
 msgid "\"lines in slice: {}\""
-msgstr "\"lines in slice: {}\""
+msgstr "\"lignes dans la tranche : {}\""
 
 #: src/std-traits/read-and-write.md
 msgid "\"lines in file: {}\""
-msgstr "\"lines in file: {}\""
+msgstr "\"ligne dans le fichier : {}\""
 
 #: src/std-traits/read-and-write.md
 msgid ""
@@ -9414,7 +9416,7 @@ msgstr "\"\\n\""
 
 #: src/std-traits/read-and-write.md
 msgid "\"Logged: {buffer:?}\""
-msgstr "\"Logged: {buffer:?}\""
+msgstr "\"Loggué : {buffer:?}\""
 
 #: src/std-traits/default.md
 msgid "The `Default` Trait"
@@ -9434,7 +9436,7 @@ msgstr "\"John Smith\""
 
 #: src/std-traits/default.md
 msgid "\"Y is set!\""
-msgstr "\"Y is set!\""
+msgstr "\"Y est défini !\""
 
 #: src/std-traits/default.md
 msgid "It can be implemented directly or it can be derived via `#[derive(Default)]`."
@@ -9497,7 +9499,7 @@ msgstr ""
 
 #: src/std-traits/exercise.md
 msgid "// Implement the `Read` trait for `RotDecoder`.\n"
-msgstr "// Implement the `Read` trait for `RotDecoder`.\n"
+msgstr "// Implémentez le trait `Read` pour `RotDecoder`.\n"
 
 #: src/std-traits/exercise.md src/std-traits/solution.md
 msgid "\"Gb trg gb gur bgure fvqr!\""
@@ -9659,9 +9661,9 @@ msgid ""
 "    // String provides no guarantees about its layout, so this could lead to\n"
 "    // undefined behavior.\n"
 msgstr ""
-"// DON'T DO THIS AT HOME! For educational purposes only.\n"
-"    // String provides no guarantees about its layout, so this could lead to\n"
-"    // undefined behavior.\n"
+"// NE LE FAITES PAS A LA MAISON ! A des fins éducatives uniquement.\n"
+"    // Le type String ne donne aucune garantie sur sa représentation en mémoire\n"
+"    // Cela pourrait donc entraîner un comportement indéfini.\n"
 
 #: src/memory-management/review.md
 msgid "\"capacity = {capacity}, ptr = {ptr:#x}, len = {len}\""
@@ -9727,7 +9729,7 @@ msgid ""
 "This slide is intended to help students coming from other languages to put Rust in "
 "context."
 msgstr ""
-"Cette diapositive a pour but d'aider les étudiants venant d'autres langages à situer Rust "
+"Cette diapositive a pour but d'aider les apprenants venant d'autres langages à situer Rust "
 "dans son contexte."
 
 #: src/memory-management/approaches.md
@@ -9811,7 +9813,7 @@ msgid ""
 "collector starts with a set of \"roots\" to find all reachable memory. Rust's \"single "
 "owner\" principle is a similar idea."
 msgstr ""
-"Les étudiants qui connaissent les implémentations du ramasse-miettes savent qu'un ramasse-"
+"Les apprenants qui connaissent les implémentations du ramasse-miettes savent qu'un ramasse-"
 "miettes commence par un ensemble de « racines » pour parcourir toute la mémoire "
 "accessible. Le principe de « propriétaire unique » de Rust repose sur une idée similaire."
 
@@ -9998,7 +10000,7 @@ msgstr "\"Cpp\""
 
 #: src/memory-management/move.md
 msgid "// Duplicate the data in s1.\n"
-msgstr "// Duplicate the data in s1.\n"
+msgstr "// Dupliquez la donnée dans s1.\n"
 
 #: src/memory-management/move.md
 msgid "The heap data from `s1` is duplicated and `s2` gets its own independent copy."
@@ -10211,15 +10213,15 @@ msgstr "\"d\""
 
 #: src/memory-management/drop.md
 msgid "\"Exiting innermost block\""
-msgstr "\"Exiting innermost block\""
+msgstr "\"Sortie du bloc imbriqué le plus profond\""
 
 #: src/memory-management/drop.md
 msgid "\"Exiting next block\""
-msgstr "\"Exiting next block\""
+msgstr "\"Sortie du bloc suivant\""
 
 #: src/memory-management/drop.md
 msgid "\"Exiting main\""
-msgstr "\"Exiting main\""
+msgstr "\"Sortie du main\""
 
 #: src/memory-management/drop.md
 msgid "Note that `std::mem::drop` is not the same as `std::ops::Drop::drop`."
@@ -10296,15 +10298,15 @@ msgstr "Complétez les éléments manquants."
 
 #: src/memory-management/exercise.md src/memory-management/solution.md
 msgid "/// A representation of a software package.\n"
-msgstr "/// A representation of a software package.\n"
+msgstr "/// Une représentation d'un paquet logiciel.\n"
 
 #: src/memory-management/exercise.md src/memory-management/solution.md
 msgid ""
 "/// Return a representation of this package as a dependency, for use in\n"
 "    /// building other packages.\n"
 msgstr ""
-"/// Return a representation of this package as a dependency, for use in\n"
-"    /// building other packages.\n"
+"/// Retournez une représentation de ce paquet en tant que dépendance, pour\n"
+"    /// pour l'utiliser dans la construction d'autres paquets.\n"
 
 #: src/memory-management/exercise.md
 msgid "\"1\""
@@ -10312,7 +10314,9 @@ msgstr "\"1\""
 
 #: src/memory-management/exercise.md src/memory-management/solution.md
 msgid "/// A builder for a Package. Use `build()` to create the `Package` itself.\n"
-msgstr "/// A builder for a Package. Use `build()` to create the `Package` itself.\n"
+msgstr ""
+"/// Un constructeur pour un Paquet. Utilisez `Build()` pour créer le`n"
+"   /// `Package` lui-même.\n"
 
 #: src/memory-management/exercise.md
 msgid "\"2\""
@@ -10320,11 +10324,11 @@ msgstr "\"2\""
 
 #: src/memory-management/exercise.md src/memory-management/solution.md
 msgid "/// Set the package version.\n"
-msgstr "/// Set the package version.\n"
+msgstr "/// Définissez la version du paquet.\n"
 
 #: src/memory-management/exercise.md src/memory-management/solution.md
 msgid "/// Set the package authors.\n"
-msgstr "/// Set the package authors.\n"
+msgstr "/// Définissez les auteurs du paquet.\n"
 
 #: src/memory-management/exercise.md
 msgid "\"3\""
@@ -10332,7 +10336,7 @@ msgstr "\"3\""
 
 #: src/memory-management/exercise.md src/memory-management/solution.md
 msgid "/// Add an additional dependency.\n"
-msgstr "/// Add an additional dependency.\n"
+msgstr "/// Ajoutez une dépendance additionnelle.\n"
 
 #: src/memory-management/exercise.md
 msgid "\"4\""
@@ -10340,7 +10344,9 @@ msgstr "\"4\""
 
 #: src/memory-management/exercise.md src/memory-management/solution.md
 msgid "/// Set the language. If not set, language defaults to None.\n"
-msgstr "/// Set the language. If not set, language defaults to None.\n"
+msgstr ""
+"/// Définissez le langage. S'il n'est pas défini il est `None`\n"
+ "  /// par défaut.\n"
 
 #: src/memory-management/exercise.md
 msgid "\"5\""
@@ -10396,7 +10402,7 @@ msgstr ""
 
 #: src/smart-pointers/box.md
 msgid "\"five: {}\""
-msgstr "\"five: {}\""
+msgstr "\"cinq : {}\""
 
 #: src/smart-pointers/box.md
 msgid ""
@@ -10418,11 +10424,11 @@ msgstr ""
 
 #: src/smart-pointers/box.md
 msgid "/// A non-empty list: first element and the rest of the list.\n"
-msgstr "/// A non-empty list: first element and the rest of the list.\n"
+msgstr "/// Une liste non vide : premier élément et le reste de la liste.\n"
 
 #: src/smart-pointers/box.md
 msgid "/// An empty list.\n"
-msgstr "/// An empty list.\n"
+msgstr "/// Une liste vide.\n"
 
 #: src/smart-pointers/box.md
 msgid "\"{list:?}\""
@@ -10507,13 +10513,10 @@ msgid ""
 "\"recursive without indirection\", because for data recursion, we have to use "
 "indirection, a `Box` or reference of some kind, instead of storing the value directly."
 msgstr ""
-"Supprimez la `Box` dans la définition de la liste et affichez l'erreur du compilateur. "
-"\"Récursif avec indirection\" est un indice que vous vouSupprimez le bloc `Box` de la "
-"définition de la liste et affichez l'erreur du compilateur. Le message « récursif sans "
-"indirection » s'affiche, car la récursivité des données nécessite l'utilisation d'une "
-"indirection (bloc `Box` ou référence) au lieu de stocker directement la valeur.drez peut-"
-"être utiliser une boîte ou une référence quelconque, au lieu de stocker une valeur "
-"directement."
+"Supprimez la `Box` dans la définition de la liste et affichez l'erreur du "
+"compilateur. \"Récursif avec indirection\" est un indice que vous voudrez peut-"
+"être utiliser une boîte ou une référence quelconque, au lieu de stocker une "
+"valeur directement."
 
 #: src/smart-pointers/box.md
 msgid ""
@@ -10772,11 +10775,11 @@ msgstr "Implémentez les types suivants afin que les tests donnés réussissent.
 
 #: src/smart-pointers/exercise.md src/smart-pointers/solution.md
 msgid "/// A node in the binary tree.\n"
-msgstr "/// A node in the binary tree.\n"
+msgstr "/// Un noeud dans l'arbre binaire.\n"
 
 #: src/smart-pointers/exercise.md src/smart-pointers/solution.md
 msgid "/// A possibly-empty subtree.\n"
-msgstr "/// A possibly-empty subtree.\n"
+msgstr "/// Un sous-arbre potentiellement vide.\n"
 
 #: src/smart-pointers/exercise.md src/smart-pointers/solution.md
 msgid ""
@@ -10784,21 +10787,21 @@ msgid ""
 "///\n"
 "/// If the same value is added multiple times, it is only stored once.\n"
 msgstr ""
-"/// A container storing a set of values, using a binary tree.\n"
+"/// Un conteneur stockant un ensemble de valeurs en utilisant un arbre binaire.\n"
 "///\n"
-"/// If the same value is added multiple times, it is only stored once.\n"
+"/// Si la même valeur est ajoutée plusieurs fois, elle n'est stockée qu'une seule fois.\n"
 
 #: src/smart-pointers/exercise.md
 msgid ""
 "// Implement `new` for `Node`.\n"
-"// Implement `new`, `insert`, `len`, and `has` for `Subtree`.\n"
+"// Implémentez `new`, `insert`, `len`, et `has` pour `Subtree`.\n"
 msgstr ""
-"// Implement `new` for `Node`.\n"
-"// Implement `new`, `insert`, `len`, and `has` for `Subtree`.\n"
+"// Implémentez `new` pour `Node`.\n"
+"// Implémentez `new`, `insert`, `len`, and `has` pour `Subtree`.\n"
 
 #: src/smart-pointers/exercise.md src/smart-pointers/solution.md
 msgid "// not a unique item\n"
-msgstr "// not a unique item\n"
+msgstr "// n'est pas un item unique\n"
 
 #: src/welcome-day-3-afternoon.md
 msgid ""
@@ -11079,7 +11082,7 @@ msgstr ""
 
 #: src/borrowing/interior-mutability/cell.md src/borrowing/interior-mutability/refcell.md
 msgid "// Note that `cell` is NOT declared as mutable.\n"
-msgstr "// Note that `cell` is NOT declared as mutable.\n"
+msgstr "// Notez que `cell` N'EST PAS déclaré comme mutable.\n"
 
 #: src/borrowing/interior-mutability/cell.md
 msgid ""
@@ -11121,7 +11124,7 @@ msgid ""
 "        // let other = cell.borrow();\n"
 "        // println!(\"{}\", other);\n"
 msgstr ""
-"// This triggers an error at runtime.\n"
+"// Ceci déclenche une erreur au runtime.\n"
 "        // let other = cell.borrow();\n"
 "        // println!(\"{}\", other);\n"
 
@@ -11188,8 +11191,8 @@ msgid ""
 "// TODO: Implement `add_spell` to take ownership of a spell and add it to\n"
 "    // the wizard's inventory.\n"
 msgstr ""
-"// TODO: Implement `add_spell` to take ownership of a spell and add it to\n"
-"    // the wizard's inventory.\n"
+"// TODO : Implémentez `add_spell` pour prendre possession d'un sort et l'ajouter\n"
+"    // à l'inventaire du sorcier.\n"
 
 #: src/borrowing/exercise.md
 msgid ""
@@ -11200,32 +11203,32 @@ msgid ""
 "    // If the wizard doesn't have enough mana, the spell should fail.\n"
 "    // If the spell has no uses left, it is removed from the inventory.\n"
 msgstr ""
-"// TODO: Implement `cast_spell` to borrow a spell from the inventory and\n"
-"    // cast it. The wizard's mana should decrease by the spell's cost and the\n"
-"    // number of uses for the spell should decrease by 1.\n"
+"// TODO : Implémentez `cast_spell` pour emprunter un sort de l'inventaire et\n"
+"    // le lancer. Le mana du sorcier doit diminuer du coût du sort et le\n"
+"    // nombre d'utilisations du sort doit diminuer de 1.\n"
 "    //\n"
-"    // If the wizard doesn't have enough mana, the spell should fail.\n"
-"    // If the spell has no uses left, it is removed from the inventory.\n"
+"    // Si le sorcier n'a pas assez de mana, le sort doit échouer.\n"
+"    // Si le sort n'a plus d'utilisations, il est retiré de l'inventaire.\n"
 
 #: src/borrowing/exercise.md src/borrowing/solution.md
 msgid "\"Fireball\""
-msgstr "\"Fireball\""
+msgstr "\"Boule de feu\""
 
 #: src/borrowing/exercise.md src/borrowing/solution.md
 msgid "\"Ice Blast\""
-msgstr "\"Ice Blast\""
+msgstr "\"Souffle glacé\""
 
 #: src/borrowing/exercise.md src/borrowing/solution.md
 msgid "// Casts successfully\n"
-msgstr "// Casts successfully\n"
+msgstr "// Sort lancé avec succès\n"
 
 #: src/borrowing/exercise.md src/borrowing/solution.md
 msgid "// Casts successfully, then removed\n"
-msgstr "// Casts successfully, then removed\n"
+msgstr "// Sort lancé avec succès puis enlevé de la lite\n"
 
 #: src/borrowing/exercise.md src/borrowing/solution.md
 msgid "// Fails (not found)\n"
-msgstr "// Fails (not found)\n"
+msgstr "// Sort échoue (Sort non trouvé)\n"
 
 #: src/borrowing/exercise.md
 msgid ""
@@ -11251,7 +11254,7 @@ msgstr "`cast_spell` est au cœur de l'exercice. Il doit :"
 
 #: src/borrowing/exercise.md
 msgid "Find the spell (by index or by reference)."
-msgstr "Find the spell (by index or by reference)."
+msgstr "Trouvez le sort (par index ou par référence)."
 
 #: src/borrowing/exercise.md
 msgid "Check mana and decrement it."
@@ -11287,15 +11290,15 @@ msgstr "Solution : Inventaire du magicien"
 
 #: src/borrowing/solution.md
 msgid "\"Spell {} not found!\""
-msgstr "\"Spell {} not found!\""
+msgstr "\"Sort {} non trouvé !\""
 
 #: src/borrowing/solution.md
 msgid "\"Casting {}! Mana left: {}. Uses left: {}\""
-msgstr "\"Casting {}! Mana left: {}. Uses left: {}\""
+msgstr "\"Lance le sort {}! Mana restant : {}. Utilisations restantes : {}\""
 
 #: src/borrowing/solution.md
 msgid "\"Not enough mana to cast {}!\""
-msgstr "\"Not enough mana to cast {}!\""
+msgstr "\"Pas assez de mana pour lancer {}!\""
 
 #: src/lifetimes.md
 msgid "This segment should take about 1 hour and 5 minutes. It contains:"
@@ -11316,11 +11319,11 @@ msgstr ""
 
 #: src/lifetimes/simple-borrows.md
 msgid "// Borrow `val` for the function call.\n"
-msgstr "// Borrow `val` for the function call.\n"
+msgstr "// La valeur de Borrow `val` pour l'appel de la fonction.\n"
 
 #: src/lifetimes/simple-borrows.md
 msgid "// Borrow has ended and we're free to mutate.\n"
-msgstr "// Borrow has ended and we're free to mutate.\n"
+msgstr "// L'emprunt s'est terminé et nous sommes libres de muter.\n"
 
 #: src/lifetimes/simple-borrows.md
 msgid ""
@@ -11342,7 +11345,7 @@ msgstr ""
 
 #: src/lifetimes/returning-borrows.md
 msgid "// x = 5; // 🛠️❌ `x` is still borrowed!\n"
-msgstr "// x = 5; // 🛠️❌ `x` is still borrowed!\n"
+msgstr "// x = 5; // 🛠️❌ `x`  est toujours emprunté !\n"
 
 #: src/lifetimes/returning-borrows.md
 msgid ""
@@ -11380,15 +11383,15 @@ msgstr ""
 
 #: src/lifetimes/multiple-borrows.md
 msgid "\"Return either `a` or `b`\""
-msgstr "\"Return either `a` or `b`\""
+msgstr "\"Retourne `a` ou `b`\""
 
 #: src/lifetimes/multiple-borrows.md
 msgid ""
 "// Which one is still borrowed?\n"
 "    // Should either mutation be allowed?\n"
 msgstr ""
-"// Which one is still borrowed?\n"
-"    // Should either mutation be allowed?\n"
+"// Laquelle des deux valeurs est toujours empruntée ?\n"
+"    // Est-ce que l'une ou l'autre des mutations devrait être autorisée ?\n"
 
 #: src/lifetimes/multiple-borrows.md
 msgid ""
@@ -11447,8 +11450,8 @@ msgid ""
 "    // a += 7;\n"
 "    // b += 7;\n"
 msgstr ""
-"// Which one is still borrowed?\n"
-"    // Should either mutation be allowed?\n"
+"// Laquelle de ces deux variables est toujours empruntée ?\n"
+"    // Est-ce qu'une de ces mutations devrait être autorisée ?\n"
 "    // a += 7;\n"
 "    // b += 7;\n"
 
@@ -11500,16 +11503,16 @@ msgid ""
 "/// Searches `points` for the point closest to `query`.\n"
 "/// Assumes there's at least one point in `points`.\n"
 msgstr ""
-"/// Searches `points` for the point closest to `query`.\n"
-"/// Assumes there's at least one point in `points`.\n"
+"/// Recherche `points` pour le point le plus proche de `query`.\n"
+"/// Suppose qu'il y a au moint un point dans `points`.\n"
 
 #: src/lifetimes/borrow-one.md
 msgid "// query // What happens if we do this instead?\n"
-msgstr "// query // What happens if we do this instead?\n"
+msgstr "// query // Que se passe-t-il lorsque nous faisons ça à la place ?\n"
 
 #: src/lifetimes/borrow-one.md
 msgid "// `query` isn't borrowed at this point.\n"
-msgstr "// `query` isn't borrowed at this point.\n"
+msgstr "// `query` n'est plus emprunté à ce stade.\n"
 
 #: src/lifetimes/borrow-one.md
 msgid ""
@@ -11639,7 +11642,7 @@ msgstr ""
 
 #: src/lifetimes/struct-lifetimes.md
 msgid "\"The quick brown fox jumps over the lazy dog.\""
-msgstr "\"The quick brown fox jumps over the lazy dog.\""
+msgstr "\"Le renard marron rapide saute par-dessus le chien parresseux.\""
 
 #: src/lifetimes/struct-lifetimes.md
 msgid "// drop(doc);\n"
@@ -11800,11 +11803,11 @@ msgstr ""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "/// A wire type as seen on the wire.\n"
-msgstr "/// A wire type as seen on the wire.\n"
+msgstr "/// Un type fil comme il apparaît à la transmission.\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "/// The Varint WireType indicates the value is a single VARINT.\n"
-msgstr "/// The Varint WireType indicates the value is a single VARINT.\n"
+msgstr "/// Le WireType Varint indique que la valeur est un VARINT unique.\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid ""
@@ -11814,11 +11817,11 @@ msgid ""
 "    /// The Len WireType indicates that the value is a length represented as a\n"
 "    /// VARINT followed by exactly that number of bytes.\n"
 msgstr ""
-"// The I64 WireType indicates that the value is precisely 8 bytes in\n"
-"    // little-endian order containing a 64-bit signed integer or double type.\n"
-"    //I64,  -- not needed for this exercise\n"
-"    /// The Len WireType indicates that the value is a length represented as a\n"
-"    /// VARINT followed by exactly that number of bytes.\n"
+"// Le WireType I64 indique que la valeur fait exactement 8 octets en\n"
+"    // ordre little-endian contenant un entier signé 64 bits ou un type double.\n"
+"    //I64,  -- pas nécessaire pour cet exercice\n"
+"    /// Le WireType Len indique que la valeur est une longueur représentée sous forme de \n"
+"    /// VARINT suivi d'exactement cenombre d'octets.\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid ""
@@ -11826,93 +11829,95 @@ msgid ""
 "    // little-endian order containing a 32-bit signed integer or float type.\n"
 "    //I32,  -- not needed for this exercise\n"
 msgstr ""
-"// The I32 WireType indicates that the value is precisely 4 bytes in\n"
-"    // little-endian order containing a 32-bit signed integer or float type.\n"
-"    //I32,  -- not needed for this exercise\n"
+"//  Le WireType I32 indique que la valeur est précisément de 4 octets en\n"
+"    // ordre little-endian contenant un type entier ou flottant signé de 32-bits.\n"
+"    //I32,  -- non nécessaire pour cet exercice\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "/// A field's value, typed based on the wire type.\n"
-msgstr "/// A field's value, typed based on the wire type.\n"
+msgstr "/// Une valeur de champ type basé sur le type fil.\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "//I64(i64),  -- not needed for this exercise\n"
-msgstr "//I64(i64),  -- not needed for this exercise\n"
+msgstr "//I64(i64),  -- non nécessaire pour cet exercice\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "//I32(i32),  -- not needed for this exercise\n"
-msgstr "//I32(i32),  -- not needed for this exercise\n"
+msgstr "//I32(i32),  -- non nécessaire pour cet exercice\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "/// A field, containing the field number and its value.\n"
-msgstr "/// A field, containing the field number and its value.\n"
+msgstr "/// Un champ contenant le numéro de champ et sa valeur.\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "//1 => WireType::I64,  -- not needed for this exercise\n"
-msgstr "//1 => WireType::I64,  -- not needed for this exercise\n"
+msgstr "//1 => WireType::I64,  -- non nécessaire pour cet exercice\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "//5 => WireType::I32,  -- not needed for this exercise\n"
-msgstr "//5 => WireType::I32,  -- not needed for this exercise\n"
+msgstr "//5 => WireType::I32,  -- non nécessaire pour cet exercice\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "\"Invalid wire type: {value}\""
-msgstr "\"Invalid wire type: {value}\""
+msgstr "\"type fil invalide : {value}\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "\"Expected string to be a `Len` field\""
-msgstr "\"Expected string to be a `Len` field\""
+msgstr "\"La chaîne doit être un champ `Len`\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "\"Invalid string\""
-msgstr "\"Invalid string\""
+msgstr "\"Chaîne invalide\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "\"Expected bytes to be a `Len` field\""
-msgstr "\"Expected bytes to be a `Len` field\""
+msgstr "\"Les octets attendus sont du champ `Len`\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "\"Expected `u64` to be a `Varint` field\""
-msgstr "\"Expected `u64` to be a `Varint` field\""
+msgstr "\"On s'attend à ce que `u64` soit un champ `Varint`\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "/// Parse a VARINT, returning the parsed value and the remaining bytes.\n"
-msgstr "/// Parse a VARINT, returning the parsed value and the remaining bytes.\n"
+msgstr "/// Parse un VARINT, retournant la valeur parsée et les octets restants.\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "\"Not enough bytes for varint\""
-msgstr "\"Not enough bytes for varint\""
+msgstr "\"Pas assez d'octets pour varint\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid ""
 "// This is the last byte of the VARINT, so convert it to\n"
 "            // a u64 and return it.\n"
 msgstr ""
-"// This is the last byte of the VARINT, so convert it to\n"
-"            // a u64 and return it.\n"
+"// Ceci est le dernier octet de VARINT, donc on le convertit\n"
+"            // en u64 et on le retourne.\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "// More than 7 bytes is invalid.\n"
-msgstr "// More than 7 bytes is invalid.\n"
+msgstr "// Plus de 7 octets sont invalides.\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "\"Too many bytes for varint\""
-msgstr "\"Too many bytes for varint\""
+msgstr "\"Trop d'octets pour varint\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "/// Convert a tag into a field number and a WireType.\n"
-msgstr "/// Convert a tag into a field number and a WireType.\n"
+msgstr "/// On convertit un tag en un numéro de champ et un WireType.\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "/// Parse a field, returning the remaining bytes\n"
-msgstr "/// Parse a field, returning the remaining bytes\n"
+msgstr "/// Parse un champ, retournant la valeur parsée et les octets restants.\n"
 
 #: src/lifetimes/exercise.md
 msgid "\"Based on the wire type, build a Field, consuming as many bytes as necessary.\""
-msgstr "\"Based on the wire type, build a Field, consuming as many bytes as necessary.\""
+msgstr ""
+"\"En se basant sur le type fil on construit un Champ en consommant autant d'octets que nécessaire.\""
+
 
 #: src/lifetimes/exercise.md
 msgid "\"Return the field, and any un-consumed bytes.\""
-msgstr "\"Return the field, and any un-consumed bytes.\""
+msgstr "\"Retourne le champ et les octets non consommés.\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid ""
@@ -11921,14 +11926,14 @@ msgid ""
 "///\n"
 "/// The entire input is consumed.\n"
 msgstr ""
-"/// Parse a message in the given data, calling `T::add_field` for each field in\n"
-"/// the message.\n"
+"/// Parse un message dans les données, appelle `T::add_field` sur chaque champ\n"
+"/// du message.\n"
 "///\n"
-"/// The entire input is consumed.\n"
+"/// L'entièreté de l'entrée est consommée.\n"
 
 #: src/lifetimes/exercise.md
 msgid "// TODO: Implement ProtoMessage for Person and PhoneNumber.\n"
-msgstr "// TODO: Implement ProtoMessage for Person and PhoneNumber.\n"
+msgstr "// TODO: Implémentez ProtoMessage pour Person et PhoneNumber.\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md src/modules/exercise.md
 #: src/modules/solution.md src/testing/unit-tests.md src/testing/solution.md
@@ -11937,7 +11942,7 @@ msgstr "\"\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "\"beautiful name\""
-msgstr "\"beautiful name\""
+msgstr "\"magnifique nom\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "\"Evan\""
@@ -11949,11 +11954,11 @@ msgstr "\"+1234-777-9090\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "\"home\""
-msgstr "\"home\""
+msgstr "\"domicile\""
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "// Put that all together into a single parse.\n"
-msgstr "// Put that all together into a single parse.\n"
+msgstr "// Mettez tout cela dans un seul parse.\n"
 
 #: src/lifetimes/exercise.md src/lifetimes/solution.md
 msgid "\"maxwell\""
@@ -11988,11 +11993,11 @@ msgstr ""
 
 #: src/lifetimes/solution.md
 msgid "// cast for simplicity\n"
-msgstr "// cast for simplicity\n"
+msgstr "// on caste pour plus de simplicité\n"
 
 #: src/lifetimes/solution.md
 msgid "// skip everything else\n"
-msgstr "// skip everything else\n"
+msgstr "// on saute tout le reste\n"
 
 #: src/welcome-day-4.md
 msgid "Welcome to Day 4"
@@ -12031,7 +12036,7 @@ msgstr ""
 
 #: src/iterators.md
 msgid "Iterator Trait"
-msgstr "Iterator Trait"
+msgstr "Trait Iterator"
 
 #: src/iterators.md
 msgid "Iterator Helper Methods"
@@ -12115,7 +12120,7 @@ msgid ""
 "If students ask, you can point out that this is how Rust's slice and array iterators work "
 "under the hood (though implemented as a Rust iterator)."
 msgstr ""
-"Si les étudiants posent la question, vous pouvez leur faire remarquer que c'est ainsi que "
+"Si les apprenants posent la question, vous pouvez leur faire remarquer que c'est ainsi que "
 "fonctionnent en interne les itérateurs de tranches et de tableaux de Rust (bien "
 "qu'implémentés comme un itérateur Rust)."
 
@@ -12145,7 +12150,7 @@ msgid ""
 "the struct but does not otherwise do any work. No work happens until the `next` method is "
 "called."
 msgstr ""
-"Expliquez aux étudiants que les itérateurs sont paresseux : la création d’un itérateur "
+"Expliquez aux apprenants que les itérateurs sont paresseux : la création d’un itérateur "
 "initialise uniquement la structure, sans effectuer d’autre traitement. Aucun traitement "
 "n’est effectué tant que la méthode `next` n’est pas appelée."
 
@@ -12198,23 +12203,23 @@ msgstr ""
 
 #: src/iterators/helpers.md
 msgid "// Create a range from 1 to 10\n"
-msgstr "// Create a range from 1 to 10\n"
+msgstr "// Crée un intervalle de 0 à 10\n"
 
 #: src/iterators/helpers.md
 msgid "// Keep only even numbers\n"
-msgstr "// Keep only even numbers\n"
+msgstr "// Ne garde que les nombres pairs\n"
 
 #: src/iterators/helpers.md
 msgid "// Square each number\n"
-msgstr "// Square each number\n"
+msgstr "// Elève chaque nombre au carré\n"
 
 #: src/iterators/helpers.md
 msgid "// Sum up all the squared numbers\n"
-msgstr "// Sum up all the squared numbers\n"
+msgstr "// Fait la somme des carrés\n"
 
 #: src/iterators/helpers.md
 msgid "\"The sum of squares of even numbers from 1 to 10 is: {}\""
-msgstr "\"The sum of squares of even numbers from 1 to 10 is: {}\""
+msgstr "\"La somme des carrés des nombres pairs de 1 à 10 est : {}\""
 
 #: src/iterators/helpers.md
 msgid ""
@@ -12453,10 +12458,10 @@ msgid ""
 "///\n"
 "/// Element `n` of the result is `values[(n+offset)%len] - values[n]`.\n"
 msgstr ""
-"/// Calculate the differences between elements of `values` offset by `offset`,\n"
-"/// wrapping around from the end of `values` to the beginning.\n"
+"/// Calculez les différences entre les éléments de `values` décalés de `offset`,\n"
+"/// en revenant au début de `values` après la fin.\n"
 "///\n"
-"/// Element `n` of the result is `values[(n+offset)%len] - values[n]`.\n"
+"/// L'élément `n` du résultat est `values[(n+offset)%len] - values[n]`.\n"
 
 #: src/modules.md src/modules/paths.md
 msgid "use, super, self"
@@ -12473,11 +12478,11 @@ msgstr "De même, `mod` nous permet de nommer les types et les fonctions :"
 
 #: src/modules/modules.md
 msgid "\"In the foo module\""
-msgstr "\"In the foo module\""
+msgstr "\"Dans le module foo\""
 
 #: src/modules/modules.md
 msgid "\"In the bar module\""
-msgstr "\"In the bar module\""
+msgstr "\"Dans le module bar\""
 
 #: src/modules/modules.md
 msgid ""
@@ -12538,20 +12543,20 @@ msgid ""
 "//! This module implements the garden, including a highly performant germination\n"
 "//! implementation.\n"
 msgstr ""
-"//! This module implements the garden, including a highly performant germination\n"
-"//! implementation.\n"
+"//! Ce module implémente le jardin. Il inclut une implémentation performant de\n"
+"//! la germination.\n"
 
 #: src/modules/filesystem.md
 msgid "// Re-export types from this module.\n"
-msgstr "// Re-export types from this module.\n"
+msgstr "// Réexporte les types de ce module.\n"
 
 #: src/modules/filesystem.md
 msgid "/// Sow the given seed packets.\n"
-msgstr "/// Sow the given seed packets.\n"
+msgstr "/// Sème les paquets de semence donnés.\n"
 
 #: src/modules/filesystem.md
 msgid "/// Harvest the produce in the garden that is ready.\n"
-msgstr "/// Harvest the produce in the garden that is ready.\n"
+msgstr "/// Récolte les produits qui sont prêts dans le jardin.\n"
 
 #: src/modules/filesystem.md
 msgid ""
@@ -12633,7 +12638,7 @@ msgstr "\"outer::inner::public\""
 
 #: src/modules/visibility.md
 msgid "Use the `pub` keyword to make modules public."
-msgstr "Utilisez le mot-clé `pub` pour rendre les modules publics."
+msgstr "Utilise le mot-clé `pub` pour rendre les modules publics."
 
 #: src/modules/visibility.md
 msgid ""
@@ -12892,15 +12897,15 @@ msgstr "Voici l'implémentation à module unique de la bibliothèque d'interface
 
 #: src/modules/exercise.md src/modules/solution.md
 msgid "/// Natural width of `self`.\n"
-msgstr "/// Natural width of `self`.\n"
+msgstr "/// Largeur naturelle de `self`.\n"
 
 #: src/modules/exercise.md src/modules/solution.md
 msgid "/// Draw the widget into a buffer.\n"
-msgstr "/// Draw the widget into a buffer.\n"
+msgstr "/// Dessinez le widget dans un tampon.\n"
 
 #: src/modules/exercise.md src/modules/solution.md
 msgid "/// Draw the widget on standard output.\n"
-msgstr "/// Draw the widget on standard output.\n"
+msgstr "/// Dessinez le widget dans la sortie standard.\n"
 
 #: src/modules/exercise.md src/modules/solution.md
 msgid "\"{buffer}\""
@@ -12908,15 +12913,15 @@ msgstr "\"{buffer}\""
 
 #: src/modules/exercise.md
 msgid "// Add 4 paddings for borders\n"
-msgstr "// Add 4 paddings for borders\n"
+msgstr "// Ajoutez 4 espaces pour les bords\n"
 
 #: src/modules/exercise.md
 msgid ""
 "// TODO: Change draw_into to return Result<(), std::fmt::Error>. Then use the\n"
 "        // ?-operator here instead of .unwrap().\n"
 msgstr ""
-"// TODO: Change draw_into to return Result<(), std::fmt::Error>. Then use the\n"
-"        // ?-operator here instead of .unwrap().\n"
+"// TODO: Modifiez draw_into pour retourner Result<(), std::fmt::Error>. Ensuite, \n"
+"       // utiliez l'opérateur ? au lieu d'`unwrap()`\n"
 
 #: src/modules/exercise.md src/modules/solution.md
 msgid "\"+-{:-<inner_width$}-+\""
@@ -12936,7 +12941,7 @@ msgstr "\"| {:inner_width$} |\""
 
 #: src/modules/exercise.md src/modules/solution.md
 msgid "// add a bit of padding\n"
-msgstr "// add a bit of padding\n"
+msgstr "// ajoutez un bit d'espace\n"
 
 #: src/modules/exercise.md src/modules/solution.md
 msgid "\"+{:-<width$}+\""
@@ -12952,11 +12957,11 @@ msgstr "\"Rust GUI Demo 1.23\""
 
 #: src/modules/exercise.md src/modules/solution.md
 msgid "\"This is a small text GUI demo.\""
-msgstr "\"This is a small text GUI demo.\""
+msgstr "\"Ceci est la démo d'un petit GUI de texte.\""
 
 #: src/modules/exercise.md src/modules/solution.md
 msgid "\"Click me!\""
-msgstr "\"Click me!\""
+msgstr "\"Clickez-moi !\""
 
 #: src/modules/exercise.md
 msgid ""
@@ -13030,9 +13035,9 @@ msgid ""
 "        // draw_into to return Result<(), std::fmt::Error>. Then use\n"
 "        // the ?-operator here instead of .unwrap().\n"
 msgstr ""
-"// TODO: after learning about error handling, you can change\n"
-"        // draw_into to return Result<(), std::fmt::Error>. Then use\n"
-"        // the ?-operator here instead of .unwrap().\n"
+"// TODO: aprèes avoir entendu parler de gestion d'erreur, vous pouvez\n"
+"        // changer draw_into pour retourner Result<(), std::fmt::Error>.\n"
+"        // Puis, utilisez l'opérateur ? au lieu de .unwrap().\n"
 
 #: src/modules/solution.md
 msgid "// ---- src/main.rs ----\n"
@@ -13251,15 +13256,15 @@ msgstr "\"8273 1232 7352 0569\""
 
 #: src/testing/solution.md
 msgid "// New: accept whitespace.\n"
-msgstr "// New: accept whitespace.\n"
+msgstr "// New: accepte les espaces.\n"
 
 #: src/testing/solution.md
 msgid "// New: reject all other characters.\n"
-msgstr "// New: reject all other characters.\n"
+msgstr "// New: rejète les autres caractères.\n"
 
 #: src/testing/solution.md
 msgid "// New: check that we have at least two digits\n"
-msgstr "// New: check that we have at least two digits\n"
+msgstr "// New: vérifiez qu'il y a au moin deux chiffres\n"
 
 #: src/testing/solution.md
 msgid "\"foo 0 0\""
@@ -13288,7 +13293,7 @@ msgstr "\" 0 0 \""
 
 #: src/error-handling.md
 msgid "Error Trait"
-msgstr "Error Trait"
+msgstr "Trait Error"
 
 #: src/error-handling.md
 msgid "thiserror"
@@ -13349,11 +13354,11 @@ msgstr ""
 
 #: src/error-handling/panics.md
 msgid "\"No problem here!\""
-msgstr "\"No problem here!\""
+msgstr "\"Pas de problèmeci !\""
 
 #: src/error-handling/panics.md
 msgid "\"oh no!\""
-msgstr "\"oh no!\""
+msgstr "\"oh non!\""
 
 #: src/error-handling/panics.md
 msgid "Catching is unusual; do not attempt to implement exceptions with `catch_unwind`!"
@@ -13498,7 +13503,7 @@ msgstr "\"config.dat\""
 
 #: src/error-handling/try.md src/error-handling/try-conversions.md
 msgid "\"username or error: {username:?}\""
-msgstr "\"username or error: {username:?}\""
+msgstr "\"username ou erreur : {username:?}\""
 
 #: src/error-handling/try.md
 msgid "Simplify the `read_username` function to use `?`."
@@ -13550,11 +13555,11 @@ msgstr ""
 
 #: src/error-handling/try-conversions.md
 msgid "\"I/O error: {e}\""
-msgstr "\"I/O error: {e}\""
+msgstr "\"Erreur I/O : {e}\""
 
 #: src/error-handling/try-conversions.md
 msgid "\"Found no username in {path}\""
-msgstr "\"Found no username in {path}\""
+msgstr "\"Aucun username trouvé dans {path}\""
 
 #: src/error-handling/try-conversions.md
 msgid "//std::fs::write(\"config.dat\", \"\").unwrap();\n"
@@ -13673,11 +13678,11 @@ msgstr ""
 
 #: src/error-handling/thiserror.md
 msgid "\"I/O error: {0}\""
-msgstr "\"I/O error: {0}\""
+msgstr "\"Erreur I/O : {0}\""
 
 #: src/error-handling/thiserror.md src/error-handling/anyhow.md
 msgid "\"Found no username in {0}\""
-msgstr "\"Found no username in {0}\""
+msgstr "\"Aucun username trouvé dans {0}\""
 
 #: src/error-handling/thiserror.md src/error-handling/anyhow.md
 msgid "//fs::write(\"config.dat\", \"\").unwrap();\n"
@@ -13689,7 +13694,7 @@ msgstr "\"Username: {username}\""
 
 #: src/error-handling/thiserror.md src/error-handling/anyhow.md
 msgid "\"Error: {err:?}\""
-msgstr "\"Error: {err:?}\""
+msgstr "\"Erreur : {err:?}\""
 
 #: src/error-handling/thiserror.md
 msgid ""
@@ -13735,11 +13740,11 @@ msgstr ""
 
 #: src/error-handling/anyhow.md
 msgid "\"Failed to open {path}\""
-msgstr "\"Failed to open {path}\""
+msgstr "\"Echec dans l'ouverture de {path}\""
 
 #: src/error-handling/anyhow.md
 msgid "\"Failed to read\""
-msgstr "\"Failed to read\""
+msgstr "\"Echec de lecture\""
 
 #: src/error-handling/anyhow.md
 msgid ""
@@ -13773,9 +13778,9 @@ msgid ""
 "`use anyhow::Context` is necessary to enable `.context()` and `.with_context()` on those "
 "types."
 msgstr ""
-"`anyhow::Context` is a trait implemented for the standard `Result` and `Option` types. "
-"`use anyhow::Context` is necessary to enable `.context()` and `.with_context()` on those "
-"types."
+"`anyhow::Context` est un trait implémenté pour les types standards `Result` and `Option`. "
+"`use anyhow::Context` est nécessaire pour permettre d'utiliser `.context()` et "
+"`.with_context()` sur ces types."
 
 #: src/error-handling/anyhow.md
 msgid ""
@@ -13783,9 +13788,9 @@ msgid ""
 "error type stored inside can be extracted for examination if desired with [`Error::"
 "downcast`](https://docs.rs/anyhow/latest/anyhow/struct.Error.html#method.downcast)."
 msgstr ""
-"`anyhow::Error` has support for downcasting, much like `std::any::Any`; the specific "
-"error type stored inside can be extracted for examination if desired with [`Error::"
-"downcast`](https://docs.rs/anyhow/latest/anyhow/struct.Error.html#method.downcast)."
+"`anyhow::Error` permet le downcasting un peu comme `std::any::Any`; le type erreur "
+"spécifique est stocké à l'intérieur et peut être extrait pour l'examen si souhaité "
+"[`Error::downcast`](https://docs.rs/anyhow/latest/anyhow/struct.Error.html#method.downcast)."
 
 #: src/error-handling/exercise.md
 msgid ""
@@ -13806,12 +13811,12 @@ msgid ""
 "// The original implementation of the expression evaluator. Update this to\n"
 "// return a `Result` and produce an error when dividing by 0.\n"
 msgstr ""
-"// The original implementation of the expression evaluator. Update this to\n"
-"// return a `Result` and produce an error when dividing by 0.\n"
+"// Implémentation originelle de l'évaluateur d'expression. Mettez à jour\n"
+"// le code pour retourner un `Result` et produire une erreur pour la division par 0.\n"
 
 #: src/error-handling/exercise.md
 msgid "\"Cannot divide by zero!\""
-msgstr "\"Cannot divide by zero!\""
+msgstr "\"Division par 0 impossible !\""
 
 #: src/error-handling/exercise.md
 msgid ""
