@@ -3144,12 +3144,14 @@ msgstr ""
 #: src/running-the-course/translations.md
 msgid ""
 "[French](https://google.github.io/comprehensive-rust/fr/) by [@KookaS](https://github.com/"
-"KookaS), [@vcaen](https://github.com/vcaen) and [@AdrienBaudemont](https://github.com/"
-"AdrienBaudemont)."
+"KookaS), [@vcaen](https://github.com/vcaen), [@AdrienBaudemont](https://github.com/"
+"AdrienBaudemont), [@asonolet](https://github.com/asonolet) and [@IRClichtR](https://github."
+"com/IRClichtR)."
 msgstr ""
 "[Français](https://google.github.io/comprehensive-rust/fr/) par [@KookaS](https://github."
 "com/KookaS), [@vcaen](https://github.com/vcaen), [@AdrienBaudemont](https://github.com/"
-"AdrienBaudemont) et [@asonolet](https://github.com/asonolet)."
+"AdrienBaudemont), [@asonolet](https://github.com/asonolet) et [@IRClichtR](https://github."
+"com/IRClichtR)."
 
 #: src/running-the-course/translations.md
 msgid ""

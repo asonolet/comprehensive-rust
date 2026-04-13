@@ -31,7 +31,7 @@ recently updated translations:
 
 - [Arabic][ar] by [@younies]
 - [Bengali][bn] by [@raselmandol].
-- [French][fr] by [@KookaS], [@vcaen] and [@AdrienBaudemont].
+- [French][fr] by [@KookaS], [@vcaen], [@AdrienBaudemont], [@asonolet] and [@IRClichtR].
 - [German][de] by [@Throvn] and [@ronaldfw].
 - [Italian][it] by [@henrythebuilder] and [@detro].
 
@@ -58,6 +58,7 @@ get going. Translations are coordinated on the [issue tracker].
 [@AdrienBaudemont]: https://github.com/AdrienBaudemont
 [@Alix1383]: https://github.com/alix1383
 [@anlunx]: https://github.com/anlunx
+[@asonolet]: https://github.com/asonolet
 [@CoinEZ-JPN]: https://github.com/CoinEZ
 [@DannyRavi]: https://github.com/DannyRavi
 [@deavid]: https://github.com/deavid
@@ -69,6 +70,7 @@ get going. Translations are coordinated on the [issue tracker].
 [@HidenoriKobayashi]: https://github.com/HidenoriKobayashi
 [@hueich]: https://github.com/hueich
 [@hugojacob]: https://github.com/hugojacob
+[@IRClichtR]: https://github.com/IRClichtR
 [@javad-jafari]: https://github.com/javad-jafari
 [@jiyongp]: https://github.com/jiyongp
 [@joaovicmendes]: https://github.com/joaovicmendes
