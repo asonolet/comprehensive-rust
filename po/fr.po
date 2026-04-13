@@ -2374,7 +2374,7 @@ msgid ""
 "book/) and [Rust by Example](https://doc.rust-lang.org/rust-by-example/macros.html) "
 "instead."
 msgstr ""
-"Apprendre comment développer des macrosi : pour cela, nous vous invitons à consulter le "
+"Apprendre comment développer des macros : pour cela, nous vous invitons à consulter le "
 "[Chapitre 19.5 dans le Rust Book](https://doc.rust-lang.org/book/ch19-06-macros.html) et "
 "[Rust by Example](https://doc.rust-lang.org/rust-by-example/macros.html) (an anglais). "
 "Vous pouvez également consulter [le Chapitre 19.5 dans la traduction non-officielle du "
@@ -2520,7 +2520,7 @@ msgid ""
 "has been for us!"
 msgstr ""
 "C'est tout, bonne chance pour la présentation du cours ! Nous espérons que vous y "
-"prendrez autant de plaisir que nous_!"
+"prendrez autant de plaisir que nous !"
 
 #: src/running-the-course.md
 msgid ""
@@ -3932,7 +3932,7 @@ msgid ""
 "matching and built-in dependency management."
 msgstr ""
 "Expérience avec C ou C++ : Rust élimine toute une classe d'_erreurs d'exécution_ via le "
-"`borroz checker`. On obtient des performances comme en C et C++, mais sans "
+"vérificateur d'emprunts (`borrow checker`). On obtient des performances comme en C et C++, mais sans "
 "problèmes d'insécurité mémoire. De plus, Rust est un langage moderne avec des "
 "constructions telles que le filtrage par motif et la gestion intégrée des dépendances."
 
@@ -5704,7 +5704,7 @@ msgstr "`String` est un tampon `owned` (possédé) d'octets encodés en UTF-8, s
 
 #: src/references/strings.md src/std-traits/read-and-write.md
 msgid "\"World\""
-msgstr "\"Monde\""
+msgstr "\"World\""
 
 #: src/references/strings.md
 msgid "\"s1: {s1}\""
@@ -5984,7 +5984,7 @@ msgid ""
 "Struct fields do not support default values. Default values are specified by implementing "
 "the `Default` trait which we will cover later."
 msgstr ""
-"Les champs des `Strcut` ne peuvent pas avoir de valeur par défaut. Les valeurs par défaut "
+"Les champs des `Struct` ne peuvent pas avoir de valeur par défaut. Les valeurs par défaut "
 "sont spécifiées en implémnetant le trait `Default` que nous aborderons plus tard."
 
 #: src/user-defined-types/named-structs.md
@@ -6711,7 +6711,7 @@ msgstr "\"Entrer un nombre\""
 
 #: src/pattern-matching/match.md
 msgid "\"Lowercase: {key}\""
-msgstr "\"petite casse: {key}\""
+msgstr "\"En minuscules : {key}\""
 
 #: src/pattern-matching/match.md
 msgid "\"Something else\""
@@ -6781,7 +6781,7 @@ msgstr ""
 
 #: src/pattern-matching/match.md
 msgid "\"Uppercase\""
-msgstr "\"Grande casse\""
+msgstr "\"En majuscules\""
 
 #: src/pattern-matching/match.md
 msgid "\"Bug: this is never printed\""
@@ -7923,7 +7923,7 @@ msgid ""
 "// Syntactic sugar for:\n"
 "//   fn add_42_millions<T: Into<i32>>(x: T) -> i32 {\n"
 msgstr ""
-"// Raccourci pour :\n"
+"// Sucre syntaxique pour :\n"
 "//   fn add_42_millions<T: Into<i32>>(x: T) -> i32 {\n"
 
 #: src/generics/impl-trait.md
@@ -7988,7 +7988,7 @@ msgstr "\"Miaou !\""
 
 #: src/generics/dyn-trait.md
 msgid "// Uses generics and static dispatch.\n"
-msgstr "// On utilise les générique et le dispatch statique.\n"
+msgstr "// On utilise les génériques et le dispatch statique.\n"
 
 #: src/generics/dyn-trait.md src/smart-pointers/trait-objects.md
 msgid "\"Hello, who are you? {}\""
@@ -13354,7 +13354,7 @@ msgstr ""
 
 #: src/error-handling/panics.md
 msgid "\"No problem here!\""
-msgstr "\"Pas de problèmeci !\""
+msgstr "\"Pas de problème ici !\""
 
 #: src/error-handling/panics.md
 msgid "\"oh no!\""
