@@ -291,7 +291,7 @@ msgstr "Expressions `while let`"
 
 #: src/SUMMARY.md
 msgid "`let else`"
-msgstr "Expressions `while let`"
+msgstr "Expressions `let else`"
 
 #: src/SUMMARY.md src/pattern-matching.md src/pattern-matching/exercise.md
 msgid "Exercise: Expression Evaluation"
@@ -6733,9 +6733,8 @@ msgid ""
 "A match guard causes the arm to match only if the condition is true. If the condition is "
 "false the match will continue checking later cases."
 msgstr ""
-"Un dispositif de protection empêche la correspondance du bras de se faire si la condition "
-"est vraie. Si la condition est fausse, la correspondance se poursuit et vérifie les cas "
-"suivants."
+"Un guard fait correspondre le bras uniquement si la condition est vraie. Si la condition est "
+"fausse, le match continue en vérifiant les cas suivants. "
 
 #: src/pattern-matching/match.md
 msgid "You might point out how some specific characters are being used when in a pattern"
@@ -6871,7 +6870,7 @@ msgstr "\"{repeat} pas x: {x}\""
 
 #: src/pattern-matching/destructuring-structs.md
 msgid "\"Single step y: {y}\""
-msgstr "\"Single pas y: {y}\""
+msgstr "\"Pas unique y: {y}\""
 
 #: src/pattern-matching/destructuring-structs.md
 msgid "\"Other move\""
@@ -6937,7 +6936,7 @@ msgstr ""
 
 #: src/pattern-matching/destructuring-enums.md
 msgid "\"cannot divide {n} into two equal parts\""
-msgstr "\"on ne peut pqs diviser {n} en deux parties égales\""
+msgstr "\"on ne peut pas diviser {n} en deux parties égales\""
 
 #: src/pattern-matching/destructuring-enums.md
 msgid "\"{n} divided in two is {half}\""
@@ -7067,7 +7066,7 @@ msgstr ""
 
 #: src/pattern-matching/let-control-flow/while-let.md
 msgid "\"Comprehensive Rust 🦀\""
-msgstr "Bienvenue à Comprehensive Rust (le guide complet de Rust) 🦀"
+msgstr "\"Comprehensive Rust (le guide complet de Rust) 🦀\""
 
 #: src/pattern-matching/let-control-flow/while-let.md
 msgid "// (There are more efficient ways to reverse a string!)\n"
@@ -7080,7 +7079,7 @@ msgid ""
 "`None`. The `while let` lets us keep iterating through all items."
 msgstr ""
 "Ici, la méthode `String::pop` (https://doc.rust-lang.org/stable/std/string/struct.String."
-"html#method.pop) renvoie `Some(c)` tant que la chaîne est vide, après quoi elle renvoie "
+"html#method.pop) renvoie `Some(c)` jusqu'à ce que la chaîne soit vide, puis elle renvoie "
 "`None`. La boucle `while let` permet de parcourir tous les éléments."
 
 #: src/pattern-matching/let-control-flow/while-let.md
