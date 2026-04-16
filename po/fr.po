@@ -8098,11 +8098,11 @@ msgstr "\"au revoir\""
 
 #: src/generics/exercise.md src/generics/solution.md
 msgid "\"bat\""
-msgstr "\"chauve-souris\""
+msgstr "\"tatou\""
 
 #: src/generics/exercise.md src/generics/solution.md
 msgid "\"armadillo\""
-msgstr "\"tatou\""
+msgstr "\"chauve-souris\""
 
 #: src/generics/exercise.md
 msgid ""
