@@ -424,7 +424,7 @@ msgstr "`HashMap`"
 
 #: src/SUMMARY.md src/std-types.md src/std-types/exercise.md
 msgid "Exercise: Counter"
-msgstr "Exercice : Conteur"
+msgstr "Exercice : Compteur"
 
 #: src/SUMMARY.md src/running-the-course/course-structure.md src/welcome-day-2-afternoon.md
 #: src/std-traits.md
