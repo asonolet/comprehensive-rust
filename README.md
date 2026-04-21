@@ -65,7 +65,7 @@ rustup component add rust-analyzer
 
 # Then clone this repository:
 
-git clone https://github.com/google/comprehensive-rust/
+git clone https://github.com/asonolet/comprehensive-rust/
 cd comprehensive-rust
 
 # Then run the following command to install the correct versions of all tools mentioned above:
