@@ -57,19 +57,24 @@ The course is built using a few tools:
 - [mdbook-course](mdbook-course/)
 - [mdbook-linkcheck2](https://github.com/marxin/mdbook-linkcheck2)
 
-First, install Rust by following the instructions on https://rustup.rs/. Then
-clone this repository:
-
 ```shell
+# First, install Rust by following the instructions on https://rustup.rs/ :
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup component add rust-analyzer
+
+# Then clone this repository:
+
 git clone https://github.com/google/comprehensive-rust/
 cd comprehensive-rust
-```
 
-Then run the following command to install the correct versions of all tools
-mentioned above:
+# Then run the following command to install the correct versions of all tools mentioned above:
 
-```shell
 cargo xtask install-tools
+
+# And launch the course
+
+cargo xtask serve -l fr
 ```
 
 This uses `cargo install` to install the tools, so you will find them in your
